@@ -1,12 +1,13 @@
 {
   "expo": {
-    "name": "periodic-table",
+    "name": "Periodic Table",
     "slug": "periodic-table",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "periodictable",
-    "userInterfaceStyle": "automatic",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0C1016",
     "ios": {
       "icon": "./assets/expo.icon"
     },

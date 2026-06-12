@@ -1,56 +1,41 @@
-# Welcome to your Expo app 👋
+# Periodic Table
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A free, open-source, ad-less periodic table app for iOS and Android, built with Expo / React Native. Inspired by the commercial "Periodic Table 2026" apps, powered entirely by open chemistry data.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **Interactive periodic table** — pinch to zoom, pan, double-tap to zoom, all 118 elements in the standard 18-column layout with the f-block split out.
+- **Property overlays** — color the table by category, atomic mass, density, electronegativity, melting/boiling point, atomic radius, year discovered, phase, or block. Numeric modes render as a heatmap.
+- **Category legend** — tap a category (alkali metals, noble gases, …) to highlight just those elements.
+- **Element cards** — photo with attribution, overview, Bohr shell diagram, physical/atomic/discovery properties, previous/next navigation, Wikipedia link.
+- **Search** — find elements by name, symbol, or atomic number.
+- **Molar mass calculator** — handles nested groups and hydrates: `H2SO4`, `Ca(OH)2`, `[Cu(NH3)4]SO4`, `CuSO4·5H2O`, with a per-element mass breakdown.
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Running
 
 ```bash
-npm run reset-project
+npm install
+npx expo start        # then press i / a, or scan with Expo Go
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Data
 
-### Other setup steps
+All element data is generated into [src/data/elements.json](src/data/elements.json) by the pipeline in [scripts/build-elements.mjs](scripts/build-elements.mjs), which merges:
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+- [Bowserinator/Periodic-Table-JSON](https://github.com/Bowserinator/Periodic-Table-JSON) (CC BY-SA 3.0)
+- [PubChem Periodic Table](https://pubchem.ncbi.nlm.nih.gov/periodic-table/) (public domain, NLM/NCBI)
 
-## Learn more
+To rebuild: re-download the sources into `data-sources/` and run `node scripts/build-elements.mjs`. See [ATTRIBUTION.md](ATTRIBUTION.md) for full credits.
 
-To learn more about developing your project with Expo, look at the following resources:
+## Roadmap
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- Isotope browser (IAEA LiveChart / NUBASE)
+- Solubility chart, reaction search, chemistry dictionary
+- Element compare and property trend graphs
+- Favorites and notes
+- Offline image pack
+- Localization
 
-## Join the community
+## License
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+MIT for the code. Element data and images keep their upstream licenses — see [ATTRIBUTION.md](ATTRIBUTION.md).
