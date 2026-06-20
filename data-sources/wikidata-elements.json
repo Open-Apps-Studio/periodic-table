@@ -1,0 +1,1182 @@
+[
+  {
+    "number": 1,
+    "symbol": "H",
+    "wikidataId": "Q556",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q556",
+    "wikidataLabel": "hydrogen",
+    "nameOrigin": "water",
+    "discoverers": "Henry Cavendish",
+    "discoveryLocations": "United Kingdom"
+  },
+  {
+    "number": 2,
+    "symbol": "He",
+    "wikidataId": "Q560",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q560",
+    "wikidataLabel": "helium",
+    "nameOrigin": "Helios",
+    "discoverers": "William Ramsay; Pierre Janssen; Norman Lockyer",
+    "discoveryLocations": null
+  },
+  {
+    "number": 3,
+    "symbol": "Li",
+    "wikidataId": "Q568",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q568",
+    "wikidataLabel": "lithium",
+    "nameOrigin": "stone",
+    "discoverers": "Johan August Arfwedson",
+    "discoveryLocations": "Sweden"
+  },
+  {
+    "number": 4,
+    "symbol": "Be",
+    "wikidataId": "Q569",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q569",
+    "wikidataLabel": "beryllium",
+    "nameOrigin": "beryl",
+    "discoverers": "Antoine Bussy; Louis Nicolas Vauquelin; Friedrich Wöhler",
+    "discoveryLocations": "France"
+  },
+  {
+    "number": 5,
+    "symbol": "B",
+    "wikidataId": "Q618",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q618",
+    "wikidataLabel": "boron",
+    "nameOrigin": "borax",
+    "discoverers": "Humphry Davy",
+    "discoveryLocations": null
+  },
+  {
+    "number": 6,
+    "symbol": "C",
+    "wikidataId": "Q623",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q623",
+    "wikidataLabel": "carbon",
+    "nameOrigin": "coal",
+    "discoverers": "Antoine Lavoisier",
+    "discoveryLocations": null
+  },
+  {
+    "number": 7,
+    "symbol": "N",
+    "wikidataId": "Q627",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q627",
+    "wikidataLabel": "nitrogen",
+    "nameOrigin": "life; nitre",
+    "discoverers": "Daniel Rutherford",
+    "discoveryLocations": "United Kingdom"
+  },
+  {
+    "number": 8,
+    "symbol": "O",
+    "wikidataId": "Q629",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q629",
+    "wikidataLabel": "oxygen",
+    "nameOrigin": "acid",
+    "discoverers": "Carl Wilhelm Scheele",
+    "discoveryLocations": "Sweden"
+  },
+  {
+    "number": 9,
+    "symbol": "F",
+    "wikidataId": "Q650",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q650",
+    "wikidataLabel": "fluorine",
+    "nameOrigin": "hydrofluoric acid",
+    "discoverers": "Henri Moissan; André-Marie Ampère",
+    "discoveryLocations": "France"
+  },
+  {
+    "number": 10,
+    "symbol": "Ne",
+    "wikidataId": "Q654",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q654",
+    "wikidataLabel": "neon",
+    "nameOrigin": "novelty",
+    "discoverers": "William Ramsay; Morris Travers",
+    "discoveryLocations": "United Kingdom"
+  },
+  {
+    "number": 11,
+    "symbol": "Na",
+    "wikidataId": "Q658",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q658",
+    "wikidataLabel": "sodium",
+    "nameOrigin": "headache; sodium hydroxide; sodium carbonate; natron",
+    "discoverers": "Humphry Davy",
+    "discoveryLocations": "United Kingdom"
+  },
+  {
+    "number": 12,
+    "symbol": "Mg",
+    "wikidataId": "Q660",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q660",
+    "wikidataLabel": "magnesium",
+    "nameOrigin": "magnesium oxide",
+    "discoverers": "Joseph Black",
+    "discoveryLocations": "United Kingdom"
+  },
+  {
+    "number": 13,
+    "symbol": "Al",
+    "wikidataId": "Q663",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q663",
+    "wikidataLabel": "aluminium",
+    "nameOrigin": "alum",
+    "discoverers": "Humphry Davy; Hans Christian Ørsted",
+    "discoveryLocations": null
+  },
+  {
+    "number": 14,
+    "symbol": "Si",
+    "wikidataId": "Q670",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q670",
+    "wikidataLabel": "silicon",
+    "nameOrigin": "flint",
+    "discoverers": "Jöns Jacob Berzelius",
+    "discoveryLocations": null
+  },
+  {
+    "number": 15,
+    "symbol": "P",
+    "wikidataId": "Q674",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q674",
+    "wikidataLabel": "phosphorus",
+    "nameOrigin": "Phosphorus",
+    "discoverers": "Hennig Brand",
+    "discoveryLocations": null
+  },
+  {
+    "number": 16,
+    "symbol": "S",
+    "wikidataId": "Q682",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q682",
+    "wikidataLabel": "sulfur",
+    "nameOrigin": null,
+    "discoverers": "Antoine Lavoisier",
+    "discoveryLocations": null
+  },
+  {
+    "number": 17,
+    "symbol": "Cl",
+    "wikidataId": "Q688",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q688",
+    "wikidataLabel": "chlorine",
+    "nameOrigin": "green",
+    "discoverers": "Carl Wilhelm Scheele",
+    "discoveryLocations": null
+  },
+  {
+    "number": 18,
+    "symbol": "Ar",
+    "wikidataId": "Q696",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q696",
+    "wikidataLabel": "argon",
+    "nameOrigin": "laziness",
+    "discoverers": "William Ramsay; John William Strutt",
+    "discoveryLocations": null
+  },
+  {
+    "number": 19,
+    "symbol": "K",
+    "wikidataId": "Q703",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q703",
+    "wikidataLabel": "potassium",
+    "nameOrigin": "potash",
+    "discoverers": "Humphry Davy",
+    "discoveryLocations": null
+  },
+  {
+    "number": 20,
+    "symbol": "Ca",
+    "wikidataId": "Q706",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q706",
+    "wikidataLabel": "calcium",
+    "nameOrigin": "lime",
+    "discoverers": "Humphry Davy",
+    "discoveryLocations": null
+  },
+  {
+    "number": 21,
+    "symbol": "Sc",
+    "wikidataId": "Q713",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q713",
+    "wikidataLabel": "scandium",
+    "nameOrigin": "Scandinavia",
+    "discoverers": "Lars Fredrik Nilson",
+    "discoveryLocations": null
+  },
+  {
+    "number": 22,
+    "symbol": "Ti",
+    "wikidataId": "Q716",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q716",
+    "wikidataLabel": "titanium",
+    "nameOrigin": "titan",
+    "discoverers": "Friedrich Wöhler",
+    "discoveryLocations": null
+  },
+  {
+    "number": 23,
+    "symbol": "V",
+    "wikidataId": "Q722",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q722",
+    "wikidataLabel": "vanadium",
+    "nameOrigin": "Freyja",
+    "discoverers": "Andrés Manuel del Río",
+    "discoveryLocations": null
+  },
+  {
+    "number": 24,
+    "symbol": "Cr",
+    "wikidataId": "Q725",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q725",
+    "wikidataLabel": "chromium",
+    "nameOrigin": "color field",
+    "discoverers": "Louis Nicolas Vauquelin",
+    "discoveryLocations": null
+  },
+  {
+    "number": 25,
+    "symbol": "Mn",
+    "wikidataId": "Q731",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q731",
+    "wikidataLabel": "manganese",
+    "nameOrigin": "Magnesia Prefecture",
+    "discoverers": "Johan Gottlieb Gahn",
+    "discoveryLocations": null
+  },
+  {
+    "number": 26,
+    "symbol": "Fe",
+    "wikidataId": "Q677",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q677",
+    "wikidataLabel": "iron",
+    "nameOrigin": null,
+    "discoverers": null,
+    "discoveryLocations": null
+  },
+  {
+    "number": 27,
+    "symbol": "Co",
+    "wikidataId": "Q740",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q740",
+    "wikidataLabel": "cobalt",
+    "nameOrigin": "kobold",
+    "discoverers": "Georg Brandt",
+    "discoveryLocations": null
+  },
+  {
+    "number": 28,
+    "symbol": "Ni",
+    "wikidataId": "Q744",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q744",
+    "wikidataLabel": "nickel",
+    "nameOrigin": "nickeline",
+    "discoverers": "Axel Fredrik Cronstedt",
+    "discoveryLocations": null
+  },
+  {
+    "number": 29,
+    "symbol": "Cu",
+    "wikidataId": "Q753",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q753",
+    "wikidataLabel": "copper",
+    "nameOrigin": "Cyprus",
+    "discoverers": null,
+    "discoveryLocations": null
+  },
+  {
+    "number": 30,
+    "symbol": "Zn",
+    "wikidataId": "Q758",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q758",
+    "wikidataLabel": "zinc",
+    "nameOrigin": "tine",
+    "discoverers": null,
+    "discoveryLocations": null
+  },
+  {
+    "number": 31,
+    "symbol": "Ga",
+    "wikidataId": "Q861",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q861",
+    "wikidataLabel": "gallium",
+    "nameOrigin": "Gaul",
+    "discoverers": "Paul-Émile Lecoq de Boisbaudran",
+    "discoveryLocations": null
+  },
+  {
+    "number": 32,
+    "symbol": "Ge",
+    "wikidataId": "Q867",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q867",
+    "wikidataLabel": "germanium",
+    "nameOrigin": "Germany",
+    "discoverers": "Clemens Winkler",
+    "discoveryLocations": "Germany"
+  },
+  {
+    "number": 33,
+    "symbol": "As",
+    "wikidataId": "Q871",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q871",
+    "wikidataLabel": "arsenic",
+    "nameOrigin": "gold; orpiment; virility",
+    "discoverers": "Albertus Magnus",
+    "discoveryLocations": null
+  },
+  {
+    "number": 34,
+    "symbol": "Se",
+    "wikidataId": "Q876",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q876",
+    "wikidataLabel": "selenium",
+    "nameOrigin": "Moon",
+    "discoverers": "Johan Gottlieb Gahn; Jöns Jacob Berzelius",
+    "discoveryLocations": "Stockholm"
+  },
+  {
+    "number": 35,
+    "symbol": "Br",
+    "wikidataId": "Q879",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q879",
+    "wikidataLabel": "bromine",
+    "nameOrigin": "stink",
+    "discoverers": "Antoine Jérôme Balard; Carl Jacob Löwig",
+    "discoveryLocations": "France"
+  },
+  {
+    "number": 36,
+    "symbol": "Kr",
+    "wikidataId": "Q888",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q888",
+    "wikidataLabel": "krypton",
+    "nameOrigin": "hiding",
+    "discoverers": "William Ramsay; Morris Travers",
+    "discoveryLocations": "United Kingdom"
+  },
+  {
+    "number": 37,
+    "symbol": "Rb",
+    "wikidataId": "Q895",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q895",
+    "wikidataLabel": "rubidium",
+    "nameOrigin": "red",
+    "discoverers": "Robert Bunsen; Gustav Kirchhoff",
+    "discoveryLocations": "Germany"
+  },
+  {
+    "number": 38,
+    "symbol": "Sr",
+    "wikidataId": "Q938",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q938",
+    "wikidataLabel": "strontium",
+    "nameOrigin": "Strontian",
+    "discoverers": "William Cruickshank",
+    "discoveryLocations": "United Kingdom"
+  },
+  {
+    "number": 39,
+    "symbol": "Y",
+    "wikidataId": "Q941",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q941",
+    "wikidataLabel": "yttrium",
+    "nameOrigin": "Ytterby mine",
+    "discoverers": "Johan Gadolin; Friedrich Wöhler",
+    "discoveryLocations": "Finland"
+  },
+  {
+    "number": 40,
+    "symbol": "Zr",
+    "wikidataId": "Q1038",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1038",
+    "wikidataLabel": "zirconium",
+    "nameOrigin": "zircon",
+    "discoverers": "Anton Eduard van Arkel; Jan Hendrik de Boer; Martin Heinrich Klaproth; Jöns Jacob Berzelius",
+    "discoveryLocations": "Germany"
+  },
+  {
+    "number": 41,
+    "symbol": "Nb",
+    "wikidataId": "Q1046",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1046",
+    "wikidataLabel": "niobium",
+    "nameOrigin": "Niobe",
+    "discoverers": "Charles Hatchett",
+    "discoveryLocations": "United Kingdom"
+  },
+  {
+    "number": 42,
+    "symbol": "Mo",
+    "wikidataId": "Q1053",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1053",
+    "wikidataLabel": "molybdenum",
+    "nameOrigin": "lead",
+    "discoverers": "Carl Wilhelm Scheele",
+    "discoveryLocations": "Sweden"
+  },
+  {
+    "number": 43,
+    "symbol": "Tc",
+    "wikidataId": "Q1054",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1054",
+    "wikidataLabel": "technetium",
+    "nameOrigin": "technique",
+    "discoverers": "Carlo Perrier; Emilio G. Segrè",
+    "discoveryLocations": "Italy"
+  },
+  {
+    "number": 44,
+    "symbol": "Ru",
+    "wikidataId": "Q1086",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1086",
+    "wikidataLabel": "ruthenium",
+    "nameOrigin": "Ruthenia",
+    "discoverers": "Karl Ernst Claus",
+    "discoveryLocations": "Q56007908"
+  },
+  {
+    "number": 45,
+    "symbol": "Rh",
+    "wikidataId": "Q1087",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1087",
+    "wikidataLabel": "rhodium",
+    "nameOrigin": "rose",
+    "discoverers": "William Hyde Wollaston",
+    "discoveryLocations": null
+  },
+  {
+    "number": 46,
+    "symbol": "Pd",
+    "wikidataId": "Q1089",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1089",
+    "wikidataLabel": "palladium",
+    "nameOrigin": "2 Pallas",
+    "discoverers": "William Hyde Wollaston",
+    "discoveryLocations": null
+  },
+  {
+    "number": 47,
+    "symbol": "Ag",
+    "wikidataId": "Q1090",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1090",
+    "wikidataLabel": "silver",
+    "nameOrigin": "white",
+    "discoverers": null,
+    "discoveryLocations": null
+  },
+  {
+    "number": 48,
+    "symbol": "Cd",
+    "wikidataId": "Q1091",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1091",
+    "wikidataLabel": "cadmium",
+    "nameOrigin": "Cadmus",
+    "discoverers": "Friedrich Stromeyer; Karl Samuel Leberecht Hermann",
+    "discoveryLocations": null
+  },
+  {
+    "number": 49,
+    "symbol": "In",
+    "wikidataId": "Q1094",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1094",
+    "wikidataLabel": "indium",
+    "nameOrigin": "indigo",
+    "discoverers": "Ferdinand Reich; Hieronymous Theodor Richter",
+    "discoveryLocations": null
+  },
+  {
+    "number": 50,
+    "symbol": "Sn",
+    "wikidataId": "Q1096",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1096",
+    "wikidataLabel": "tin",
+    "nameOrigin": null,
+    "discoverers": null,
+    "discoveryLocations": null
+  },
+  {
+    "number": 51,
+    "symbol": "Sb",
+    "wikidataId": "Q1099",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1099",
+    "wikidataLabel": "antimony",
+    "nameOrigin": null,
+    "discoverers": null,
+    "discoveryLocations": null
+  },
+  {
+    "number": 52,
+    "symbol": "Te",
+    "wikidataId": "Q1100",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1100",
+    "wikidataLabel": "tellurium",
+    "nameOrigin": "Terra",
+    "discoverers": "Franz-Joseph Müller von Reichenstein",
+    "discoveryLocations": "Zlatna"
+  },
+  {
+    "number": 53,
+    "symbol": "I",
+    "wikidataId": "Q1103",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1103",
+    "wikidataLabel": "iodine",
+    "nameOrigin": "violet",
+    "discoverers": "Bernard Courtois",
+    "discoveryLocations": "Paris"
+  },
+  {
+    "number": 54,
+    "symbol": "Xe",
+    "wikidataId": "Q1106",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1106",
+    "wikidataLabel": "xenon",
+    "nameOrigin": "stranger",
+    "discoverers": "William Ramsay; Morris Travers",
+    "discoveryLocations": "University College London"
+  },
+  {
+    "number": 55,
+    "symbol": "Cs",
+    "wikidataId": "Q1108",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1108",
+    "wikidataLabel": "caesium",
+    "nameOrigin": "sky blue",
+    "discoverers": "Robert Bunsen; Gustav Kirchhoff",
+    "discoveryLocations": "Heidelberg"
+  },
+  {
+    "number": 56,
+    "symbol": "Ba",
+    "wikidataId": "Q1112",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1112",
+    "wikidataLabel": "barium",
+    "nameOrigin": "weight",
+    "discoverers": "Humphry Davy",
+    "discoveryLocations": "Royal Institution"
+  },
+  {
+    "number": 57,
+    "symbol": "La",
+    "wikidataId": "Q1801",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1801",
+    "wikidataLabel": "lanthanum",
+    "nameOrigin": "hiding",
+    "discoverers": "Carl Gustaf Mosander",
+    "discoveryLocations": "Karolinska Institutet"
+  },
+  {
+    "number": 58,
+    "symbol": "Ce",
+    "wikidataId": "Q1385",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1385",
+    "wikidataLabel": "cerium",
+    "nameOrigin": "Ceres",
+    "discoverers": "Martin Heinrich Klaproth; Jöns Jacob Berzelius",
+    "discoveryLocations": null
+  },
+  {
+    "number": 59,
+    "symbol": "Pr",
+    "wikidataId": "Q1386",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1386",
+    "wikidataLabel": "praseodymium",
+    "nameOrigin": "green; twin",
+    "discoverers": "Carl Gustaf Mosander",
+    "discoveryLocations": null
+  },
+  {
+    "number": 60,
+    "symbol": "Nd",
+    "wikidataId": "Q1388",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1388",
+    "wikidataLabel": "neodymium",
+    "nameOrigin": "twin; novelty",
+    "discoverers": "Carl Auer von Welsbach",
+    "discoveryLocations": "Vienna"
+  },
+  {
+    "number": 61,
+    "symbol": "Pm",
+    "wikidataId": "Q1809",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1809",
+    "wikidataLabel": "promethium",
+    "nameOrigin": "Prometheus",
+    "discoverers": "Lawrence E. Glendenin; Jacob Akiba Marinsky; Charles D. Coryell",
+    "discoveryLocations": "Oak Ridge National Laboratory"
+  },
+  {
+    "number": 62,
+    "symbol": "Sm",
+    "wikidataId": "Q1819",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1819",
+    "wikidataLabel": "samarium",
+    "nameOrigin": "samarskite-(Y)",
+    "discoverers": "Paul-Émile Lecoq de Boisbaudran",
+    "discoveryLocations": "Paris"
+  },
+  {
+    "number": 63,
+    "symbol": "Eu",
+    "wikidataId": "Q1396",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1396",
+    "wikidataLabel": "europium",
+    "nameOrigin": "Europe",
+    "discoverers": "Eugène-Anatole Demarçay",
+    "discoveryLocations": null
+  },
+  {
+    "number": 64,
+    "symbol": "Gd",
+    "wikidataId": "Q1832",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1832",
+    "wikidataLabel": "gadolinium",
+    "nameOrigin": "Johan Gadolin",
+    "discoverers": "Jean Charles Galissard de Marignac",
+    "discoveryLocations": null
+  },
+  {
+    "number": 65,
+    "symbol": "Tb",
+    "wikidataId": "Q1838",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1838",
+    "wikidataLabel": "terbium",
+    "nameOrigin": "Ytterby mine",
+    "discoverers": "Carl Gustaf Mosander",
+    "discoveryLocations": "Stockholm"
+  },
+  {
+    "number": 66,
+    "symbol": "Dy",
+    "wikidataId": "Q1843",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1843",
+    "wikidataLabel": "dysprosium",
+    "nameOrigin": "getting",
+    "discoverers": "Paul-Émile Lecoq de Boisbaudran",
+    "discoveryLocations": "Paris"
+  },
+  {
+    "number": 67,
+    "symbol": "Ho",
+    "wikidataId": "Q1846",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1846",
+    "wikidataLabel": "holmium",
+    "nameOrigin": "Stockholm",
+    "discoverers": "Per Teodor Cleve; Marc Delafontaine; Jacques-Louis Soret",
+    "discoveryLocations": "Geneva; Uppsala"
+  },
+  {
+    "number": 68,
+    "symbol": "Er",
+    "wikidataId": "Q1849",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1849",
+    "wikidataLabel": "erbium",
+    "nameOrigin": "Ytterby mine",
+    "discoverers": "Carl Gustaf Mosander",
+    "discoveryLocations": null
+  },
+  {
+    "number": 69,
+    "symbol": "Tm",
+    "wikidataId": "Q1853",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1853",
+    "wikidataLabel": "thulium",
+    "nameOrigin": "Scandinavia; Thule",
+    "discoverers": "Per Teodor Cleve",
+    "discoveryLocations": null
+  },
+  {
+    "number": 70,
+    "symbol": "Yb",
+    "wikidataId": "Q1855",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1855",
+    "wikidataLabel": "ytterbium",
+    "nameOrigin": "Ytterby mine",
+    "discoverers": "Jean Charles Galissard de Marignac",
+    "discoveryLocations": null
+  },
+  {
+    "number": 71,
+    "symbol": "Lu",
+    "wikidataId": "Q1857",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1857",
+    "wikidataLabel": "lutetium",
+    "nameOrigin": "Lutetia",
+    "discoverers": "Georges Urbain; Carl Auer von Welsbach",
+    "discoveryLocations": null
+  },
+  {
+    "number": 72,
+    "symbol": "Hf",
+    "wikidataId": "Q1119",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1119",
+    "wikidataLabel": "hafnium",
+    "nameOrigin": "Copenhagen",
+    "discoverers": "Dirk Coster; George de Hevesy",
+    "discoveryLocations": "Denmark"
+  },
+  {
+    "number": 73,
+    "symbol": "Ta",
+    "wikidataId": "Q1123",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1123",
+    "wikidataLabel": "tantalum",
+    "nameOrigin": "Tantalus",
+    "discoverers": "Anders Gustaf Ekeberg",
+    "discoveryLocations": null
+  },
+  {
+    "number": 74,
+    "symbol": "W",
+    "wikidataId": "Q743",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q743",
+    "wikidataLabel": "tungsten",
+    "nameOrigin": "Canis lupus",
+    "discoverers": "Juan José Elhuyar; Fausto Elhuyar",
+    "discoveryLocations": "Spain"
+  },
+  {
+    "number": 75,
+    "symbol": "Re",
+    "wikidataId": "Q737",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q737",
+    "wikidataLabel": "rhenium",
+    "nameOrigin": "Rhine",
+    "discoverers": "Otto Berg; Ida Noddack; Walter Noddack",
+    "discoveryLocations": null
+  },
+  {
+    "number": 76,
+    "symbol": "Os",
+    "wikidataId": "Q751",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q751",
+    "wikidataLabel": "osmium",
+    "nameOrigin": "odor",
+    "discoverers": "Smithson Tennant; William Hyde Wollaston",
+    "discoveryLocations": null
+  },
+  {
+    "number": 77,
+    "symbol": "Ir",
+    "wikidataId": "Q877",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q877",
+    "wikidataLabel": "iridium",
+    "nameOrigin": "Iris",
+    "discoverers": "Smithson Tennant",
+    "discoveryLocations": "London"
+  },
+  {
+    "number": 78,
+    "symbol": "Pt",
+    "wikidataId": "Q880",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q880",
+    "wikidataLabel": "platinum",
+    "nameOrigin": "silver",
+    "discoverers": "Antonio de Ulloa; Julius Caesar Scaliger",
+    "discoveryLocations": null
+  },
+  {
+    "number": 79,
+    "symbol": "Au",
+    "wikidataId": "Q897",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q897",
+    "wikidataLabel": "gold",
+    "nameOrigin": null,
+    "discoverers": null,
+    "discoveryLocations": null
+  },
+  {
+    "number": 80,
+    "symbol": "Hg",
+    "wikidataId": "Q925",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q925",
+    "wikidataLabel": "mercury",
+    "nameOrigin": "Mercury",
+    "discoverers": null,
+    "discoveryLocations": null
+  },
+  {
+    "number": 81,
+    "symbol": "Tl",
+    "wikidataId": "Q932",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q932",
+    "wikidataLabel": "thallium",
+    "nameOrigin": "thallus",
+    "discoverers": "William Crookes",
+    "discoveryLocations": null
+  },
+  {
+    "number": 82,
+    "symbol": "Pb",
+    "wikidataId": "Q708",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q708",
+    "wikidataLabel": "lead",
+    "nameOrigin": null,
+    "discoverers": null,
+    "discoveryLocations": null
+  },
+  {
+    "number": 83,
+    "symbol": "Bi",
+    "wikidataId": "Q942",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q942",
+    "wikidataLabel": "bismuth",
+    "nameOrigin": null,
+    "discoverers": null,
+    "discoveryLocations": null
+  },
+  {
+    "number": 84,
+    "symbol": "Po",
+    "wikidataId": "Q979",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q979",
+    "wikidataLabel": "polonium",
+    "nameOrigin": "Poland",
+    "discoverers": "Pierre Curie; Marie Sklodowska-Curie",
+    "discoveryLocations": null
+  },
+  {
+    "number": 85,
+    "symbol": "At",
+    "wikidataId": "Q999",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q999",
+    "wikidataLabel": "astatine",
+    "nameOrigin": "instability",
+    "discoverers": "Emilio G. Segrè",
+    "discoveryLocations": "United States"
+  },
+  {
+    "number": 86,
+    "symbol": "Rn",
+    "wikidataId": "Q1133",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1133",
+    "wikidataLabel": "radon",
+    "nameOrigin": "radium",
+    "discoverers": "Robert Bowie Owens; Friedrich Ernst Dorn; Ernest Rutherford",
+    "discoveryLocations": null
+  },
+  {
+    "number": 87,
+    "symbol": "Fr",
+    "wikidataId": "Q671",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q671",
+    "wikidataLabel": "francium",
+    "nameOrigin": "France",
+    "discoverers": "Marguerite Perey",
+    "discoveryLocations": "France"
+  },
+  {
+    "number": 88,
+    "symbol": "Ra",
+    "wikidataId": "Q1128",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1128",
+    "wikidataLabel": "radium",
+    "nameOrigin": "radioactivity",
+    "discoverers": "Pierre Curie; Marie Sklodowska-Curie",
+    "discoveryLocations": null
+  },
+  {
+    "number": 89,
+    "symbol": "Ac",
+    "wikidataId": "Q1121",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1121",
+    "wikidataLabel": "actinium",
+    "nameOrigin": "light beam",
+    "discoverers": "André-Louis Debierne",
+    "discoveryLocations": null
+  },
+  {
+    "number": 90,
+    "symbol": "Th",
+    "wikidataId": "Q1115",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1115",
+    "wikidataLabel": "thorium",
+    "nameOrigin": "Thor",
+    "discoverers": "Jöns Jacob Berzelius",
+    "discoveryLocations": null
+  },
+  {
+    "number": 91,
+    "symbol": "Pa",
+    "wikidataId": "Q1109",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1109",
+    "wikidataLabel": "protactinium",
+    "nameOrigin": "actinium",
+    "discoverers": "Kazimierz Fajans; Otto Hahn; Lise Meitner",
+    "discoveryLocations": null
+  },
+  {
+    "number": 92,
+    "symbol": "U",
+    "wikidataId": "Q1098",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1098",
+    "wikidataLabel": "uranium",
+    "nameOrigin": "Uranus",
+    "discoverers": "Q903801",
+    "discoveryLocations": null
+  },
+  {
+    "number": 93,
+    "symbol": "Np",
+    "wikidataId": "Q1105",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1105",
+    "wikidataLabel": "neptunium",
+    "nameOrigin": "Neptune",
+    "discoverers": "Philip Abelson; Edwin McMillan",
+    "discoveryLocations": null
+  },
+  {
+    "number": 94,
+    "symbol": "Pu",
+    "wikidataId": "Q1102",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1102",
+    "wikidataLabel": "plutonium",
+    "nameOrigin": "Pluto",
+    "discoverers": "Joseph W. Kennedy; Arthur Wahl; Glenn Theodore Seaborg; Edwin McMillan",
+    "discoveryLocations": null
+  },
+  {
+    "number": 95,
+    "symbol": "Am",
+    "wikidataId": "Q1872",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1872",
+    "wikidataLabel": "americium",
+    "nameOrigin": "Americas",
+    "discoverers": "Glenn Theodore Seaborg",
+    "discoveryLocations": null
+  },
+  {
+    "number": 96,
+    "symbol": "Cm",
+    "wikidataId": "Q1876",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1876",
+    "wikidataLabel": "curium",
+    "nameOrigin": "Marie Sklodowska-Curie; Pierre Curie",
+    "discoverers": "Glenn Theodore Seaborg",
+    "discoveryLocations": null
+  },
+  {
+    "number": 97,
+    "symbol": "Bk",
+    "wikidataId": "Q1882",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1882",
+    "wikidataLabel": "berkelium",
+    "nameOrigin": "Berkeley",
+    "discoverers": "Stanley Gerald Thompson; Albert Ghiorso; Glenn Theodore Seaborg",
+    "discoveryLocations": "University of California, Berkeley"
+  },
+  {
+    "number": 98,
+    "symbol": "Cf",
+    "wikidataId": "Q1888",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1888",
+    "wikidataLabel": "californium",
+    "nameOrigin": "California",
+    "discoverers": "Stanley Gerald Thompson; Kenneth Street Jr.; Albert Ghiorso; Glenn Theodore Seaborg",
+    "discoveryLocations": "University of California, Berkeley"
+  },
+  {
+    "number": 99,
+    "symbol": "Es",
+    "wikidataId": "Q1892",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1892",
+    "wikidataLabel": "einsteinium",
+    "nameOrigin": "Albert Einstein",
+    "discoverers": "Albert Ghiorso; Glenn Theodore Seaborg",
+    "discoveryLocations": null
+  },
+  {
+    "number": 100,
+    "symbol": "Fm",
+    "wikidataId": "Q1896",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1896",
+    "wikidataLabel": "fermium",
+    "nameOrigin": "Enrico Fermi",
+    "discoverers": "Glenn Theodore Seaborg",
+    "discoveryLocations": null
+  },
+  {
+    "number": 101,
+    "symbol": "Md",
+    "wikidataId": "Q1898",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1898",
+    "wikidataLabel": "mendelevium",
+    "nameOrigin": "Dmitri Mendeleev",
+    "discoverers": "Glenn Theodore Seaborg",
+    "discoveryLocations": null
+  },
+  {
+    "number": 102,
+    "symbol": "No",
+    "wikidataId": "Q1901",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1901",
+    "wikidataLabel": "nobelium",
+    "nameOrigin": "Alfred Nobel",
+    "discoverers": "Glenn Theodore Seaborg",
+    "discoveryLocations": null
+  },
+  {
+    "number": 103,
+    "symbol": "Lr",
+    "wikidataId": "Q1905",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1905",
+    "wikidataLabel": "lawrencium",
+    "nameOrigin": "Ernest Orlando Lawrence",
+    "discoverers": "Albert Ghiorso",
+    "discoveryLocations": "University of California, Berkeley"
+  },
+  {
+    "number": 104,
+    "symbol": "Rf",
+    "wikidataId": "Q1226",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1226",
+    "wikidataLabel": "rutherfordium",
+    "nameOrigin": "Ernest Rutherford",
+    "discoverers": "Albert Ghiorso",
+    "discoveryLocations": "Dubna"
+  },
+  {
+    "number": 105,
+    "symbol": "Db",
+    "wikidataId": "Q1232",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1232",
+    "wikidataLabel": "dubnium",
+    "nameOrigin": "Dubna",
+    "discoverers": "Lawrence Berkeley National Laboratory; Joint Institute for Nuclear Research",
+    "discoveryLocations": null
+  },
+  {
+    "number": 106,
+    "symbol": "Sg",
+    "wikidataId": "Q1234",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1234",
+    "wikidataLabel": "seaborgium",
+    "nameOrigin": "Glenn Theodore Seaborg",
+    "discoverers": "Yuri Oganessian",
+    "discoveryLocations": null
+  },
+  {
+    "number": 107,
+    "symbol": "Bh",
+    "wikidataId": "Q1249",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1249",
+    "wikidataLabel": "bohrium",
+    "nameOrigin": "Q7085",
+    "discoverers": "Yuri Oganessian",
+    "discoveryLocations": null
+  },
+  {
+    "number": 108,
+    "symbol": "Hs",
+    "wikidataId": "Q1252",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1252",
+    "wikidataLabel": "hassium",
+    "nameOrigin": "Hesse",
+    "discoverers": "GSI Helmholtz Centre for Heavy Ion Research",
+    "discoveryLocations": null
+  },
+  {
+    "number": 109,
+    "symbol": "Mt",
+    "wikidataId": "Q1258",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1258",
+    "wikidataLabel": "meitnerium",
+    "nameOrigin": "Lise Meitner",
+    "discoverers": "GSI Helmholtz Centre for Heavy Ion Research",
+    "discoveryLocations": "GSI Helmholtz Centre for Heavy Ion Research"
+  },
+  {
+    "number": 110,
+    "symbol": "Ds",
+    "wikidataId": "Q1266",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1266",
+    "wikidataLabel": "darmstadtium",
+    "nameOrigin": "Darmstadt",
+    "discoverers": "GSI Helmholtz Centre for Heavy Ion Research",
+    "discoveryLocations": "GSI Helmholtz Centre for Heavy Ion Research"
+  },
+  {
+    "number": 111,
+    "symbol": "Rg",
+    "wikidataId": "Q1272",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1272",
+    "wikidataLabel": "roentgenium",
+    "nameOrigin": "Wilhelm Conrad Röntgen",
+    "discoverers": "GSI Helmholtz Centre for Heavy Ion Research",
+    "discoveryLocations": "GSI Helmholtz Centre for Heavy Ion Research"
+  },
+  {
+    "number": 112,
+    "symbol": "Cn",
+    "wikidataId": "Q1278",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1278",
+    "wikidataLabel": "copernicium",
+    "nameOrigin": "Nicolaus Copernicus",
+    "discoverers": "GSI Helmholtz Centre for Heavy Ion Research",
+    "discoveryLocations": null
+  },
+  {
+    "number": 113,
+    "symbol": "Nh",
+    "wikidataId": "Q1301",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1301",
+    "wikidataLabel": "nihonium",
+    "nameOrigin": "Japan",
+    "discoverers": "Joint Institute for Nuclear Research",
+    "discoveryLocations": null
+  },
+  {
+    "number": 114,
+    "symbol": "Fl",
+    "wikidataId": "Q1302",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1302",
+    "wikidataLabel": "flerovium",
+    "nameOrigin": "Flerov Laboratory of Nuclear Reactions",
+    "discoverers": "Joint Institute for Nuclear Research",
+    "discoveryLocations": "Joint Institute for Nuclear Research"
+  },
+  {
+    "number": 115,
+    "symbol": "Mc",
+    "wikidataId": "Q1303",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1303",
+    "wikidataLabel": "moscovium",
+    "nameOrigin": "Moscow Oblast",
+    "discoverers": "Joint Institute for Nuclear Research",
+    "discoveryLocations": "Joint Institute for Nuclear Research"
+  },
+  {
+    "number": 116,
+    "symbol": "Lv",
+    "wikidataId": "Q1304",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1304",
+    "wikidataLabel": "livermorium",
+    "nameOrigin": "Lawrence Livermore National Laboratory",
+    "discoverers": "Joint Institute for Nuclear Research",
+    "discoveryLocations": null
+  },
+  {
+    "number": 117,
+    "symbol": "Ts",
+    "wikidataId": "Q1306",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1306",
+    "wikidataLabel": "tennessine",
+    "nameOrigin": "Tennessee",
+    "discoverers": "Yuri Oganessian",
+    "discoveryLocations": "Joint Institute for Nuclear Research"
+  },
+  {
+    "number": 118,
+    "symbol": "Og",
+    "wikidataId": "Q1307",
+    "wikidataUrl": "https://www.wikidata.org/wiki/Q1307",
+    "wikidataLabel": "oganesson",
+    "nameOrigin": "Yuri Oganessian",
+    "discoverers": "Joint Institute for Nuclear Research",
+    "discoveryLocations": null
+  }
+]

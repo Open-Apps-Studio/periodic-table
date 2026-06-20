@@ -1,7 +1,10 @@
 import { memo } from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, Text, View } from 'react-native';
 import { ELEMENTS } from '@/data/elements';
-import { CategoryColors, Palette, withAlpha } from '@/constants/theme';
+import { CategoryColors, withAlpha } from '@/constants/theme';
+import { usePalette } from '@/context/theme-context';
+import { useThemedStyles } from '@/hooks/use-themed-styles';
+import { formatCellField } from '@/lib/cell-fields';
 import { DisplayMode, heatOf, heatRange } from '@/lib/display-modes';
 import type { ElementCategory, PeriodicElement } from '@/types/element';
 
@@ -19,12 +22,68 @@ const cellY = (ypos: number) => LABEL + (ypos - 1) * STEP + (ypos >= 9 ? F_BLOCK
 
 interface PeriodicTableProps {
   mode: DisplayMode;
+  cellFieldId: string;
   /** When set (category mode), other categories are dimmed. */
   highlightCategory?: ElementCategory | null;
   onPressElement: (el: PeriodicElement) => void;
 }
 
-export function PeriodicTable({ mode, highlightCategory, onPressElement }: PeriodicTableProps) {
+export function PeriodicTable({ mode, cellFieldId, highlightCategory, onPressElement }: PeriodicTableProps) {
+  const styles = useThemedStyles((p) => ({
+    cell: {
+      position: 'absolute',
+      width: CELL,
+      height: CELL,
+      borderRadius: 9,
+      borderWidth: 1.2,
+      paddingTop: 2,
+      paddingHorizontal: 3,
+      paddingBottom: 3,
+      alignItems: 'center',
+      overflow: 'hidden',
+    },
+    number: {
+      position: 'absolute',
+      top: 3,
+      left: 4,
+      fontSize: 9,
+      fontWeight: '600',
+      color: p.textSecondary,
+    },
+    symbol: {
+      marginTop: 10,
+      fontSize: 20,
+      fontWeight: '800',
+      color: p.text,
+      lineHeight: 22,
+    },
+    detail: {
+      width: '100%',
+      fontSize: 7.5,
+      fontWeight: '600',
+      color: p.textSecondary,
+      marginTop: 2,
+      textAlign: 'center',
+      paddingHorizontal: 1,
+    },
+    axisLabel: {
+      position: 'absolute',
+      fontSize: 10,
+      fontWeight: '700',
+      color: p.textTertiary,
+      textAlign: 'center',
+    },
+    fBlockMarker: {
+      borderStyle: 'dashed',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    fBlockText: {
+      fontSize: 12,
+      fontWeight: '700',
+    },
+  }));
+
   const range = heatRange(mode, ELEMENTS);
   const isHeat = !!mode.heatValue;
 
@@ -43,16 +102,17 @@ export function PeriodicTable({ mode, highlightCategory, onPressElement }: Perio
       ))}
 
       {/* 57-71 / 89-103 placeholders linking to the f-block rows */}
-      <FBlockMarker x={cellX(3)} y={cellY(6)} label="57–71" color={CategoryColors.lanthanide} />
-      <FBlockMarker x={cellX(3)} y={cellY(7)} label="89–103" color={CategoryColors.actinide} />
+      <FBlockMarker styles={styles} x={cellX(3)} y={cellY(6)} label="57–71" color={CategoryColors.lanthanide} />
+      <FBlockMarker styles={styles} x={cellX(3)} y={cellY(7)} label="89–103" color={CategoryColors.actinide} />
 
       {ELEMENTS.map((el) => {
         const dimmed = !!highlightCategory && el.category !== highlightCategory;
         return (
           <ElementCell
             key={el.number}
+            styles={styles}
             el={el}
-            value={mode.cellValue(el)}
+            detail={formatCellField(cellFieldId, el)}
             heat={isHeat ? heatOf(mode, el, range) : null}
             heatMode={isHeat}
             dimmed={dimmed}
@@ -64,7 +124,19 @@ export function PeriodicTable({ mode, highlightCategory, onPressElement }: Perio
   );
 }
 
-function FBlockMarker({ x, y, label, color }: { x: number; y: number; label: string; color: string }) {
+function FBlockMarker({
+  styles,
+  x,
+  y,
+  label,
+  color,
+}: {
+  styles: { cell: object; fBlockMarker: object; fBlockText: object };
+  x: number;
+  y: number;
+  label: string;
+  color: string;
+}) {
   return (
     <View
       style={[
@@ -78,28 +150,36 @@ function FBlockMarker({ x, y, label, color }: { x: number; y: number; label: str
 }
 
 const ElementCell = memo(function ElementCell({
+  styles,
   el,
-  value,
+  detail,
   heat,
   heatMode,
   dimmed,
   onPress,
 }: {
+  styles: {
+    cell: object;
+    number: object;
+    symbol: object;
+    detail: object;
+  };
   el: PeriodicElement;
-  value: string | null;
+  detail: string;
   heat: number | null;
   heatMode: boolean;
   dimmed: boolean;
   onPress: (el: PeriodicElement) => void;
 }) {
+  const palette = usePalette();
   const categoryColor = CategoryColors[el.category];
 
   let background: string;
   let border: string;
   if (heatMode) {
     if (heat !== null) {
-      background = withAlpha(Palette.accent, 0.06 + heat * 0.72);
-      border = withAlpha(Palette.accent, 0.25 + heat * 0.5);
+      background = withAlpha(palette.accent, 0.06 + heat * 0.72);
+      border = withAlpha(palette.accent, 0.25 + heat * 0.5);
     } else {
       background = withAlpha('#868E96', 0.08);
       border = withAlpha('#868E96', 0.25);
@@ -124,66 +204,13 @@ const ElementCell = memo(function ElementCell({
       ]}>
       <Text style={styles.number}>{el.number}</Text>
       <Text style={styles.symbol}>{el.symbol}</Text>
-      <Text style={styles.name} numberOfLines={1}>
-        {el.name}
-      </Text>
-      <Text style={styles.value} numberOfLines={1}>
-        {value ?? '—'}
+      <Text
+        style={styles.detail}
+        numberOfLines={2}
+        adjustsFontSizeToFit
+        minimumFontScale={0.65}>
+        {detail}
       </Text>
     </Pressable>
   );
-});
-
-const styles = StyleSheet.create({
-  cell: {
-    position: 'absolute',
-    width: CELL,
-    height: CELL,
-    borderRadius: 9,
-    borderWidth: 1.2,
-    paddingTop: 3,
-    paddingHorizontal: 4,
-    alignItems: 'center',
-  },
-  number: {
-    position: 'absolute',
-    top: 4,
-    left: 5,
-    fontSize: 10,
-    fontWeight: '600',
-    color: Palette.textSecondary,
-  },
-  symbol: {
-    marginTop: 12,
-    fontSize: 22,
-    fontWeight: '800',
-    color: Palette.text,
-  },
-  name: {
-    fontSize: 8.5,
-    fontWeight: '600',
-    color: Palette.textSecondary,
-    marginTop: 1,
-  },
-  value: {
-    fontSize: 8.5,
-    color: Palette.textTertiary,
-    marginTop: 1,
-  },
-  axisLabel: {
-    position: 'absolute',
-    fontSize: 10,
-    fontWeight: '700',
-    color: Palette.textTertiary,
-    textAlign: 'center',
-  },
-  fBlockMarker: {
-    borderStyle: 'dashed',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  fBlockText: {
-    fontSize: 12,
-    fontWeight: '700',
-  },
 });

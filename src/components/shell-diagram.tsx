@@ -1,11 +1,29 @@
-import { StyleSheet, Text, View } from 'react-native';
-import { Palette, withAlpha } from '@/constants/theme';
+import { Text, View } from 'react-native';
+import { withAlpha } from '@/constants/theme';
+import { useThemedStyles } from '@/hooks/use-themed-styles';
 
 const SIZE = 190;
 const NUCLEUS = 26;
 
 /** Concentric-ring Bohr diagram with the electron count badged on each shell. */
 export function ShellDiagram({ shells, color }: { shells: number[]; color: string }) {
+  const styles = useThemedStyles((p) => ({
+    wrap: { alignItems: 'center', paddingVertical: 8 },
+    ring: { position: 'absolute', borderWidth: 1.2 },
+    nucleus: { position: 'absolute', width: NUCLEUS, height: NUCLEUS, borderRadius: NUCLEUS / 2, borderWidth: 1.5 },
+    badge: {
+      position: 'absolute',
+      width: 22,
+      height: 18,
+      borderRadius: 9,
+      borderWidth: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    badgeText: { fontSize: 10, fontWeight: '800' },
+    caption: { color: p.textTertiary, fontSize: 11, marginTop: 6 },
+  }));
+
   const maxRadius = SIZE / 2 - 14;
   const step = shells.length > 1 ? (maxRadius - NUCLEUS / 2 - 14) / (shells.length - 1) : 0;
 
@@ -41,20 +59,3 @@ export function ShellDiagram({ shells, color }: { shells: number[]; color: strin
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: { alignItems: 'center', paddingVertical: 8 },
-  ring: { position: 'absolute', borderWidth: 1.2 },
-  nucleus: { position: 'absolute', width: NUCLEUS, height: NUCLEUS, borderRadius: NUCLEUS / 2, borderWidth: 1.5 },
-  badge: {
-    position: 'absolute',
-    width: 22,
-    height: 18,
-    borderRadius: 9,
-    borderWidth: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  badgeText: { fontSize: 10, fontWeight: '800' },
-  caption: { color: Palette.textTertiary, fontSize: 11, marginTop: 6 },
-});

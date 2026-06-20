@@ -65,7 +65,7 @@ function ZoomableInner({
   const ty = useSharedValue(Math.max(0, (viewportHeight - contentHeight * fitScale) / 2));
   const savedScale = useSharedValue(fitScale);
   const savedTx = useSharedValue(0);
-  const savedTy = useSharedValue(ty.value);
+  const savedTy = useSharedValue(ty.get());
 
   const clampX = (x: number, s: number) => {
     'worklet';
@@ -81,43 +81,43 @@ function ZoomableInner({
   const pan = Gesture.Pan()
     .maxPointers(2)
     .onStart(() => {
-      savedTx.value = tx.value;
-      savedTy.value = ty.value;
+      savedTx.set(tx.get());
+      savedTy.set(ty.get());
     })
     .onUpdate((e) => {
-      tx.value = clampX(savedTx.value + e.translationX, scale.value);
-      ty.value = clampY(savedTy.value + e.translationY, scale.value);
+      tx.set(clampX(savedTx.get() + e.translationX, scale.get()));
+      ty.set(clampY(savedTy.get() + e.translationY, scale.get()));
     });
 
   const pinch = Gesture.Pinch()
     .onStart(() => {
-      savedScale.value = scale.value;
-      savedTx.value = tx.value;
-      savedTy.value = ty.value;
+      savedScale.set(scale.get());
+      savedTx.set(tx.get());
+      savedTy.set(ty.get());
     })
     .onUpdate((e) => {
-      const next = Math.min(maxScale!, Math.max(minScale, savedScale.value * e.scale));
-      const k = next / savedScale.value;
-      scale.value = next;
-      tx.value = clampX(e.focalX - k * (e.focalX - savedTx.value), next);
-      ty.value = clampY(e.focalY - k * (e.focalY - savedTy.value), next);
+      const next = Math.min(maxScale!, Math.max(minScale, savedScale.get() * e.scale));
+      const k = next / savedScale.get();
+      scale.set(next);
+      tx.set(clampX(e.focalX - k * (e.focalX - savedTx.get()), next));
+      ty.set(clampY(e.focalY - k * (e.focalY - savedTy.get()), next));
     });
 
   const doubleTap = Gesture.Tap()
     .numberOfTaps(2)
     .onEnd((e) => {
-      const zoomedIn = scale.value > fitScale * 1.4;
+      const zoomedIn = scale.get() > fitScale * 1.4;
       const next = zoomedIn ? fitScale : Math.min(maxScale!, fitScale * 2.2);
-      const k = next / scale.value;
-      scale.value = withTiming(next, { duration: 220 });
-      tx.value = withTiming(clampX(e.x - k * (e.x - tx.value), next), { duration: 220 });
-      ty.value = withTiming(clampY(e.y - k * (e.y - ty.value), next), { duration: 220 });
+      const k = next / scale.get();
+      scale.set(withTiming(next, { duration: 220 }));
+      tx.set(withTiming(clampX(e.x - k * (e.x - tx.get()), next), { duration: 220 }));
+      ty.set(withTiming(clampY(e.y - k * (e.y - ty.get()), next), { duration: 220 }));
     });
 
   const gesture = Gesture.Simultaneous(pan, pinch, doubleTap);
 
   const animatedStyle = useAnimatedStyle(() => ({
-    transform: [{ translateX: tx.value }, { translateY: ty.value }, { scale: scale.value }],
+    transform: [{ translateX: tx.get() }, { translateY: ty.get() }, { scale: scale.get() }],
   }));
 
   return (

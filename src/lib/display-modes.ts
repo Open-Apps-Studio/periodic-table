@@ -1,5 +1,6 @@
 import type { PeriodicElement } from '@/types/element';
 import { fmt, fmtYear } from './format';
+import { fmtPercent, fmtUsd } from './format-properties';
 
 export interface DisplayMode {
   id: string;
@@ -41,6 +42,13 @@ export const DISPLAY_MODES: DisplayMode[] = [
     heatValue: (el) => el.electronegativity,
   },
   {
+    id: 'price',
+    label: 'Cost / 100g',
+    cellValue: (el) => fmtUsd(el.priceUsdPer100g),
+    heatValue: (el) => el.priceUsdPer100g,
+    log: true,
+  },
+  {
     id: 'melt',
     label: 'Melting point',
     cellValue: (el) => (el.melt == null ? null : `${Math.round(el.melt)} K`),
@@ -53,6 +61,19 @@ export const DISPLAY_MODES: DisplayMode[] = [
     heatValue: (el) => el.boil,
   },
   {
+    id: 'thermal',
+    label: 'Thermal conductivity',
+    cellValue: (el) => (el.thermalConductivity == null ? null : `${fmt(el.thermalConductivity, 3)} W/mK`),
+    heatValue: (el) => el.thermalConductivity,
+    log: true,
+  },
+  {
+    id: 'sound',
+    label: 'Speed of sound',
+    cellValue: (el) => (el.speedOfSound == null ? null : `${fmt(el.speedOfSound, 4)} m/s`),
+    heatValue: (el) => el.speedOfSound,
+  },
+  {
     id: 'radius',
     label: 'Atomic radius',
     cellValue: (el) => (el.atomicRadius == null ? null : `${el.atomicRadius} pm`),
@@ -63,6 +84,18 @@ export const DISPLAY_MODES: DisplayMode[] = [
     label: 'Year discovered',
     cellValue: (el) => (el.yearDiscovered == null ? null : fmtYear(el.yearDiscovered)),
     heatValue: year,
+  },
+  {
+    id: 'abundance',
+    label: 'Crust abundance',
+    cellValue: (el) => fmtPercent(el.abundanceCrust),
+    heatValue: (el) => el.abundanceCrust,
+    log: true,
+  },
+  {
+    id: 'radioactive',
+    label: 'Radioactive',
+    cellValue: (el) => (el.radioactive == null ? null : el.radioactive ? 'Yes' : 'Stable'),
   },
   {
     id: 'phase',

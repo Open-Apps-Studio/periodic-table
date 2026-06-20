@@ -1,6 +1,18 @@
 import type { ElementCategory } from '@/types/element';
 
-export const Palette = {
+export type PaletteColors = {
+  readonly background: string;
+  readonly surface: string;
+  readonly surfaceRaised: string;
+  readonly border: string;
+  readonly text: string;
+  readonly textSecondary: string;
+  readonly textTertiary: string;
+  readonly accent: string;
+  readonly danger: string;
+};
+
+export const DarkPalette: PaletteColors = {
   background: '#0C1016',
   surface: '#151B24',
   surfaceRaised: '#1C2430',
@@ -10,7 +22,26 @@ export const Palette = {
   textTertiary: '#5C6B80',
   accent: '#4DABF7',
   danger: '#FF6B6B',
-} as const;
+};
+
+export const LightPalette: PaletteColors = {
+  background: '#F1F5F9',
+  surface: '#FFFFFF',
+  surfaceRaised: '#E8EDF4',
+  border: '#CBD5E1',
+  text: '#0F172A',
+  textSecondary: '#475569',
+  textTertiary: '#94A3B8',
+  accent: '#228BE6',
+  danger: '#E03131',
+};
+
+/** @deprecated Use usePalette() for theme-aware colors. */
+export const Palette = DarkPalette;
+
+export function getPalette(colorScheme: string | null | undefined): PaletteColors {
+  return colorScheme === 'light' ? LightPalette : DarkPalette;
+}
 
 export const CategoryColors: Record<ElementCategory, string> = {
   'alkali-metal': '#FF6B6B',

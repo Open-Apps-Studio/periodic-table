@@ -62,8 +62,6 @@ export function parseFormula(input: string): MolarMassResult {
   return { formula: input.trim(), molarMass, parts };
 }
 
-const OPEN: Record<string, string> = { ')': '(', ']': '[', '}': '{' };
-
 function parseGroup(segment: string): Counts {
   // Stack of counts per nesting level.
   const stack: Counts[] = [new Map()];

@@ -1,18 +1,20 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
-import { Palette } from '@/constants/theme';
+import { usePalette } from '@/context/theme-context';
 
 export default function TabsLayout() {
+  const palette = usePalette();
+
   return (
     <Tabs
       screenOptions={{
-        headerStyle: { backgroundColor: Palette.background },
+        headerStyle: { backgroundColor: palette.background },
         headerShadowVisible: false,
-        headerTintColor: Palette.text,
-        tabBarStyle: { backgroundColor: Palette.surface, borderTopColor: Palette.border },
-        tabBarActiveTintColor: Palette.accent,
-        tabBarInactiveTintColor: Palette.textTertiary,
-        sceneStyle: { backgroundColor: Palette.background },
+        headerTintColor: palette.text,
+        tabBarStyle: { backgroundColor: palette.surface, borderTopColor: palette.border },
+        tabBarActiveTintColor: palette.accent,
+        tabBarInactiveTintColor: palette.textTertiary,
+        sceneStyle: { backgroundColor: palette.background },
       }}>
       <Tabs.Screen
         name="index"
@@ -25,15 +27,37 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="elements"
         options={{
-          title: 'Elements',
+          title: 'Search',
           tabBarIcon: ({ color, size }) => <Ionicons name="search-outline" size={size} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="list"
+        options={{
+          title: 'List',
+          tabBarIcon: ({ color, size }) => <Ionicons name="list-outline" size={size} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="tables"
+        options={{
+          title: 'Tables',
+          tabBarIcon: ({ color, size }) => <Ionicons name="grid-outline" size={size} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="more"
+        options={{
+          title: 'More',
+          tabBarIcon: ({ color, size }) => <Ionicons name="apps-outline" size={size} color={color} />,
         }}
       />
       <Tabs.Screen
         name="tools"
         options={{
-          title: 'Tools',
-          tabBarIcon: ({ color, size }) => <Ionicons name="flask-outline" size={size} color={color} />,
+          title: 'Calculators',
+          href: null,
+          tabBarIcon: ({ color, size }) => <Ionicons name="calculator-outline" size={size} color={color} />,
         }}
       />
     </Tabs>
