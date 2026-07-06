@@ -1,6 +1,8 @@
-# Periodic Table
+# (Open Source) Periodic Table
 
-A free, open-source, ad-less periodic table app for iOS and Android, built with Expo / React Native. Inspired by the commercial "Periodic Table 2026" apps, powered entirely by open chemistry data.
+A free, open-source, ad-less periodic table app for iOS and Android by [Open Apps Studio](https://github.com/Open-Apps-Studio), built with Expo / React Native. Inspired by the commercial "Periodic Table 2026" apps, powered entirely by open chemistry data.
+
+[Download on the App Store](https://apps.apple.com/app/id6781818611)
 
 ## Features
 
