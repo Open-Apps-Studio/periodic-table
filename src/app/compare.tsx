@@ -6,7 +6,7 @@ import { CategoryColors, CategoryLabels, withAlpha } from '@/constants/theme';
 import { usePalette } from '@/context/theme-context';
 import { ELEMENTS, getElement } from '@/data/elements';
 import { useThemedStyles } from '@/hooks/use-themed-styles';
-import { fmt, fmtKelvin, fmtYear } from '@/lib/format';
+import { fmt, fmtKelvinShort, fmtYear } from '@/lib/format';
 import {
   displayAtomicRadius,
   displayVanDerWaalsRadius,
@@ -263,8 +263,8 @@ function comparisonRows(left: PeriodicElement, right: PeriodicElement): [string,
     row('Block / Phase', (el) => `${el.block}-block / ${el.phase}`),
     row('Atomic mass', (el) => `${fmt(el.atomicMass, 7)} u`),
     row('Density', (el) => (el.densityValue == null ? '—' : `${fmt(el.densityValue, 4)} g/cm³`)),
-    row('Melting point', (el) => fmtKelvin(el.melt)),
-    row('Boiling point', (el) => fmtKelvin(el.boil)),
+    row('Melting point', (el) => fmtKelvinShort(el.melt)),
+    row('Boiling point', (el) => fmtKelvinShort(el.boil)),
     row('Electronegativity', (el) => (el.electronegativity == null ? '—' : fmt(el.electronegativity, 3))),
     row('Atomic radius', (el) => displayAtomicRadius(el) ?? '—'),
     row('Van der Waals', (el) => displayVanDerWaalsRadius(el) ?? '—'),

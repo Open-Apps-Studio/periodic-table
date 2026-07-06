@@ -14,13 +14,17 @@ import { fmt, fmtKelvin, fmtYear } from '@/lib/format';
 import {
   displayAtomicRadius,
   displayVanDerWaalsRadius,
+  fmtConductivity,
   fmtDuration,
   fmtGpa,
+  fmtKjPerMol,
   fmtMolarVolume,
   fmtPercent,
   fmtResistivity,
   fmtSci,
+  fmtSpecificHeat,
   fmtSusceptibility,
+  fmtThermalExpansion,
   fmtUsd,
 } from '@/lib/format-properties';
 
@@ -219,7 +223,12 @@ export default function ElementScreen() {
             ['Boiling point', fmtKelvin(el.boil)],
             ['Critical temperature', fmtKelvin(el.criticalTemperature)],
             ['Critical pressure', el.criticalPressure == null ? '—' : `${fmt(el.criticalPressure, 4)} MPa`],
+            ['Curie point', fmtKelvin(el.curiePoint)],
             ['Molar heat', el.molarHeat == null ? '—' : `${fmt(el.molarHeat, 4)} J/(mol·K)`],
+            ['Specific heat', fmtSpecificHeat(el.specificHeat) ?? '—'],
+            ['Heat of fusion', fmtKjPerMol(el.heatOfFusion) ?? '—'],
+            ['Heat of vaporization', fmtKjPerMol(el.heatOfVaporization) ?? '—'],
+            ['Thermal expansion', fmtThermalExpansion(el.thermalExpansion) ?? '—'],
             ['Molar volume', fmtMolarVolume(el.molarVolume) ?? '—'],
             ['Gas phase', el.gasPhase ?? '—'],
           ]}
@@ -246,7 +255,9 @@ export default function ElementScreen() {
           rows={[
             ['Crystal structure', el.crystalStructure ?? '—'],
             ['Magnetic type', el.magneticType == null ? '—' : el.magneticType.charAt(0).toUpperCase() + el.magneticType.slice(1)],
+            ['Electrical type', el.electricalType ?? '—'],
             ['Thermal conductivity', el.thermalConductivity == null ? '—' : `${fmt(el.thermalConductivity, 5)} W/(m·K)`],
+            ['Electrical conductivity', fmtConductivity(el.electricalConductivity) ?? '—'],
             ['Electrical resistivity', fmtResistivity(el.resistivity) ?? '—'],
             ['Speed of sound', el.speedOfSound == null ? '—' : `${fmt(el.speedOfSound, 5)} m/s`],
             ['Refractive index', el.refractiveIndex == null ? '—' : fmt(el.refractiveIndex, 6)],

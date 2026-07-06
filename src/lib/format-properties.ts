@@ -63,6 +63,27 @@ export function fmtPercent(value: number | null | undefined): string | null {
   return `${fmt(value, 3)}%`;
 }
 
+export function fmtSpecificHeat(value: number | null | undefined): string | null {
+  if (value == null) return null;
+  return `${fmt(value, 4)} J/(g·K)`;
+}
+
+export function fmtKjPerMol(value: number | null | undefined): string | null {
+  if (value == null) return null;
+  return `${fmt(value, 4)} kJ/mol`;
+}
+
+export function fmtThermalExpansion(value: number | null | undefined): string | null {
+  if (value == null) return null;
+  // Values are ~1e-5 /K; show in µm/(m·K) so they read as small whole-ish numbers.
+  return `${fmt(value * 1e6, 3)} µm/(m·K)`;
+}
+
+export function fmtConductivity(value: number | null | undefined): string | null {
+  if (value == null) return null;
+  return `${fmtSci(value, 2)} S/m`;
+}
+
 export function displayAtomicRadius(el: {
   empiricalRadius: number | null;
   calculatedRadius: number | null;
