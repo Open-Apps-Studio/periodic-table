@@ -41,21 +41,21 @@ export default function QrScreen() {
   const shareApp = async () => {
     await Share.share({
       title: 'Periodic Table',
-      message: 'Free, open-source, ad-free periodic table app.',
+      message: 'Free, open-source, ad-free periodic table app. https://apps.apple.com/app/id6781818611',
     });
   };
 
   return (
     <>
-      <Stack.Screen options={{ title: 'QR-Code' }} />
+      <Stack.Screen options={{ title: 'Share the App' }} />
       <View style={styles.container}>
-        <Text style={styles.title}>Install QR</Text>
+        <Text style={styles.title}>Pass it on</Text>
         <Text style={styles.body}>
           Scan this code from another device or use the share button to send the app link.
         </Text>
         <View style={styles.qrCard}>
           <Image source={require('../../assets/install-qr.png')} style={styles.qrImage} contentFit="contain" />
-          <Text style={styles.caption}>Bundled install/share QR. Replace the asset when the public store URL changes.</Text>
+          <Text style={styles.caption}>Opens the app on the App Store.</Text>
         </View>
         <Pressable style={styles.actionButton} onPress={shareApp}>
           <Ionicons name="share-social-outline" size={18} color={palette.accent} />

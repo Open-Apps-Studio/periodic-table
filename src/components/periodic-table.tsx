@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { Pressable, Text, View } from 'react-native';
 import { ELEMENTS } from '@/data/elements';
 import { CategoryColors, withAlpha } from '@/constants/theme';
-import { usePalette } from '@/context/theme-context';
+import { usePalette, useThemeScheme } from '@/context/theme-context';
 import { useThemedStyles } from '@/hooks/use-themed-styles';
 import { formatCellField } from '@/lib/cell-fields';
 import { DisplayMode, heatOf, heatRange } from '@/lib/display-modes';
@@ -172,21 +172,22 @@ const ElementCell = memo(function ElementCell({
   onPress: (el: PeriodicElement) => void;
 }) {
   const palette = usePalette();
+  const isDark = useThemeScheme() === 'dark';
   const categoryColor = CategoryColors[el.category];
 
   let background: string;
   let border: string;
   if (heatMode) {
     if (heat !== null) {
-      background = withAlpha(palette.accent, 0.06 + heat * 0.72);
-      border = withAlpha(palette.accent, 0.25 + heat * 0.5);
+      background = withAlpha(palette.accent, 0.08 + heat * 0.78);
+      border = withAlpha(palette.accent, 0.3 + heat * 0.5);
     } else {
       background = withAlpha('#868E96', 0.08);
       border = withAlpha('#868E96', 0.25);
     }
   } else {
-    background = withAlpha(categoryColor, 0.16);
-    border = withAlpha(categoryColor, 0.55);
+    background = withAlpha(categoryColor, isDark ? 0.44 : 0.42);
+    border = withAlpha(categoryColor, isDark ? 0.85 : 0.9);
   }
 
   return (

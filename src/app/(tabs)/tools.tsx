@@ -47,17 +47,20 @@ export default function ToolsScreen() {
     container: { flex: 1, backgroundColor: p.background },
     content: { padding: 16, gap: 14, paddingBottom: 32 },
     segmented: {
-      flexDirection: 'row',
-      gap: 8,
+      flexGrow: 0,
       backgroundColor: p.surface,
       borderRadius: 16,
       borderWidth: 1,
       borderColor: p.border,
+    },
+    segmentedContent: {
+      flexDirection: 'row',
+      gap: 6,
       padding: 5,
     },
     segment: {
-      flex: 1,
       minHeight: 38,
+      paddingHorizontal: 13,
       borderRadius: 12,
       alignItems: 'center',
       justifyContent: 'center',
@@ -237,7 +240,11 @@ export default function ToolsScreen() {
       style={styles.container}
       contentContainerStyle={styles.content}
       keyboardShouldPersistTaps="handled">
-      <View style={styles.segmented}>
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        style={styles.segmented}
+        contentContainerStyle={styles.segmentedContent}>
         {TOOL_TABS.map((tab) => {
           const active = activeTab === tab.id;
           return (
@@ -250,7 +257,7 @@ export default function ToolsScreen() {
             </Pressable>
           );
         })}
-      </View>
+      </ScrollView>
 
       {activeTab === 'calculator' && (
       <View style={styles.card}>

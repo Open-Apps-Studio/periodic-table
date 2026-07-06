@@ -60,12 +60,13 @@ function ZoomableInner({
   const fitScale = viewportWidth / contentWidth;
   const minScale = fitScale * minScaleFactor;
 
+  const initialTy = Math.max(0, (viewportHeight - contentHeight * fitScale) / 2);
   const scale = useSharedValue(fitScale);
   const tx = useSharedValue(0);
-  const ty = useSharedValue(Math.max(0, (viewportHeight - contentHeight * fitScale) / 2));
+  const ty = useSharedValue(initialTy);
   const savedScale = useSharedValue(fitScale);
   const savedTx = useSharedValue(0);
-  const savedTy = useSharedValue(ty.get());
+  const savedTy = useSharedValue(initialTy);
 
   const clampX = (x: number, s: number) => {
     'worklet';

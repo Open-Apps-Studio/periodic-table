@@ -178,29 +178,6 @@ export default function ElementScreen() {
           </View>
         </View>
 
-        <View style={styles.card}>
-          <Text style={styles.sectionTitle}>Element Notes</Text>
-          <View style={styles.noteActions}>
-            <Pressable style={styles.favoriteButton} onPress={() => toggleFavorite(el.number)}>
-              <Ionicons name={noteEntry.favorite ? 'heart' : 'heart-outline'} size={17} color="#E64980" />
-              <Text style={styles.favoriteText}>{noteEntry.favorite ? 'Favorited' : 'Add favorite'}</Text>
-            </Pressable>
-            <Pressable style={styles.favoriteButton} onPress={() => router.push('/notes' as never)}>
-              <Ionicons name="reader-outline" size={17} color="#E64980" />
-              <Text style={styles.favoriteText}>All notes</Text>
-            </Pressable>
-          </View>
-          <TextInput
-            style={styles.noteInput}
-            placeholder={`Private note for ${el.name}`}
-            placeholderTextColor={palette.textTertiary}
-            value={noteEntry.note}
-            onChangeText={(text) => setNote(el.number, text)}
-            multiline
-            autoCorrect
-          />
-        </View>
-
         {/* Photo */}
         {el.image && (
           <View style={styles.card}>
@@ -268,7 +245,7 @@ export default function ElementScreen() {
           title="Material Properties"
           rows={[
             ['Crystal structure', el.crystalStructure ?? '—'],
-            ['Magnetic type', el.magneticType ?? '—'],
+            ['Magnetic type', el.magneticType == null ? '—' : el.magneticType.charAt(0).toUpperCase() + el.magneticType.slice(1)],
             ['Thermal conductivity', el.thermalConductivity == null ? '—' : `${fmt(el.thermalConductivity, 5)} W/(m·K)`],
             ['Electrical resistivity', fmtResistivity(el.resistivity) ?? '—'],
             ['Speed of sound', el.speedOfSound == null ? '—' : `${fmt(el.speedOfSound, 5)} m/s`],
@@ -342,6 +319,29 @@ export default function ElementScreen() {
             ['RTEC Number', el.rtecNumber ?? '—'],
           ]}
         />
+
+        <View style={styles.card}>
+          <Text style={styles.sectionTitle}>Notes & Favorites</Text>
+          <View style={styles.noteActions}>
+            <Pressable style={styles.favoriteButton} onPress={() => toggleFavorite(el.number)}>
+              <Ionicons name={noteEntry.favorite ? 'heart' : 'heart-outline'} size={17} color="#E64980" />
+              <Text style={styles.favoriteText}>{noteEntry.favorite ? 'Favorited' : 'Add favorite'}</Text>
+            </Pressable>
+            <Pressable style={styles.favoriteButton} onPress={() => router.push('/notes' as never)}>
+              <Ionicons name="reader-outline" size={17} color="#E64980" />
+              <Text style={styles.favoriteText}>All notes</Text>
+            </Pressable>
+          </View>
+          <TextInput
+            style={styles.noteInput}
+            placeholder={`Private note for ${el.name}`}
+            placeholderTextColor={palette.textTertiary}
+            value={noteEntry.note}
+            onChangeText={(text) => setNote(el.number, text)}
+            multiline
+            autoCorrect
+          />
+        </View>
 
         <Pressable style={styles.wikiButton} onPress={() => Linking.openURL(el.wikipediaUrl)}>
           <Ionicons name="globe-outline" size={16} color={palette.accent} />

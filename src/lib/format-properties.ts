@@ -37,7 +37,8 @@ export function fmtGpa(value: number | null | undefined): string | null {
 
 export function fmtMolarVolume(value: number | null | undefined): string | null {
   if (value == null) return null;
-  return `${fmtSci(value, 2)} m³/mol`;
+  // Stored in m³/mol; display in cm³/mol so values read naturally (7.09 cm³/mol).
+  return `${fmt(value * 1e6, 4)} cm³/mol`;
 }
 
 export function fmtResistivity(value: number | null | undefined): string | null {

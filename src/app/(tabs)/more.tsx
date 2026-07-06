@@ -1,11 +1,13 @@
-import { Modal, Pressable, ScrollView, Share, Text, View } from 'react-native';
+import { Linking, Modal, Pressable, ScrollView, Share, Text, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { withAlpha } from '@/constants/theme';
-import { usePalette } from '@/context/theme-context';
+import { usePalette, useThemePreference, type ThemePreference } from '@/context/theme-context';
 import { useThemedStyles } from '@/hooks/use-themed-styles';
+
+const APP_STORE_URL = 'https://apps.apple.com/app/id6781818611';
 
 type FeatureId =
   | 'isotopes'
@@ -26,7 +28,6 @@ interface FeatureCard {
   subtitle: string;
   icon: keyof typeof Ionicons.glyphMap;
   accent: string;
-  status: 'Free' | 'Local' | 'Info';
   route?: string;
   details: string[];
 }
@@ -38,7 +39,6 @@ const FEATURE_CARDS: FeatureCard[] = [
     subtitle: 'Stable and radioactive isotope notes for common classroom work.',
     icon: 'radio-outline',
     accent: '#495057',
-    status: 'Free',
     route: '/isotopes',
     details: [
       '3,383 ground-state nuclides from the IAEA LiveChart API.',
@@ -53,7 +53,6 @@ const FEATURE_CARDS: FeatureCard[] = [
     subtitle: 'Pick any two elements and compare properties side-by-side.',
     icon: 'git-compare-outline',
     accent: '#7950F2',
-    status: 'Free',
     route: '/compare',
     details: [
       'Compare atomic, physical, material, abundance, isotope, discovery, and market-price fields.',
@@ -65,7 +64,6 @@ const FEATURE_CARDS: FeatureCard[] = [
     subtitle: 'Graph element properties across periods and the f-block.',
     icon: 'analytics-outline',
     accent: '#F77F00',
-    status: 'Free',
     route: '/trends',
     details: [
       'Graph every numeric property exposed in the element list.',
@@ -79,7 +77,6 @@ const FEATURE_CARDS: FeatureCard[] = [
     subtitle: 'A compact chemistry glossary without accounts or paid gates.',
     icon: 'book-outline',
     accent: '#6C757D',
-    status: 'Free',
     route: '/dictionary',
     details: [
       'Search compact chemistry definitions by term, category, example, or tag.',
@@ -93,7 +90,6 @@ const FEATURE_CARDS: FeatureCard[] = [
     subtitle: 'Local study notes and favorites stored on this device.',
     icon: 'heart-outline',
     accent: '#E64980',
-    status: 'Local',
     route: '/notes',
     details: [
       'Pin favorite elements from the element detail screen.',
@@ -104,10 +100,9 @@ const FEATURE_CARDS: FeatureCard[] = [
   {
     id: 'reactions',
     title: 'Chemical reactions',
-    subtitle: 'Qualitative reactions and prediction helpers are available for free.',
+    subtitle: 'Balance equations and browse common reactions with observations.',
     icon: 'flask-outline',
     accent: '#2D936C',
-    status: 'Free',
     route: '/reactions',
     details: [
       'Balance molecular equations from formulas.',
@@ -117,16 +112,14 @@ const FEATURE_CARDS: FeatureCard[] = [
   },
   {
     id: 'qr',
-    title: 'QR-Code',
-    subtitle: 'Install and share the app from the same place.',
+    title: 'Share the app',
+    subtitle: 'QR code and share sheet for sending the app to a friend.',
     icon: 'qr-code-outline',
     accent: '#118AB2',
-    status: 'Free',
     route: '/qr',
     details: [
-      'The project already includes assets/install-qr.png for install sharing.',
-      'Release builds can update this card with the final App Store or TestFlight URL.',
-      'The Share row below opens the native share sheet right now.',
+      'Scan the QR code from another device to open the App Store page.',
+      'Or use the share button to send the link directly.',
     ],
   },
   {
@@ -135,7 +128,6 @@ const FEATURE_CARDS: FeatureCard[] = [
     subtitle: 'Molar mass, amount of substance, concentration, solubility, and reference tables.',
     icon: 'calculator-outline',
     accent: '#228BE6',
-    status: 'Free',
     route: '/tools',
     details: [
       'Molar mass calculator parses nested groups and hydrate dots.',
@@ -149,7 +141,6 @@ const FEATURE_CARDS: FeatureCard[] = [
     subtitle: 'Short learning cards without accounts, ads, or locked progress.',
     icon: 'school-outline',
     accent: '#2F9E44',
-    status: 'Free',
     route: '/academy',
     details: [
       'Short lesson cards for trends, isotopes, ions, bonding, reactions, moles, solubility, and radioactivity.',
@@ -159,21 +150,21 @@ const FEATURE_CARDS: FeatureCard[] = [
   },
 ];
 
-const SETTINGS = [
-  ['Theme', 'Uses the device light/dark setting automatically.'],
-  ['Table form', 'Full 18-column table is active. Compact 8-group mode is intentionally not on by default.'],
-  ['Font size', 'System font scaling is respected where React Native exposes it.'],
+const THEME_OPTIONS: Array<{ id: ThemePreference; label: string }> = [
+  { id: 'system', label: 'System' },
+  { id: 'light', label: 'Light' },
+  { id: 'dark', label: 'Dark' },
 ];
 
 export default function MoreScreen() {
   const router = useRouter();
   const palette = usePalette();
   const insets = useSafeAreaInsets();
+  const { preference, setPreference } = useThemePreference();
   const [selected, setSelected] = useState<FeatureCard | null>(null);
   const styles = useThemedStyles((p) => ({
     container: { flex: 1, backgroundColor: p.background },
     content: { padding: 14, paddingBottom: 96, gap: 14 },
-    title: { color: p.text, fontSize: 18, fontWeight: '900', textAlign: 'center', marginBottom: 2 },
     grid: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
     feature: {
       minHeight: 98,
@@ -184,21 +175,11 @@ export default function MoreScreen() {
       padding: 10,
       overflow: 'hidden',
     },
-    wide: { width: '49%' },
+    wide: { width: '48%', flexGrow: 1 },
     full: { width: '100%' },
     featureIcon: { width: 34, height: 34, borderRadius: 17, alignItems: 'center', justifyContent: 'center', marginBottom: 8 },
     featureTitle: { color: p.text, fontSize: 13.5, fontWeight: '900' },
     featureSubtitle: { color: p.textSecondary, fontSize: 11.5, lineHeight: 16, marginTop: 3, paddingRight: 4 },
-    badge: {
-      position: 'absolute',
-      top: 8,
-      right: 8,
-      borderRadius: 8,
-      paddingHorizontal: 6,
-      paddingVertical: 3,
-      backgroundColor: p.surfaceRaised,
-    },
-    badgeText: { color: p.textSecondary, fontSize: 10, fontWeight: '900' },
     section: {
       backgroundColor: p.surface,
       borderRadius: 14,
@@ -217,9 +198,28 @@ export default function MoreScreen() {
     sectionTitle: { color: p.text, fontSize: 15, fontWeight: '900' },
     settingRow: { flexDirection: 'row', gap: 12, paddingHorizontal: 14, paddingVertical: 12, borderTopWidth: 0.5, borderTopColor: p.border },
     settingIcon: { width: 30, alignItems: 'center', paddingTop: 2 },
-    settingBody: { flex: 1, gap: 2 },
+    settingBody: { flex: 1, gap: 8 },
     settingName: { color: p.text, fontSize: 14, fontWeight: '900' },
     settingText: { color: p.textSecondary, fontSize: 12.5, lineHeight: 18 },
+    themeSegments: {
+      flexDirection: 'row',
+      gap: 6,
+      backgroundColor: p.surfaceRaised,
+      borderRadius: 12,
+      borderWidth: 1,
+      borderColor: p.border,
+      padding: 4,
+    },
+    themeSegment: {
+      flex: 1,
+      minHeight: 34,
+      borderRadius: 9,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    themeSegmentActive: { backgroundColor: withAlpha(p.accent, 0.16) },
+    themeSegmentText: { color: p.textSecondary, fontSize: 12.5, fontWeight: '800' },
+    themeSegmentTextActive: { color: p.accent },
     aboutText: { color: p.textSecondary, fontSize: 13, lineHeight: 20, padding: 14 },
     linkRow: {
       minHeight: 50,
@@ -281,13 +281,12 @@ export default function MoreScreen() {
   const shareApp = async () => {
     await Share.share({
       title: 'Periodic Table',
-      message: 'Free, open-source, ad-free periodic table app.',
+      message: `Free, open-source, ad-free periodic table app. ${APP_STORE_URL}`,
     });
   };
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-      <Text style={styles.title}>Other</Text>
       <View style={styles.grid}>
         {FEATURE_CARDS.map((item, index) => (
           <Pressable
@@ -295,7 +294,7 @@ export default function MoreScreen() {
             onPress={() => openFeature(item)}
             style={({ pressed }) => [
               styles.feature,
-              index === 0 || index === 3 || item.title === 'QR-Code' ? styles.full : styles.wide,
+              index === 0 ? styles.full : styles.wide,
               { backgroundColor: withAlpha(item.accent, 0.09), borderColor: withAlpha(item.accent, 0.24) },
               pressed && { opacity: 0.65 },
             ]}>
@@ -304,9 +303,6 @@ export default function MoreScreen() {
             </View>
             <Text style={styles.featureTitle}>{item.title}</Text>
             <Text style={styles.featureSubtitle}>{item.subtitle}</Text>
-            <View style={styles.badge}>
-              <Text style={[styles.badgeText, item.status === 'Free' && { color: palette.accent }]}>{item.status}</Text>
-            </View>
           </Pressable>
         ))}
       </View>
@@ -316,17 +312,29 @@ export default function MoreScreen() {
           <Ionicons name="settings-outline" size={18} color={palette.accent} />
           <Text style={styles.sectionTitle}>Settings</Text>
         </View>
-        {SETTINGS.map(([name, text]) => (
-          <View key={name} style={styles.settingRow}>
-            <View style={styles.settingIcon}>
-              <Ionicons name="options-outline" size={17} color={palette.textTertiary} />
-            </View>
-            <View style={styles.settingBody}>
-              <Text style={styles.settingName}>{name}</Text>
-              <Text style={styles.settingText}>{text}</Text>
+        <View style={styles.settingRow}>
+          <View style={styles.settingIcon}>
+            <Ionicons name="contrast-outline" size={17} color={palette.textTertiary} />
+          </View>
+          <View style={styles.settingBody}>
+            <Text style={styles.settingName}>Theme</Text>
+            <View style={styles.themeSegments}>
+              {THEME_OPTIONS.map((option) => {
+                const active = preference === option.id;
+                return (
+                  <Pressable
+                    key={option.id}
+                    onPress={() => setPreference(option.id)}
+                    style={[styles.themeSegment, active && styles.themeSegmentActive]}>
+                    <Text style={[styles.themeSegmentText, active && styles.themeSegmentTextActive]}>
+                      {option.label}
+                    </Text>
+                  </Pressable>
+                );
+              })}
             </View>
           </View>
-        ))}
+        </View>
       </View>
 
       <View style={styles.section}>
@@ -335,8 +343,17 @@ export default function MoreScreen() {
           <Text style={styles.sectionTitle}>About</Text>
         </View>
         <Text style={styles.aboutText}>
-          Periodic Table is a free, open-source, ad-free chemistry reference. Element data comes from open datasets with attribution, and premium-style features are treated as normal app features.
+          Periodic Table is a free, open-source chemistry reference by Open Apps Studio. No ads, no
+          paywalls, no accounts — every feature is included. Element data comes from open chemistry
+          datasets with attribution.
         </Text>
+        <Pressable
+          style={({ pressed }) => [styles.linkRow, pressed && { opacity: 0.6 }]}
+          onPress={() => Linking.openURL(`${APP_STORE_URL}?action=write-review`)}>
+          <Ionicons name="star-outline" size={18} color={palette.textTertiary} />
+          <Text style={styles.linkText}>Rate on the App Store</Text>
+          <Ionicons name="chevron-forward" size={16} color={palette.textTertiary} />
+        </Pressable>
         <Pressable style={({ pressed }) => [styles.linkRow, pressed && { opacity: 0.6 }]} onPress={shareApp}>
           <Ionicons name="share-social-outline" size={18} color={palette.textTertiary} />
           <Text style={styles.linkText}>Share the app</Text>

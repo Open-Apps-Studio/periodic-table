@@ -152,7 +152,6 @@ export default function TablesScreen() {
   const styles = useThemedStyles((p) => ({
     container: { flex: 1, backgroundColor: p.background },
     content: { padding: 14, gap: 10, paddingBottom: 96 },
-    title: { color: p.text, fontSize: 18, fontWeight: '900', textAlign: 'center', marginBottom: 6 },
     tableCard: {
       minHeight: 86,
       flexDirection: 'row',
@@ -200,7 +199,6 @@ export default function TablesScreen() {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-      <Text style={styles.title}>Tables</Text>
       {TABLES.map((item) => {
         const active = item.id === openId;
         return (
