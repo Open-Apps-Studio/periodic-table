@@ -46,6 +46,20 @@ export interface PeriodicElement {
   boil: number | null;
   /** J/(mol·K) */
   molarHeat: number | null;
+  /** J/(g·K) */
+  specificHeat: number | null;
+  /** kJ/mol */
+  heatOfFusion: number | null;
+  /** kJ/mol */
+  heatOfVaporization: number | null;
+  /** 1/K (linear coefficient of thermal expansion) */
+  thermalExpansion: number | null;
+  /** Kelvin; only defined for ferromagnetic elements */
+  curiePoint: number | null;
+  /** Conductor | Semiconductor | Insulator */
+  electricalType: string | null;
+  /** S/m */
+  electricalConductivity: number | null;
   shells: number[];
   electronConfiguration: string;
   electronConfigurationFull: string;

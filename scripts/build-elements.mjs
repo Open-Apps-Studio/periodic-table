@@ -112,6 +112,28 @@ const discoveryYear = (pubChemYear, ptableYear) => {
   return firstNumber(pubChemYear, ptableNumericYear);
 };
 
+// Several upstream datasets stuff a date ("5000 BC") or a place ("Middle East",
+// "Ancient Egypt") into the discoverer field for elements known since antiquity.
+// Those are not people, so treat them as "discoverer unknown" and let the
+// location/year fields carry that information instead.
+const looksLikePerson = (value) => {
+  if (typeof value !== 'string') return false;
+  const v = value.trim();
+  if (!v) return false;
+  if (/\d/.test(v)) return false; // dates like "5000 BC", "before 3000 BC"
+  if (/\b(bc|bce|ad|ce)\b/i.test(v)) return false;
+  if (/unknown|prehist|antiquit|ancient|middle east|mesopotam|arabia|asia|europe|africa|china|egypt|india|region/i.test(v)) {
+    return false;
+  }
+  return true;
+};
+const cleanDiscoverer = (...values) => {
+  for (const value of values) {
+    if (looksLikePerson(value)) return value.trim();
+  }
+  return null;
+};
+
 const elements = bowser
   .filter((el) => el.number <= 118)
   .map((el) => {
@@ -131,6 +153,12 @@ const elements = bowser
     const isStable = pt.half_life === 'Stable' && pt.lifetime === 'Stable';
     const isRadioactive = isStable ? false : halfLife != null || lifetime != null ? true : null;
 
+    const heat = pt.heat ?? {};
+    // Source stores specific heat in J/(kg·K); express per gram to match reference apps.
+    const specificHeatKg = num(heat.specific);
+    // Source stores electric conductivity in MS/m (10⁶ S/m).
+    const electricConductivityMS = num(pt.conductivity?.electric);
+
     return {
       number: el.number,
       symbol: el.symbol,
@@ -147,6 +175,13 @@ const elements = bowser
       melt: firstNumber(el.melt, pc.MeltingPoint, pt.melting_point),
       boil: firstNumber(el.boil, pc.BoilingPoint, pt.boiling_point),
       molarHeat: firstNumber(el.molar_heat, pt.heat?.molar),
+      specificHeat: specificHeatKg == null ? null : specificHeatKg / 1000,
+      heatOfFusion: num(heat.fusion),
+      heatOfVaporization: num(heat.vaporization),
+      thermalExpansion: num(pt.thermal_expansion),
+      curiePoint: num(pt.curie_point),
+      electricalType: firstString(pt.electrical_type),
+      electricalConductivity: electricConductivityMS == null ? null : electricConductivityMS * 1e6,
       shells: el.shells,
       electronConfiguration: el.electron_configuration_semantic,
       electronConfigurationFull: el.electron_configuration,
@@ -156,7 +191,7 @@ const elements = bowser
       atomicRadius: num(pc.AtomicRadius),
       oxidationStates: pc.OxidationStates || null,
       cpkHex: firstString(el['cpk-hex'], pc.CPKHexColor?.toLowerCase(), pt.cpk_hex),
-      discoveredBy: firstString(el.discovered_by, pt.discovered?.by, wd.discoverers),
+      discoveredBy: cleanDiscoverer(pt.discovered?.by, wd.discoverers, el.discovered_by),
       namedBy: el.named_by,
       yearDiscovered: discoveryYear(yearRaw, pt.discovered?.year),
       appearance: el.appearance,
