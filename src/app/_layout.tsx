@@ -47,6 +47,7 @@ function ThemedNavigation() {
         }}>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="element/[number]" options={{ title: '', headerBackTitle: 'Back' }} />
+        <Stack.Screen name="model/[number]" options={{ title: '3D Model', headerBackTitle: 'Back' }} />
         <Stack.Screen name="isotopes" options={{ title: 'Isotopes', headerBackTitle: 'Back' }} />
         <Stack.Screen name="compare" options={{ title: 'Compare Elements', headerBackTitle: 'Back' }} />
         <Stack.Screen name="notes" options={{ title: 'Element Notes', headerBackTitle: 'Back' }} />

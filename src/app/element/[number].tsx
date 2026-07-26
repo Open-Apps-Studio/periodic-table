@@ -21,7 +21,6 @@ import {
   fmtMolarVolume,
   fmtPercent,
   fmtResistivity,
-  fmtSci,
   fmtSpecificHeat,
   fmtSusceptibility,
   fmtThermalExpansion,
@@ -34,13 +33,13 @@ export default function ElementScreen() {
   const { getEntry, setNote, toggleFavorite } = useElementNotes();
   const styles = useThemedStyles((p) => ({
     container: { flex: 1, backgroundColor: p.background },
-    content: { padding: 16, paddingBottom: 40, gap: 14 },
+    content: { width: '100%', maxWidth: 760, alignSelf: 'center', padding: 16, paddingBottom: 40, gap: 14 },
     center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
     navButtons: { flexDirection: 'row', gap: 4 },
     navButton: {
-      width: 32,
-      height: 32,
-      borderRadius: 16,
+      width: 34,
+      height: 34,
+      borderRadius: 17,
       backgroundColor: p.surfaceRaised,
       alignItems: 'center',
       justifyContent: 'center',
@@ -109,8 +108,8 @@ export default function ElementScreen() {
       borderTopWidth: StyleSheet.hairlineWidth,
       borderTopColor: p.border,
     },
-    propLabel: { color: p.textTertiary, fontSize: 13.5 },
-    propValue: { color: p.text, fontSize: 13.5, fontWeight: '600', flexShrink: 1, textAlign: 'right' },
+    propLabel: { color: p.textSecondary, fontSize: 13.5, lineHeight: 19, flex: 1 },
+    propValue: { color: p.text, fontSize: 13.5, lineHeight: 19, fontWeight: '600', flex: 1.35, textAlign: 'right' },
     wikiButton: {
       flexDirection: 'row',
       alignItems: 'center',
@@ -155,15 +154,18 @@ export default function ElementScreen() {
           title: el.name,
           headerRight: () => (
             <View style={styles.navButtons}>
-              <NavButton styles={styles} palette={palette} icon={noteEntry.favorite ? 'heart' : 'heart-outline'} disabled={false} onPress={() => toggleFavorite(el.number)} color={noteEntry.favorite ? '#E64980' : undefined} />
-              <NavButton styles={styles} palette={palette} icon="git-compare-outline" disabled={false} onPress={() => router.push(`/compare?left=${el.number}` as never)} />
-              <NavButton styles={styles} palette={palette} icon="chevron-back" disabled={el.number <= 1} onPress={() => goTo(el.number - 1)} />
-              <NavButton styles={styles} palette={palette} icon="chevron-forward" disabled={el.number >= 118} onPress={() => goTo(el.number + 1)} />
+              <NavButton styles={styles} palette={palette} label={noteEntry.favorite ? `Remove ${el.name} from favorites` : `Add ${el.name} to favorites`} icon={noteEntry.favorite ? 'heart' : 'heart-outline'} disabled={false} onPress={() => toggleFavorite(el.number)} color={noteEntry.favorite ? '#E64980' : undefined} />
+              <NavButton styles={styles} palette={palette} label={`Compare ${el.name}`} icon="git-compare-outline" disabled={false} onPress={() => router.push(`/compare?left=${el.number}` as never)} />
+              <NavButton styles={styles} palette={palette} label="Previous element" icon="chevron-back" disabled={el.number <= 1} onPress={() => goTo(el.number - 1)} />
+              <NavButton styles={styles} palette={palette} label="Next element" icon="chevron-forward" disabled={el.number >= 118} onPress={() => goTo(el.number + 1)} />
             </View>
           ),
         }}
       />
-      <ScrollView style={styles.container} contentContainerStyle={styles.content}>
+      <ScrollView
+        style={styles.container}
+        contentContainerStyle={styles.content}
+        contentInsetAdjustmentBehavior="automatic">
         {/* Hero */}
         <View style={[styles.hero, { borderColor: withAlpha(color, 0.45), backgroundColor: withAlpha(color, 0.1) }]}>
           <View style={[styles.heroTile, { borderColor: withAlpha(color, 0.6), backgroundColor: withAlpha(color, 0.18) }]}>
@@ -194,7 +196,7 @@ export default function ElementScreen() {
         {/* Summary */}
         <View style={styles.card}>
           <Text style={styles.sectionTitle}>Overview</Text>
-          <Text style={styles.summary}>{el.summary}</Text>
+          <Text style={styles.summary} selectable>{el.summary}</Text>
           {el.appearance && <PropertyRow styles={styles} label="Appearance" value={el.appearance} />}
           <PropertyRow styles={styles} label="CAS Number" value={el.casNumber == null ? '—' : `CAS${el.casNumber}`} />
           <PropertyRow styles={styles} label="Cost per 100 grams" value={price} />
@@ -301,7 +303,7 @@ export default function ElementScreen() {
             ['Neutron mass absorption', el.neutronMassAbsorption == null ? '—' : `${fmt(el.neutronMassAbsorption, 4)} m²/kg`],
           ]}
         />
-        <Pressable style={styles.wikiButton} onPress={() => router.push(`/isotopes?q=${encodeURIComponent(el.name)}` as never)}>
+        <Pressable accessibilityRole="button" style={styles.wikiButton} onPress={() => router.push(`/isotopes?q=${encodeURIComponent(el.name)}` as never)}>
           <Ionicons name="radio-outline" size={16} color={palette.accent} />
           <Text style={styles.wikiText}>Browse {el.symbol} isotopes</Text>
         </Pressable>
@@ -334,11 +336,11 @@ export default function ElementScreen() {
         <View style={styles.card}>
           <Text style={styles.sectionTitle}>Notes & Favorites</Text>
           <View style={styles.noteActions}>
-            <Pressable style={styles.favoriteButton} onPress={() => toggleFavorite(el.number)}>
+            <Pressable accessibilityRole="button" style={styles.favoriteButton} onPress={() => toggleFavorite(el.number)}>
               <Ionicons name={noteEntry.favorite ? 'heart' : 'heart-outline'} size={17} color="#E64980" />
               <Text style={styles.favoriteText}>{noteEntry.favorite ? 'Favorited' : 'Add favorite'}</Text>
             </Pressable>
-            <Pressable style={styles.favoriteButton} onPress={() => router.push('/notes' as never)}>
+            <Pressable accessibilityRole="button" style={styles.favoriteButton} onPress={() => router.push('/notes' as never)}>
               <Ionicons name="reader-outline" size={17} color="#E64980" />
               <Text style={styles.favoriteText}>All notes</Text>
             </Pressable>
@@ -354,20 +356,24 @@ export default function ElementScreen() {
           />
         </View>
 
-        <Pressable style={styles.wikiButton} onPress={() => Linking.openURL(el.wikipediaUrl)}>
+        <Pressable accessibilityRole="link" style={styles.wikiButton} onPress={() => Linking.openURL(el.wikipediaUrl)}>
           <Ionicons name="globe-outline" size={16} color={palette.accent} />
           <Text style={styles.wikiText}>Read more on Wikipedia</Text>
         </Pressable>
         {el.spectralImage && (
-          <Pressable style={styles.wikiButton} onPress={() => Linking.openURL(el.spectralImage!)}>
+          <Pressable accessibilityRole="link" style={styles.wikiButton} onPress={() => Linking.openURL(el.spectralImage!)}>
             <Ionicons name="analytics-outline" size={16} color={palette.accent} />
             <Text style={styles.wikiText}>Open spectral image</Text>
           </Pressable>
         )}
         {el.bohrModel3d && (
-          <Pressable style={styles.wikiButton} onPress={() => Linking.openURL(el.bohrModel3d!)}>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityHint="Opens an interactive model viewer"
+            style={styles.wikiButton}
+            onPress={() => router.push(`/model/${el.number}` as never)}>
             <Ionicons name="cube-outline" size={16} color={palette.accent} />
-            <Text style={styles.wikiText}>Open 3D Bohr model</Text>
+            <Text style={styles.wikiText}>View interactive 3D model</Text>
           </Pressable>
         )}
       </ScrollView>
@@ -378,6 +384,7 @@ export default function ElementScreen() {
 function NavButton({
   styles,
   palette,
+  label,
   icon,
   disabled,
   onPress,
@@ -385,13 +392,21 @@ function NavButton({
 }: {
   styles: { navButton: object };
   palette: ReturnType<typeof usePalette>;
+  label: string;
   icon: keyof typeof Ionicons.glyphMap;
   disabled: boolean;
   onPress: () => void;
   color?: string;
 }) {
   return (
-    <Pressable onPress={onPress} disabled={disabled} hitSlop={6} style={[styles.navButton, disabled && { opacity: 0.3 }]}>
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={label}
+      accessibilityState={{ disabled }}
+      onPress={onPress}
+      disabled={disabled}
+      hitSlop={6}
+      style={[styles.navButton, disabled && { opacity: 0.3 }]}>
       <Ionicons name={icon} size={20} color={color ?? palette.text} />
     </Pressable>
   );
@@ -429,8 +444,8 @@ function PropertyRow({
 }) {
   return (
     <View style={styles.propRow}>
-      <Text style={styles.propLabel}>{label}</Text>
-      <Text style={styles.propValue}>{value}</Text>
+      <Text style={styles.propLabel} selectable>{label}</Text>
+      <Text style={styles.propValue} selectable>{value}</Text>
     </View>
   );
 }
