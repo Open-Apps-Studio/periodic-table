@@ -126,7 +126,7 @@ export default function QuizScreen() {
       padding: 10,
     },
     missSymbol: { width: 44, height: 44, borderRadius: 10, alignItems: 'center', justifyContent: 'center' },
-    missSymbolText: { color: '#111827', fontSize: 18, fontWeight: '900' },
+    missSymbolText: { fontSize: 18, fontWeight: '900' },
     missBody: { flex: 1, gap: 2 },
     missName: { color: p.text, fontSize: 15, fontWeight: '800' },
     missDetail: { color: p.textSecondary, fontSize: 12.5 },
@@ -234,10 +234,11 @@ export default function QuizScreen() {
             <Pressable
               key={q.element.number}
               accessibilityRole="button"
+              accessibilityLabel={`View ${q.element.name} details. Correct answer was ${q.answer}`}
               onPress={() => router.push(`/element/${q.element.number}`)}
               style={({ pressed }) => [styles.missRow, pressed && { opacity: 0.7 }]}>
-              <View style={[styles.missSymbol, { backgroundColor: CategoryColors[q.element.category] }]}>
-                <Text style={styles.missSymbolText}>{q.element.symbol}</Text>
+              <View style={[styles.missSymbol, { backgroundColor: withAlpha(CategoryColors[q.element.category], 0.16) }]}>
+                <Text style={[styles.missSymbolText, { color: CategoryColors[q.element.category] }]}>{q.element.symbol}</Text>
               </View>
               <View style={styles.missBody}>
                 <Text style={styles.missName}>

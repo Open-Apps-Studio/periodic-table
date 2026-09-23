@@ -56,6 +56,7 @@ function ThemedNavigation() {
         <Stack.Screen name="trends" options={{ title: 'Trends', headerBackTitle: 'Back' }} />
         <Stack.Screen name="dictionary" options={{ title: 'Dictionary', headerBackTitle: 'Back' }} />
         <Stack.Screen name="academy" options={{ title: 'Academy', headerBackTitle: 'Back' }} />
+        <Stack.Screen name="quiz" options={{ title: 'Element Quiz', headerBackTitle: 'Back' }} />
       </Stack>
     </RouterThemeProvider>
   );
