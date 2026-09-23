@@ -10,6 +10,7 @@ import { useThemedStyles } from '@/hooks/use-themed-styles';
 const APP_STORE_URL = 'https://apps.apple.com/app/id6781818611';
 
 type FeatureId =
+  | 'quiz'
   | 'isotopes'
   | 'compare'
   | 'trends'
@@ -33,6 +34,19 @@ interface FeatureCard {
 }
 
 const FEATURE_CARDS: FeatureCard[] = [
+  {
+    id: 'quiz',
+    title: 'Element Quiz',
+    subtitle: 'Learn symbols, names, atomic numbers, and families in 10-question rounds.',
+    icon: 'trophy-outline',
+    accent: '#F59F00',
+    route: '/quiz',
+    details: [
+      'Four quiz types: symbol to name, name to symbol, atomic number, and element families.',
+      'Start with the first 20 elements, then work up to 36 or all 118.',
+      'Wrong answers link straight to the element card, and best scores stay on this device.',
+    ],
+  },
   {
     id: 'isotopes',
     title: 'Isotopes',
@@ -375,6 +389,7 @@ function FeatureSheet({
   styles: ReturnType<typeof useThemedStyles<Record<string, object>>>;
   onClose: () => void;
 }) {
+  const palette = usePalette();
   return (
     <Modal visible={!!selected} transparent animationType="slide" onRequestClose={onClose}>
       <Pressable style={styles.backdrop} onPress={onClose}>
@@ -387,8 +402,13 @@ function FeatureSheet({
                   <Ionicons name={selected.icon} size={19} color={selected.accent} />
                 </View>
                 <Text style={styles.sheetTitle}>{selected.title}</Text>
-                <Pressable onPress={onClose} style={styles.closeButton} hitSlop={8}>
-                  <Ionicons name="close" size={18} color="#687385" />
+                <Pressable
+                  onPress={onClose}
+                  style={styles.closeButton}
+                  hitSlop={8}
+                  accessibilityRole="button"
+                  accessibilityLabel="Close feature details">
+                  <Ionicons name="close" size={18} color={palette.textSecondary} />
                 </Pressable>
               </View>
               <ScrollView contentContainerStyle={styles.detailList}>
