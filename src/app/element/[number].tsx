@@ -3,6 +3,7 @@ import { Linking, Pressable, ScrollView, StyleSheet, Text, TextInput, View } fro
 import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
+import { GhsCard } from '@/components/ghs-card';
 import { ShellDiagram } from '@/components/shell-diagram';
 import { CategoryColors, CategoryLabels, withAlpha } from '@/constants/theme';
 import { useElementNotes } from '@/context/element-notes-context';
@@ -122,6 +123,12 @@ export default function ElementScreen() {
       borderColor: withAlpha(p.accent, 0.4),
     },
     wikiText: { color: p.accent, fontSize: 14, fontWeight: '700' },
+    particles: { flexDirection: 'row', gap: 8, marginTop: 10 },
+    particle: { flex: 1, alignItems: 'center', paddingVertical: 8, borderRadius: 12, gap: 2 },
+    particleValue: { fontSize: 22, fontWeight: '900' },
+    particleLabel: { color: p.textSecondary, fontSize: 11.5, fontWeight: '800', textTransform: 'uppercase' },
+    particleNote: { color: p.textTertiary, fontSize: 11.5, marginTop: 6, marginBottom: 4 },
+    spectrum: { width: '100%', aspectRatio: 4, borderRadius: 8, backgroundColor: '#000000' },
   }));
 
   const params = useLocalSearchParams<{ number: string }>();
@@ -154,6 +161,15 @@ export default function ElementScreen() {
   const nuclides = getNuclidesForElement(el.number);
   const stableNuclides = nuclides.filter((nuclide) => nuclide.stable).length;
   const naturalNuclides = nuclides.filter((nuclide) => nuclide.abundancePercent != null).length;
+  // Neutron count for the most common isotope (or the longest-lived one for
+  // radioactive elements), so the particle row matches what textbooks show.
+  const referenceNuclide =
+    [...nuclides].filter((n) => n.abundancePercent != null).sort((a, b) => (b.abundancePercent ?? 0) - (a.abundancePercent ?? 0))[0] ??
+    [...nuclides].filter((n) => n.halfLifeSeconds != null).sort((a, b) => (b.halfLifeSeconds ?? 0) - (a.halfLifeSeconds ?? 0))[0];
+  // Wikipedia "File:" pages redirect to the image itself through Special:FilePath.
+  const spectrumUri = el.spectralImage?.includes('/wiki/File:')
+    ? `https://commons.wikimedia.org/wiki/Special:FilePath/${el.spectralImage.split('/wiki/File:')[1]}?width=1000`
+    : null;
 
   return (
     <>
@@ -216,6 +232,14 @@ export default function ElementScreen() {
         <View style={styles.card}>
           <Text style={styles.sectionTitle}>Electron Shells</Text>
           <ShellDiagram shells={el.shells} color={color} />
+          <View style={styles.particles}>
+            <Particle styles={styles} label="Protons" value={String(el.number)} color="#F59F00" />
+            <Particle styles={styles} label="Neutrons" value={referenceNuclide ? String(referenceNuclide.n) : '—'} color="#4DABF7" />
+            <Particle styles={styles} label="Electrons" value={String(el.number)} color="#FF6B6B" />
+          </View>
+          {referenceNuclide && (
+            <Text style={styles.particleNote}>Neutrons shown for {el.symbol}-{referenceNuclide.massNumber}, its {referenceNuclide.abundancePercent != null ? 'most common' : 'longest-lived'} isotope.</Text>
+          )}
           <PropertyRow styles={styles} label="Configuration" value={el.electronConfiguration} />
           <PropertyRow styles={styles} label="Full configuration" value={el.electronConfigurationFull} />
           <PropertyRow styles={styles} label="Shells" value={el.shells.join(', ')} />
@@ -342,6 +366,22 @@ export default function ElementScreen() {
           ]}
         />
 
+        <GhsCard ghs={el.ghs} elementName={el.name} />
+
+        {spectrumUri && (
+          <View style={styles.card}>
+            <Text style={styles.sectionTitle}>Emission spectrum</Text>
+            <Image
+              source={{ uri: spectrumUri }}
+              style={styles.spectrum}
+              contentFit="contain"
+              transition={200}
+              accessibilityLabel={`Emission spectrum of ${el.name}`}
+            />
+            <Text style={styles.attribution}>Wikimedia Commons</Text>
+          </View>
+        )}
+
         <View style={styles.card}>
           <Text style={styles.sectionTitle}>Notes & Favorites</Text>
           <View style={styles.noteActions}>
@@ -455,6 +495,25 @@ function PropertyRow({
     <View style={styles.propRow}>
       <Text style={styles.propLabel} selectable>{label}</Text>
       <Text style={styles.propValue} selectable>{value}</Text>
+    </View>
+  );
+}
+
+function Particle({
+  label,
+  value,
+  color,
+  styles,
+}: {
+  label: string;
+  value: string;
+  color: string;
+  styles: { particle: object; particleValue: object; particleLabel: object };
+}) {
+  return (
+    <View style={[styles.particle, { backgroundColor: withAlpha(color, 0.12) }]} accessible accessibilityLabel={`${value} ${label.toLowerCase()}`}>
+      <Text style={[styles.particleValue, { color }]}>{value}</Text>
+      <Text style={styles.particleLabel}>{label}</Text>
     </View>
   );
 }

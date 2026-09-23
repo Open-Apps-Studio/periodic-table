@@ -9,7 +9,9 @@ A free, open-source, ad-less periodic table app for iOS and Android by [Open App
 - **Interactive periodic table** — pinch to zoom, pan, double-tap to zoom, all 118 elements in the standard 18-column layout with the f-block split out.
 - **Property overlays** — color the table by category, atomic mass, density, electronegativity, melting/boiling point, atomic radius, year discovered, phase, or block. Numeric modes render as a heatmap.
 - **Category legend** — tap a category (alkali metals, noble gases, …) to highlight just those elements.
-- **Element cards** — photo with attribution, overview, Bohr shell diagram, physical/atomic/discovery properties, isotope counts, previous/next navigation, Wikipedia link.
+- **Element cards** — photo with attribution, overview, Bohr shell diagram, proton/neutron/electron counts, emission spectrum, physical/atomic/discovery properties, isotope counts, previous/next navigation, Wikipedia link.
+- **Safety (GHS)** — signal word, hazard pictograms, and H-statements for 77 elements from the EU harmonised classification / ECHA via PubChem, always naming the classified form (e.g. "aluminium powder (pyrophoric)").
+- **Element quiz** — symbols, names, atomic numbers, and element families in 10-question rounds.
 - **Search** — find elements by name, symbol, or atomic number.
 - **Isotope browser** — 3,383 IAEA LiveChart nuclides with half-life, decay modes, abundance, spin/parity, mass, binding energy, and discovery year.
 - **Trend graphs** — chart element properties across the table, individual periods, or the f-block with tap-to-inspect bars and log-scale normalization.

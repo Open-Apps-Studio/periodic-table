@@ -54,6 +54,25 @@
   "nameOrigin": "water",
   "discoveryLocation": "The United Kingdom",
   "casNumber": "1333-74-0",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "hydrogen",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H220",
+     "text": "Extremely flammable gas"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 23.64,
   "priceUsdPer100g": 2.364,
   "priceReference": {
@@ -162,6 +181,28 @@
   "nameOrigin": "Helios",
   "discoveryLocation": "Sweden and The United Kingdom",
   "casNumber": "7440-59-7",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-168-5",
+   "substance": "Helium (EC: 231-168-5)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS04",
+     "label": "Compressed gas"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H280",
+     "text": "Contains gas under pressure; may explode if heated"
+    }
+   ],
+   "notClassified": {
+    "reports": 2,
+    "total": 491
+   }
+  },
   "priceUsdPerKg": 40.39,
   "priceUsdPer100g": 4.039,
   "priceReference": {
@@ -272,6 +313,33 @@
   "nameOrigin": "stone",
   "discoveryLocation": "Sweden",
   "casNumber": "7439-93-2",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "lithium",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    },
+    {
+     "code": "GHS05",
+     "label": "Corrosive"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously"
+    },
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 115.7,
   "priceUsdPer100g": 11.57,
   "priceReference": {
@@ -383,6 +451,57 @@
   "nameOrigin": "beryl",
   "discoveryLocation": "France",
   "casNumber": "7440-41-7",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "beryllium",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS06",
+     "label": "Acute toxic"
+    },
+    {
+     "code": "GHS08",
+     "label": "Health hazard"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H301",
+     "text": "Toxic if swallowed"
+    },
+    {
+     "code": "H315",
+     "text": "Causes skin irritation"
+    },
+    {
+     "code": "H317",
+     "text": "May cause an allergic skin reaction"
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation"
+    },
+    {
+     "code": "H330",
+     "text": "Fatal if inhaled"
+    },
+    {
+     "code": "H335",
+     "text": "May cause respiratory irritation"
+    },
+    {
+     "code": "H350i",
+     "text": "May cause cancer by inhalation"
+    },
+    {
+     "code": "H372",
+     "text": "Causes damage to organs through prolonged or repeated exposure"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 831.6,
   "priceUsdPer100g": 83.16,
   "priceReference": {
@@ -495,6 +614,18 @@
   "nameOrigin": "borax",
   "discoveryLocation": "France and The United Kingdom",
   "casNumber": "7440-42-8",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-151-2",
+   "substance": "Boron (EC: 231-151-2)",
+   "signal": null,
+   "pictograms": [],
+   "hazards": [],
+   "notClassified": {
+    "reports": 253,
+    "total": 485
+   }
+  },
   "priceUsdPerKg": 2386,
   "priceUsdPer100g": 238.6,
   "priceReference": {
@@ -608,6 +739,32 @@
   "nameOrigin": "coal",
   "discoveryLocation": "Egypt",
   "casNumber": "7440-44-0",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-153-3",
+   "substance": "Carbon (EC: 231-153-3)",
+   "signal": "Warning",
+   "pictograms": [
+    {
+     "code": "GHS07",
+     "label": "Irritant"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation"
+    },
+    {
+     "code": "H335",
+     "text": "May cause respiratory irritation"
+    }
+   ],
+   "notClassified": {
+    "reports": 1095,
+    "total": 2727
+   }
+  },
   "priceUsdPerKg": 24,
   "priceUsdPer100g": 2.4,
   "priceReference": {
@@ -722,6 +879,28 @@
   "nameOrigin": "life; nitre",
   "discoveryLocation": "The United Kingdom",
   "casNumber": "7727-37-9",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-783-9",
+   "substance": "Nitrogen (EC: 231-783-9)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS04",
+     "label": "Compressed gas"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H280",
+     "text": "Contains gas under pressure; may explode if heated"
+    }
+   ],
+   "notClassified": {
+    "reports": 47,
+    "total": 1001
+   }
+  },
   "priceUsdPerKg": 2.77,
   "priceUsdPer100g": 0.277,
   "priceReference": {
@@ -837,6 +1016,25 @@
   "nameOrigin": "acid",
   "discoveryLocation": "Sweden and The United Kingdom",
   "casNumber": "7782-44-7",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "oxygen",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS03",
+     "label": "Oxidizer"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H270",
+     "text": "May cause or intensify fire; oxidizer"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 0.64,
   "priceUsdPer100g": 0.064,
   "priceReference": {
@@ -953,6 +1151,41 @@
   "nameOrigin": "hydrofluoric acid",
   "discoveryLocation": "France",
   "casNumber": "7782-41-4",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "fluorine",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS03",
+     "label": "Oxidizer"
+    },
+    {
+     "code": "GHS05",
+     "label": "Corrosive"
+    },
+    {
+     "code": "GHS06",
+     "label": "Acute toxic"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H270",
+     "text": "May cause or intensify fire; oxidizer"
+    },
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage"
+    },
+    {
+     "code": "H330",
+     "text": "Fatal if inhaled"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 1900,
   "priceUsdPer100g": 190,
   "priceReference": {
@@ -1070,6 +1303,25 @@
   "nameOrigin": "novelty",
   "discoveryLocation": "The United Kingdom",
   "casNumber": "7440-01-9",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-110-9",
+   "substance": "Neon (EC: 231-110-9)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS04",
+     "label": "Compressed gas"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H280",
+     "text": "Contains gas under pressure; may explode if heated"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 629.9,
   "priceUsdPer100g": 62.989999999999995,
   "priceReference": {
@@ -1189,6 +1441,33 @@
   "nameOrigin": "headache; sodium hydroxide; sodium carbonate; natron",
   "discoveryLocation": "The United Kingdom",
   "casNumber": "7440-23-5",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "sodium",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    },
+    {
+     "code": "GHS05",
+     "label": "Corrosive"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously"
+    },
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 3.04,
   "priceUsdPer100g": 0.304,
   "priceReference": {
@@ -1309,6 +1588,29 @@
   "nameOrigin": "magnesium oxide",
   "discoveryLocation": "The United Kingdom",
   "casNumber": "7439-95-4",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "magnesium powder (pyrophoric)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H250",
+     "text": "Catches fire spontaneously if exposed to air"
+    },
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 2.26,
   "priceUsdPer100g": 0.22599999999999998,
   "priceReference": {
@@ -1430,6 +1732,29 @@
   "nameOrigin": "alum",
   "discoveryLocation": "Denmark",
   "casNumber": "7429-90-5",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "aluminium powder (pyrophoric)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H250",
+     "text": "Catches fire spontaneously if exposed to air"
+    },
+    {
+     "code": "H261",
+     "text": "In contact with water releases flammable gas"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 1.91,
   "priceUsdPer100g": 0.191,
   "priceReference": {
@@ -1552,6 +1877,18 @@
   "nameOrigin": "flint",
   "discoveryLocation": "Sweden",
   "casNumber": "7440-21-3",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-130-8",
+   "substance": "Silicon (EC: 231-130-8)",
+   "signal": null,
+   "pictograms": [],
+   "hazards": [],
+   "notClassified": {
+    "reports": 3142,
+    "total": 3263
+   }
+  },
   "priceUsdPerKg": 1.91,
   "priceUsdPer100g": 0.191,
   "priceReference": {
@@ -1675,6 +2012,29 @@
   "nameOrigin": "Phosphorus",
   "discoveryLocation": "Germany",
   "casNumber": "7723-14-0",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "red phosphorus",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H228",
+     "text": "Flammable solid"
+    },
+    {
+     "code": "H412",
+     "text": "Harmful to aquatic life with long lasting effects"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 300,
   "priceUsdPer100g": 30,
   "priceReference": {
@@ -1799,6 +2159,25 @@
   "nameOrigin": null,
   "discoveryLocation": "China",
   "casNumber": "7704-34-9",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "sulfur",
+   "signal": "Warning",
+   "pictograms": [
+    {
+     "code": "GHS07",
+     "label": "Irritant"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H315",
+     "text": "Causes skin irritation"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 0.1,
   "priceUsdPer100g": 0.01,
   "priceReference": {
@@ -1924,6 +2303,53 @@
   "nameOrigin": "green",
   "discoveryLocation": "Sweden",
   "casNumber": "7782-50-5",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "chlorine",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS03",
+     "label": "Oxidizer"
+    },
+    {
+     "code": "GHS06",
+     "label": "Acute toxic"
+    },
+    {
+     "code": "GHS09",
+     "label": "Environmental hazard"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H270",
+     "text": "May cause or intensify fire; oxidizer"
+    },
+    {
+     "code": "H315",
+     "text": "Causes skin irritation"
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation"
+    },
+    {
+     "code": "H331",
+     "text": "Toxic if inhaled"
+    },
+    {
+     "code": "H335",
+     "text": "May cause respiratory irritation"
+    },
+    {
+     "code": "H400",
+     "text": "Very toxic to aquatic life"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 1.5,
   "priceUsdPer100g": 0.15,
   "priceReference": {
@@ -2050,6 +2476,28 @@
   "nameOrigin": "laziness",
   "discoveryLocation": "The United Kingdom",
   "casNumber": "7440-37-1",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-147-0",
+   "substance": "Argon (EC: 231-147-0)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS04",
+     "label": "Compressed gas"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H280",
+     "text": "Contains gas under pressure; may explode if heated"
+    }
+   ],
+   "notClassified": {
+    "reports": 4,
+    "total": 643
+   }
+  },
   "priceUsdPerKg": 2.56,
   "priceUsdPer100g": 0.256,
   "priceReference": {
@@ -2178,6 +2626,33 @@
   "nameOrigin": "potash",
   "discoveryLocation": "The United Kingdom",
   "casNumber": "7440-09-7",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "potassium",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    },
+    {
+     "code": "GHS05",
+     "label": "Corrosive"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously"
+    },
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 13.02,
   "priceUsdPer100g": 1.302,
   "priceReference": {
@@ -2307,6 +2782,25 @@
   "nameOrigin": "lime",
   "discoveryLocation": "The United Kingdom",
   "casNumber": "7440-70-2",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "calcium",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H261",
+     "text": "In contact with water releases flammable gas"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 5.93,
   "priceUsdPer100g": 0.593,
   "priceReference": {
@@ -2437,6 +2931,28 @@
   "nameOrigin": "Scandinavia",
   "discoveryLocation": "Sweden",
   "casNumber": "7440-20-2",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-129-2",
+   "substance": "Scandium (EC: 231-129-2)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H228",
+     "text": "Flammable solid"
+    }
+   ],
+   "notClassified": {
+    "reports": 5,
+    "total": 105
+   }
+  },
   "priceUsdPerKg": 15000,
   "priceUsdPer100g": 1500,
   "priceReference": {
@@ -2568,6 +3084,18 @@
   "nameOrigin": "titan",
   "discoveryLocation": "The United Kingdom",
   "casNumber": "7440-32-6",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-142-3",
+   "substance": "Titanium (EC: 231-142-3)",
+   "signal": null,
+   "pictograms": [],
+   "hazards": [],
+   "notClassified": {
+    "reports": 606,
+    "total": 808
+   }
+  },
   "priceUsdPerKg": 3.77,
   "priceUsdPer100g": 0.377,
   "priceReference": {
@@ -2700,6 +3228,18 @@
   "nameOrigin": "Freyja",
   "discoveryLocation": "Mexico and Sweden",
   "casNumber": "7440-62-2",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-171-1",
+   "substance": "Vanadium (EC: 231-171-1)",
+   "signal": null,
+   "pictograms": [],
+   "hazards": [],
+   "notClassified": {
+    "reports": 431,
+    "total": 452
+   }
+  },
   "priceUsdPerKg": 22.6,
   "priceUsdPer100g": 2.2600000000000002,
   "priceReference": {
@@ -2833,6 +3373,7 @@
   "nameOrigin": "color field",
   "discoveryLocation": "France",
   "casNumber": "7440-47-3",
+  "ghs": null,
   "priceUsdPerKg": 7.64,
   "priceUsdPer100g": 0.764,
   "priceReference": {
@@ -2967,6 +3508,7 @@
   "nameOrigin": "Magnesia Prefecture",
   "discoveryLocation": "Sweden",
   "casNumber": "7439-96-5",
+  "ghs": null,
   "priceUsdPerKg": 2.06,
   "priceUsdPer100g": 0.20600000000000002,
   "priceReference": {
@@ -3102,6 +3644,18 @@
   "nameOrigin": null,
   "discoveryLocation": "Egypt and Mesopotamia",
   "casNumber": "7439-89-6",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-096-4",
+   "substance": "Iron (EC: 231-096-4)",
+   "signal": null,
+   "pictograms": [],
+   "hazards": [],
+   "notClassified": {
+    "reports": 4458,
+    "total": 6013
+   }
+  },
   "priceUsdPerKg": 0.08,
   "priceUsdPer100g": 0.008,
   "priceReference": {
@@ -3238,6 +3792,49 @@
   "nameOrigin": "kobold",
   "discoveryLocation": "Sweden",
   "casNumber": "7440-48-4",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "cobalt",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS07",
+     "label": "Irritant"
+    },
+    {
+     "code": "GHS08",
+     "label": "Health hazard"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H317",
+     "text": "May cause an allergic skin reaction"
+    },
+    {
+     "code": "H334",
+     "text": "May cause allergy or asthma symptoms or breathing difficulties if inhaled"
+    },
+    {
+     "code": "H341",
+     "text": "Suspected of causing genetic defects"
+    },
+    {
+     "code": "H350",
+     "text": "May cause cancer"
+    },
+    {
+     "code": "H360F",
+     "text": "May damage fertility"
+    },
+    {
+     "code": "H413",
+     "text": "May cause long lasting harmful effects to aquatic life"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 59.5,
   "priceUsdPer100g": 5.95,
   "priceReference": {
@@ -3375,6 +3972,37 @@
   "nameOrigin": "nickeline",
   "discoveryLocation": "Sweden",
   "casNumber": "7440-02-0",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "nickel",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS07",
+     "label": "Irritant"
+    },
+    {
+     "code": "GHS08",
+     "label": "Health hazard"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H317",
+     "text": "May cause an allergic skin reaction"
+    },
+    {
+     "code": "H351",
+     "text": "Suspected of causing cancer"
+    },
+    {
+     "code": "H372",
+     "text": "Causes damage to organs through prolonged or repeated exposure"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 9.19,
   "priceUsdPer100g": 0.9189999999999999,
   "priceReference": {
@@ -3513,6 +4141,29 @@
   "nameOrigin": "Cyprus",
   "discoveryLocation": "Middle East",
   "casNumber": "7440-50-8",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "copper [specific surface area > 0,67 mm2/mg]",
+   "signal": "Warning",
+   "pictograms": [
+    {
+     "code": "GHS09",
+     "label": "Environmental hazard"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H400",
+     "text": "Very toxic to aquatic life"
+    },
+    {
+     "code": "H410",
+     "text": "Very toxic to aquatic life with long lasting effects"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 5.9,
   "priceUsdPer100g": 0.5900000000000001,
   "priceReference": {
@@ -3643,6 +4294,41 @@
   "nameOrigin": "tine",
   "discoveryLocation": "Germany",
   "casNumber": "7440-66-6",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "zinc powder - zinc dust (pyrophoric)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    },
+    {
+     "code": "GHS09",
+     "label": "Environmental hazard"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H250",
+     "text": "Catches fire spontaneously if exposed to air"
+    },
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously"
+    },
+    {
+     "code": "H400",
+     "text": "Very toxic to aquatic life"
+    },
+    {
+     "code": "H410",
+     "text": "Very toxic to aquatic life with long lasting effects"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 2.83,
   "priceUsdPer100g": 0.28300000000000003,
   "priceReference": {
@@ -3756,6 +4442,28 @@
   "nameOrigin": "Gaul",
   "discoveryLocation": "France",
   "casNumber": "7440-55-3",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-163-8",
+   "substance": "Gallium (EC: 231-163-8)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS05",
+     "label": "Corrosive"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage"
+    }
+   ],
+   "notClassified": {
+    "reports": 9,
+    "total": 388
+   }
+  },
   "priceUsdPerKg": 278.2,
   "priceUsdPer100g": 27.82,
   "priceReference": {
@@ -3870,6 +4578,18 @@
   "nameOrigin": "Germany",
   "discoveryLocation": "Germany",
   "casNumber": "7440-56-4",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-164-3",
+   "substance": "Germanium (EC: 231-164-3)",
+   "signal": null,
+   "pictograms": [],
+   "hazards": [],
+   "notClassified": {
+    "reports": 186,
+    "total": 319
+   }
+  },
   "priceUsdPerKg": 1833,
   "priceUsdPer100g": 183.3,
   "priceReference": {
@@ -3985,6 +4705,41 @@
   "nameOrigin": "gold; orpiment; virility",
   "discoveryLocation": "Known since antiquity",
   "casNumber": "7440-38-2",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "arsenic",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS06",
+     "label": "Acute toxic"
+    },
+    {
+     "code": "GHS09",
+     "label": "Environmental hazard"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H301",
+     "text": "Toxic if swallowed"
+    },
+    {
+     "code": "H331",
+     "text": "Toxic if inhaled"
+    },
+    {
+     "code": "H400",
+     "text": "Very toxic to aquatic life"
+    },
+    {
+     "code": "H410",
+     "text": "Very toxic to aquatic life with long lasting effects"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 1.74,
   "priceUsdPer100g": 0.174,
   "priceReference": {
@@ -4101,6 +4856,41 @@
   "nameOrigin": "Moon",
   "discoveryLocation": "Sweden",
   "casNumber": "7782-49-2",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "selenium",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS06",
+     "label": "Acute toxic"
+    },
+    {
+     "code": "GHS08",
+     "label": "Health hazard"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H301",
+     "text": "Toxic if swallowed"
+    },
+    {
+     "code": "H331",
+     "text": "Toxic if inhaled"
+    },
+    {
+     "code": "H373",
+     "text": "May causes damage to organs through prolonged or repeated exposure"
+    },
+    {
+     "code": "H413",
+     "text": "May cause long lasting harmful effects to aquatic life"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 30.37,
   "priceUsdPer100g": 3.037,
   "priceReference": {
@@ -4218,6 +5008,41 @@
   "nameOrigin": "stink",
   "discoveryLocation": "France",
   "casNumber": "7726-95-6",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "bromine",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS05",
+     "label": "Corrosive"
+    },
+    {
+     "code": "GHS06",
+     "label": "Acute toxic"
+    },
+    {
+     "code": "GHS09",
+     "label": "Environmental hazard"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage"
+    },
+    {
+     "code": "H330",
+     "text": "Fatal if inhaled"
+    },
+    {
+     "code": "H400",
+     "text": "Very toxic to aquatic life"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 4.4,
   "priceUsdPer100g": 0.44000000000000006,
   "priceReference": {
@@ -4357,6 +5182,25 @@
   "nameOrigin": "hiding",
   "discoveryLocation": "The United Kingdom",
   "casNumber": "7439-90-9",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-098-5",
+   "substance": "Krypton (EC: 231-098-5)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS04",
+     "label": "Compressed gas"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H280",
+     "text": "Contains gas under pressure; may explode if heated"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 1.4,
   "priceUsdPer100g": 0.13999999999999999,
   "priceReference": {
@@ -4477,6 +5321,36 @@
   "nameOrigin": "red",
   "discoveryLocation": "Germany",
   "casNumber": "7440-17-7",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-126-6",
+   "substance": "Rubidium (EC: 231-126-6)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    },
+    {
+     "code": "GHS05",
+     "label": "Corrosive"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously"
+    },
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage"
+    }
+   ],
+   "notClassified": {
+    "reports": 1,
+    "total": 81
+   }
+  },
   "priceUsdPerKg": 14720,
   "priceUsdPer100g": 1472,
   "priceReference": {
@@ -4598,6 +5472,40 @@
   "nameOrigin": "Strontian",
   "discoveryLocation": "The United Kingdom",
   "casNumber": "7440-24-6",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-133-4",
+   "substance": "Strontium (EC: 231-133-4)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    },
+    {
+     "code": "GHS05",
+     "label": "Corrosive"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously"
+    },
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage"
+    },
+    {
+     "code": "H318",
+     "text": "Causes serious eye damage"
+    }
+   ],
+   "notClassified": {
+    "reports": 52,
+    "total": 304
+   }
+  },
   "priceUsdPerKg": 5.4,
   "priceUsdPer100g": 0.54,
   "priceReference": {
@@ -4720,6 +5628,18 @@
   "nameOrigin": "Ytterby mine",
   "discoveryLocation": "Finland",
   "casNumber": "7440-65-5",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-174-8",
+   "substance": "Yttrium (EC: 231-174-8)",
+   "signal": null,
+   "pictograms": [],
+   "hazards": [],
+   "notClassified": {
+    "reports": 180,
+    "total": 317
+   }
+  },
   "priceUsdPerKg": 35,
   "priceUsdPer100g": 3.5,
   "priceReference": {
@@ -4836,6 +5756,29 @@
   "nameOrigin": "zircon",
   "discoveryLocation": "Germany",
   "casNumber": "7440-67-7",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "zirconium powder (pyrophoric)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H250",
+     "text": "Catches fire spontaneously if exposed to air"
+    },
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 23.14,
   "priceUsdPer100g": 2.314,
   "priceReference": {
@@ -4953,6 +5896,18 @@
   "nameOrigin": "Niobe",
   "discoveryLocation": "The United Kingdom",
   "casNumber": "7440-03-1",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-113-5",
+   "substance": "Niobium (EC: 231-113-5)",
+   "signal": null,
+   "pictograms": [],
+   "hazards": [],
+   "notClassified": {
+    "reports": 307,
+    "total": 529
+   }
+  },
   "priceUsdPerKg": 42,
   "priceUsdPer100g": 4.2,
   "priceReference": {
@@ -5093,6 +6048,18 @@
   "nameOrigin": "lead",
   "discoveryLocation": "Sweden",
   "casNumber": "7439-98-7",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-107-2",
+   "substance": "Molybdenum (EC: 231-107-2)",
+   "signal": null,
+   "pictograms": [],
+   "hazards": [],
+   "notClassified": {
+    "reports": 874,
+    "total": 1523
+   }
+  },
   "priceUsdPerKg": 16,
   "priceUsdPer100g": 1.6,
   "priceReference": {
@@ -5206,6 +6173,7 @@
   "nameOrigin": "technique",
   "discoveryLocation": "Italy",
   "casNumber": "7440-26-8",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -5313,6 +6281,7 @@
   "nameOrigin": "Ruthenia",
   "discoveryLocation": "Russia",
   "casNumber": "7440-18-8",
+  "ghs": null,
   "priceUsdPerKg": 3054,
   "priceUsdPer100g": 305.4,
   "priceReference": {
@@ -5426,6 +6395,18 @@
   "nameOrigin": "rose",
   "discoveryLocation": "The United Kingdom",
   "casNumber": "7440-16-6",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-125-0",
+   "substance": "Rhodium (EC: 231-125-0)",
+   "signal": null,
+   "pictograms": [],
+   "hazards": [],
+   "notClassified": {
+    "reports": 239,
+    "total": 294
+   }
+  },
   "priceUsdPerKg": 76840,
   "priceUsdPer100g": 7684,
   "priceReference": {
@@ -5538,6 +6519,18 @@
   "nameOrigin": "2 Pallas",
   "discoveryLocation": "The United Kingdom",
   "casNumber": "7440-05-3",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-115-6",
+   "substance": "Palladium (EC: 231-115-6)",
+   "signal": null,
+   "pictograms": [],
+   "hazards": [],
+   "notClassified": {
+    "reports": 365,
+    "total": 616
+   }
+  },
   "priceUsdPerKg": 34401,
   "priceUsdPer100g": 3440.1,
   "priceReference": {
@@ -5651,6 +6644,29 @@
   "nameOrigin": "white",
   "discoveryLocation": "Known since antiquity",
   "casNumber": "7440-22-4",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "silver massive: [particle diameter ≥ 1 mm]",
+   "signal": "Warning",
+   "pictograms": [
+    {
+     "code": "GHS08",
+     "label": "Health hazard"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H361f",
+     "text": "Suspected of damaging fertility"
+    },
+    {
+     "code": "H373",
+     "text": "May causes damage to organs through prolonged or repeated exposure"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 462,
   "priceUsdPer100g": 46.2,
   "priceReference": {
@@ -5764,6 +6780,65 @@
   "nameOrigin": "Cadmus",
   "discoveryLocation": "Germany",
   "casNumber": "7440-43-9",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "cadmium (pyrophoric)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    },
+    {
+     "code": "GHS06",
+     "label": "Acute toxic"
+    },
+    {
+     "code": "GHS08",
+     "label": "Health hazard"
+    },
+    {
+     "code": "GHS09",
+     "label": "Environmental hazard"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H250",
+     "text": "Catches fire spontaneously if exposed to air"
+    },
+    {
+     "code": "H330",
+     "text": "Fatal if inhaled"
+    },
+    {
+     "code": "H341",
+     "text": "Suspected of causing genetic defects"
+    },
+    {
+     "code": "H350",
+     "text": "May cause cancer"
+    },
+    {
+     "code": "H361fd",
+     "text": "Suspected of damaging fertility; Suspected of damaging the unborn child"
+    },
+    {
+     "code": "H372",
+     "text": "Causes damage to organs through prolonged or repeated exposure"
+    },
+    {
+     "code": "H400",
+     "text": "Very toxic to aquatic life"
+    },
+    {
+     "code": "H410",
+     "text": "Very toxic to aquatic life with long lasting effects"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 1.98,
   "priceUsdPer100g": 0.198,
   "priceReference": {
@@ -5878,6 +6953,28 @@
   "nameOrigin": "indigo",
   "discoveryLocation": "Germany",
   "casNumber": "7440-74-6",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-180-0",
+   "substance": "Indium (EC: 231-180-0)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS08",
+     "label": "Health hazard"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H372",
+     "text": "Causes damage to organs through prolonged or repeated exposure"
+    }
+   ],
+   "notClassified": {
+    "reports": 69,
+    "total": 371
+   }
+  },
   "priceUsdPerKg": 341.6,
   "priceUsdPer100g": 34.160000000000004,
   "priceReference": {
@@ -5993,6 +7090,18 @@
   "nameOrigin": null,
   "discoveryLocation": "Known since antiquity",
   "casNumber": "7440-31-5",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-141-8",
+   "substance": "Tin (EC: 231-141-8)",
+   "signal": null,
+   "pictograms": [],
+   "hazards": [],
+   "notClassified": {
+    "reports": 695,
+    "total": 953
+   }
+  },
   "priceUsdPerKg": 20,
   "priceUsdPer100g": 2,
   "priceReference": {
@@ -6109,6 +7218,7 @@
   "nameOrigin": null,
   "discoveryLocation": "Known since antiquity",
   "casNumber": "7440-36-0",
+  "ghs": null,
   "priceUsdPerKg": 7.05,
   "priceUsdPer100g": 0.705,
   "priceReference": {
@@ -6226,6 +7336,29 @@
   "nameOrigin": "Terra",
   "discoveryLocation": "Romania",
   "casNumber": "13494-80-9",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "tellurium",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS08",
+     "label": "Health hazard"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H360Df",
+     "text": "May damage the unborn child; Suspected of damaging fertility"
+    },
+    {
+     "code": "H362",
+     "text": "May cause harm to breast-fed children"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 55.68,
   "priceUsdPer100g": 5.568,
   "priceReference": {
@@ -6339,6 +7472,37 @@
   "nameOrigin": "violet",
   "discoveryLocation": "France",
   "casNumber": "7553-56-2",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "iodine",
+   "signal": "Warning",
+   "pictograms": [
+    {
+     "code": "GHS07",
+     "label": "Irritant"
+    },
+    {
+     "code": "GHS09",
+     "label": "Environmental hazard"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H312",
+     "text": "Harmful in contact with skin"
+    },
+    {
+     "code": "H332",
+     "text": "Harmful if inhaled"
+    },
+    {
+     "code": "H400",
+     "text": "Very toxic to aquatic life"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 28,
   "priceUsdPer100g": 2.8,
   "priceReference": {
@@ -6452,6 +7616,28 @@
   "nameOrigin": "stranger",
   "discoveryLocation": "The United Kingdom",
   "casNumber": "7440-63-3",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-172-7",
+   "substance": "Xenon (EC: 231-172-7)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS04",
+     "label": "Compressed gas"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H280",
+     "text": "Contains gas under pressure; may explode if heated"
+    }
+   ],
+   "notClassified": {
+    "reports": 22,
+    "total": 373
+   }
+  },
   "priceUsdPerKg": 9.2,
   "priceUsdPer100g": 0.9199999999999999,
   "priceReference": {
@@ -6566,6 +7752,40 @@
   "nameOrigin": "sky blue",
   "discoveryLocation": "Germany",
   "casNumber": "7440-46-2",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-155-4",
+   "substance": "Caesium (EC: 231-155-4)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    },
+    {
+     "code": "GHS05",
+     "label": "Corrosive"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H260",
+     "text": "In contact with water releases flammable gases which may ignite spontaneously"
+    },
+    {
+     "code": "H314",
+     "text": "Causes severe skin burns and eye damage"
+    },
+    {
+     "code": "H318",
+     "text": "Causes serious eye damage"
+    }
+   ],
+   "notClassified": {
+    "reports": 1,
+    "total": 158
+   }
+  },
   "priceUsdPerKg": 73400,
   "priceUsdPer100g": 7340,
   "priceReference": {
@@ -6680,6 +7900,7 @@
   "nameOrigin": "weight",
   "discoveryLocation": "The United Kingdom",
   "casNumber": "7440-39-3",
+  "ghs": null,
   "priceUsdPerKg": 550,
   "priceUsdPer100g": 55,
   "priceReference": {
@@ -6796,6 +8017,18 @@
   "nameOrigin": "hiding",
   "discoveryLocation": "Sweden",
   "casNumber": "7439-91-0",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-099-0",
+   "substance": "Lanthanum (EC: 231-099-0)",
+   "signal": null,
+   "pictograms": [],
+   "hazards": [],
+   "notClassified": {
+    "reports": 146,
+    "total": 248
+   }
+  },
   "priceUsdPerKg": 7,
   "priceUsdPer100g": 0.7,
   "priceReference": {
@@ -6913,6 +8146,28 @@
   "nameOrigin": "Ceres",
   "discoveryLocation": "Germany and Sweden",
   "casNumber": "7440-45-1",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-154-9",
+   "substance": "Cerium (EC: 231-154-9)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H228",
+     "text": "Flammable solid"
+    }
+   ],
+   "notClassified": {
+    "reports": 11,
+    "total": 502
+   }
+  },
   "priceUsdPerKg": 7,
   "priceUsdPer100g": 0.7,
   "priceReference": {
@@ -7029,6 +8284,44 @@
   "nameOrigin": "green; twin",
   "discoveryLocation": "Austria",
   "casNumber": "7440-10-0",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-120-3",
+   "substance": "Praseodymium (EC: 231-120-3)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    },
+    {
+     "code": "GHS07",
+     "label": "Irritant"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H228",
+     "text": "Flammable solid"
+    },
+    {
+     "code": "H251",
+     "text": "Self-heating; may catch fire"
+    },
+    {
+     "code": "H315",
+     "text": "Causes skin irritation"
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation"
+    }
+   ],
+   "notClassified": {
+    "reports": 45,
+    "total": 247
+   }
+  },
   "priceUsdPerKg": 85,
   "priceUsdPer100g": 8.5,
   "priceReference": {
@@ -7144,6 +8437,18 @@
   "nameOrigin": "twin; novelty",
   "discoveryLocation": "Austria",
   "casNumber": "7440-00-8",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-109-3",
+   "substance": "Neodymium (EC: 231-109-3)",
+   "signal": null,
+   "pictograms": [],
+   "hazards": [],
+   "notClassified": {
+    "reports": 261,
+    "total": 463
+   }
+  },
   "priceUsdPerKg": 60,
   "priceUsdPer100g": 6,
   "priceReference": {
@@ -7259,6 +8564,7 @@
   "nameOrigin": "Prometheus",
   "discoveryLocation": "The United States",
   "casNumber": "7440-12-2",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -7368,6 +8674,32 @@
   "nameOrigin": "samarskite-(Y)",
   "discoveryLocation": "France",
   "casNumber": "7440-19-9",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-128-7",
+   "substance": "Samarium (EC: 231-128-7)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H228",
+     "text": "Flammable solid"
+    },
+    {
+     "code": "H261",
+     "text": "In contact with water releases flammable gas"
+    }
+   ],
+   "notClassified": {
+    "reports": 6,
+    "total": 255
+   }
+  },
   "priceUsdPerKg": 14.35,
   "priceUsdPer100g": 1.435,
   "priceReference": {
@@ -7483,6 +8815,28 @@
   "nameOrigin": "Europe",
   "discoveryLocation": "France",
   "casNumber": "7440-53-1",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-161-7",
+   "substance": "Europium (EC: 231-161-7)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H250",
+     "text": "Catches fire spontaneously if exposed to air"
+    }
+   ],
+   "notClassified": {
+    "reports": 2,
+    "total": 48
+   }
+  },
   "priceUsdPerKg": 258,
   "priceUsdPer100g": 25.8,
   "priceReference": {
@@ -7598,6 +8952,28 @@
   "nameOrigin": "Johan Gadolin",
   "discoveryLocation": "Switzerland",
   "casNumber": "7440-54-2",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-162-2",
+   "substance": "Gadolinium (EC: 231-162-2)",
+   "signal": "Warning",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H261",
+     "text": "In contact with water releases flammable gas"
+    }
+   ],
+   "notClassified": {
+    "reports": 11,
+    "total": 63
+   }
+  },
   "priceUsdPerKg": 55,
   "priceUsdPer100g": 5.5,
   "priceReference": {
@@ -7713,6 +9089,28 @@
   "nameOrigin": "Ytterby mine",
   "discoveryLocation": "Sweden",
   "casNumber": "7440-27-9",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-137-6",
+   "substance": "Terbium (EC: 231-137-6)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H228",
+     "text": "Flammable solid"
+    }
+   ],
+   "notClassified": {
+    "reports": 13,
+    "total": 62
+   }
+  },
   "priceUsdPerKg": 550,
   "priceUsdPer100g": 55,
   "priceReference": {
@@ -7828,6 +9226,28 @@
   "nameOrigin": "getting",
   "discoveryLocation": "France",
   "casNumber": "7429-91-6",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-073-9",
+   "substance": "Dysprosium (EC: 231-073-9)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H228",
+     "text": "Flammable solid"
+    }
+   ],
+   "notClassified": {
+    "reports": 25,
+    "total": 105
+   }
+  },
   "priceUsdPerKg": 350,
   "priceUsdPer100g": 35,
   "priceReference": {
@@ -7943,6 +9363,28 @@
   "nameOrigin": "Stockholm",
   "discoveryLocation": "Switzerland",
   "casNumber": "7440-60-0",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-169-0",
+   "substance": "Holmium (EC: 231-169-0)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H228",
+     "text": "Flammable solid"
+    }
+   ],
+   "notClassified": {
+    "reports": 4,
+    "total": 50
+   }
+  },
   "priceUsdPerKg": 1400,
   "priceUsdPer100g": 140,
   "priceReference": {
@@ -8058,6 +9500,28 @@
   "nameOrigin": "Ytterby mine",
   "discoveryLocation": "Sweden",
   "casNumber": "7440-52-0",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-160-1",
+   "substance": "Erbium (EC: 231-160-1)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H228",
+     "text": "Flammable solid"
+    }
+   ],
+   "notClassified": {
+    "reports": 5,
+    "total": 104
+   }
+  },
   "priceUsdPerKg": 95,
   "priceUsdPer100g": 9.5,
   "priceReference": {
@@ -8173,6 +9637,40 @@
   "nameOrigin": "Scandinavia; Thule",
   "discoveryLocation": "Sweden",
   "casNumber": "7440-30-4",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-140-2",
+   "substance": "Thulium (EC: 231-140-2)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    },
+    {
+     "code": "GHS07",
+     "label": "Irritant"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H228",
+     "text": "Flammable solid"
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation"
+    },
+    {
+     "code": "H335",
+     "text": "May cause respiratory irritation"
+    }
+   ],
+   "notClassified": {
+    "reports": 3,
+    "total": 50
+   }
+  },
   "priceUsdPerKg": 6200,
   "priceUsdPer100g": 620,
   "priceReference": {
@@ -8288,6 +9786,56 @@
   "nameOrigin": "Ytterby mine",
   "discoveryLocation": "Switzerland",
   "casNumber": "7440-64-4",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-173-2",
+   "substance": "Ytterbium (EC: 231-173-2)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    },
+    {
+     "code": "GHS07",
+     "label": "Irritant"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H228",
+     "text": "Flammable solid"
+    },
+    {
+     "code": "H302",
+     "text": "Harmful if swallowed"
+    },
+    {
+     "code": "H312",
+     "text": "Harmful in contact with skin"
+    },
+    {
+     "code": "H315",
+     "text": "Causes skin irritation"
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation"
+    },
+    {
+     "code": "H332",
+     "text": "Harmful if inhaled"
+    },
+    {
+     "code": "H335",
+     "text": "May cause respiratory irritation"
+    }
+   ],
+   "notClassified": {
+    "reports": 3,
+    "total": 50
+   }
+  },
   "priceUsdPerKg": 1600,
   "priceUsdPer100g": 160,
   "priceReference": {
@@ -8404,6 +9952,28 @@
   "nameOrigin": "Lutetia",
   "discoveryLocation": "France and Germany",
   "casNumber": "7439-94-3",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-103-0",
+   "substance": "Lutetium (EC: 231-103-0)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H228",
+     "text": "Flammable solid"
+    }
+   ],
+   "notClassified": {
+    "reports": 4,
+    "total": 51
+   }
+  },
   "priceUsdPerKg": 6269,
   "priceUsdPer100g": 626.9,
   "priceReference": {
@@ -8519,6 +10089,28 @@
   "nameOrigin": "Copenhagen",
   "discoveryLocation": "Denmark",
   "casNumber": "7440-58-6",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-166-4",
+   "substance": "Hafnium (EC: 231-166-4)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H250",
+     "text": "Catches fire spontaneously if exposed to air"
+    }
+   ],
+   "notClassified": {
+    "reports": 124,
+    "total": 360
+   }
+  },
   "priceUsdPerKg": 1414,
   "priceUsdPer100g": 141.4,
   "priceReference": {
@@ -8632,6 +10224,28 @@
   "nameOrigin": "Tantalus",
   "discoveryLocation": "Sweden",
   "casNumber": "7440-25-7",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-135-5",
+   "substance": "Tantalum (EC: 231-135-5)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H228",
+     "text": "Flammable solid"
+    }
+   ],
+   "notClassified": {
+    "reports": 200,
+    "total": 455
+   }
+  },
   "priceUsdPerKg": 238,
   "priceUsdPer100g": 23.8,
   "priceReference": {
@@ -8745,6 +10359,28 @@
   "nameOrigin": "Canis lupus",
   "discoveryLocation": "Spain",
   "casNumber": "7440-33-7",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-143-9",
+   "substance": "Tungsten (EC: 231-143-9)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H228",
+     "text": "Flammable solid"
+    }
+   ],
+   "notClassified": {
+    "reports": 196,
+    "total": 741
+   }
+  },
   "priceUsdPerKg": 25.52,
   "priceUsdPer100g": 2.552,
   "priceReference": {
@@ -8860,6 +10496,28 @@
   "nameOrigin": "Rhine",
   "discoveryLocation": "Germany",
   "casNumber": "7440-15-5",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-124-5",
+   "substance": "Rhenium (EC: 231-124-5)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H228",
+     "text": "Flammable solid"
+    }
+   ],
+   "notClassified": {
+    "reports": 137,
+    "total": 393
+   }
+  },
   "priceUsdPerKg": 1635,
   "priceUsdPer100g": 163.5,
   "priceReference": {
@@ -8973,6 +10631,49 @@
   "nameOrigin": "odor",
   "discoveryLocation": "The United Kingdom",
   "casNumber": "7440-04-2",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-114-0",
+   "substance": "Osmium (EC: 231-114-0)",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS02",
+     "label": "Flammable"
+    },
+    {
+     "code": "GHS05",
+     "label": "Corrosive"
+    },
+    {
+     "code": "GHS07",
+     "label": "Irritant"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H228",
+     "text": "Flammable solid"
+    },
+    {
+     "code": "H315",
+     "text": "Causes skin irritation"
+    },
+    {
+     "code": "H318",
+     "text": "Causes serious eye damage"
+    },
+    {
+     "code": "H335",
+     "text": "May cause respiratory irritation"
+    },
+    {
+     "code": "H413",
+     "text": "May cause long lasting harmful effects to aquatic life"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 12860,
   "priceUsdPer100g": 1286,
   "priceReference": {
@@ -9086,6 +10787,7 @@
   "nameOrigin": "Iris",
   "discoveryLocation": "France and The United Kingdom",
   "casNumber": "7439-88-5",
+  "ghs": null,
   "priceUsdPerKg": 31186,
   "priceUsdPer100g": 3118.6,
   "priceReference": {
@@ -9199,6 +10901,18 @@
   "nameOrigin": "silver",
   "discoveryLocation": "Peru",
   "casNumber": "7440-06-4",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-116-1",
+   "substance": "Platinum (EC: 231-116-1)",
+   "signal": null,
+   "pictograms": [],
+   "hazards": [],
+   "notClassified": {
+    "reports": 410,
+    "total": 504
+   }
+  },
   "priceUsdPerKg": 26492,
   "priceUsdPer100g": 2649.2,
   "priceReference": {
@@ -9312,6 +11026,18 @@
   "nameOrigin": null,
   "discoveryLocation": "Middle East",
   "casNumber": "7440-57-5",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-165-9",
+   "substance": "Gold (EC: 231-165-9)",
+   "signal": null,
+   "pictograms": [],
+   "hazards": [],
+   "notClassified": {
+    "reports": 502,
+    "total": 506
+   }
+  },
   "priceUsdPerKg": 38189,
   "priceUsdPer100g": 3818.9,
   "priceReference": {
@@ -9426,6 +11152,49 @@
   "nameOrigin": "Mercury",
   "discoveryLocation": "Known since antiquity",
   "casNumber": "7439-97-6",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "mercury",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS06",
+     "label": "Acute toxic"
+    },
+    {
+     "code": "GHS08",
+     "label": "Health hazard"
+    },
+    {
+     "code": "GHS09",
+     "label": "Environmental hazard"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H330",
+     "text": "Fatal if inhaled"
+    },
+    {
+     "code": "H360D",
+     "text": "May damage the unborn child"
+    },
+    {
+     "code": "H372",
+     "text": "Causes damage to organs through prolonged or repeated exposure"
+    },
+    {
+     "code": "H400",
+     "text": "Very toxic to aquatic life"
+    },
+    {
+     "code": "H410",
+     "text": "Very toxic to aquatic life with long lasting effects"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 38.44,
   "priceUsdPer100g": 3.844,
   "priceReference": {
@@ -9540,6 +11309,41 @@
   "nameOrigin": "thallus",
   "discoveryLocation": "The United Kingdom",
   "casNumber": "7440-28-0",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "thallium",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS06",
+     "label": "Acute toxic"
+    },
+    {
+     "code": "GHS08",
+     "label": "Health hazard"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H300",
+     "text": "Fatal if swallowed"
+    },
+    {
+     "code": "H330",
+     "text": "Fatal if inhaled"
+    },
+    {
+     "code": "H373",
+     "text": "May causes damage to organs through prolonged or repeated exposure"
+    },
+    {
+     "code": "H413",
+     "text": "May cause long lasting harmful effects to aquatic life"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 7400,
   "priceUsdPer100g": 740,
   "priceReference": {
@@ -9656,6 +11460,41 @@
   "nameOrigin": null,
   "discoveryLocation": "Middle East",
   "casNumber": "7439-92-1",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "lead powder; [particle diameter < 1 mm]",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS08",
+     "label": "Health hazard"
+    },
+    {
+     "code": "GHS09",
+     "label": "Environmental hazard"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H360FD",
+     "text": "May damage fertility; May damage the unborn child"
+    },
+    {
+     "code": "H362",
+     "text": "May cause harm to breast-fed children"
+    },
+    {
+     "code": "H400",
+     "text": "Very toxic to aquatic life"
+    },
+    {
+     "code": "H410",
+     "text": "Very toxic to aquatic life with long lasting effects"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 2.29,
   "priceUsdPer100g": 0.229,
   "priceReference": {
@@ -9773,6 +11612,18 @@
   "nameOrigin": null,
   "discoveryLocation": "France",
   "casNumber": "7440-69-9",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-177-4",
+   "substance": "Bismuth (EC: 231-177-4)",
+   "signal": null,
+   "pictograms": [],
+   "hazards": [],
+   "notClassified": {
+    "reports": 324,
+    "total": 382
+   }
+  },
   "priceUsdPerKg": 10.34,
   "priceUsdPer100g": 1.034,
   "priceReference": {
@@ -9885,6 +11736,7 @@
   "nameOrigin": "Poland",
   "discoveryLocation": "France",
   "casNumber": "7440-08-6",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -9991,6 +11843,7 @@
   "nameOrigin": "instability",
   "discoveryLocation": "The United States",
   "casNumber": "7440-68-8",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -10097,6 +11950,7 @@
   "nameOrigin": "radium",
   "discoveryLocation": "Germany",
   "casNumber": "10043-92-2",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -10204,6 +12058,7 @@
   "nameOrigin": "France",
   "discoveryLocation": "France",
   "casNumber": "7440-73-5",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -10312,6 +12167,7 @@
   "nameOrigin": "radioactivity",
   "discoveryLocation": "France",
   "casNumber": "7440-14-4",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -10420,6 +12276,7 @@
   "nameOrigin": "light beam",
   "discoveryLocation": "France",
   "casNumber": "7440-34-8",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -10530,6 +12387,48 @@
   "nameOrigin": "Thor",
   "discoveryLocation": "Sweden",
   "casNumber": "7440-29-1",
+  "ghs": {
+   "source": "European Chemicals Agency (ECHA)",
+   "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-139-7",
+   "substance": "Thorium (EC: 231-139-7)",
+   "signal": "Warning",
+   "pictograms": [
+    {
+     "code": "GHS07",
+     "label": "Irritant"
+    },
+    {
+     "code": "GHS08",
+     "label": "Health hazard"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H302",
+     "text": "Harmful if swallowed"
+    },
+    {
+     "code": "H315",
+     "text": "Causes skin irritation"
+    },
+    {
+     "code": "H319",
+     "text": "Causes serious eye irritation"
+    },
+    {
+     "code": "H335",
+     "text": "May cause respiratory irritation"
+    },
+    {
+     "code": "H373",
+     "text": "May causes damage to organs through prolonged or repeated exposure"
+    }
+   ],
+   "notClassified": {
+    "reports": 2,
+    "total": 18
+   }
+  },
   "priceUsdPerKg": 176,
   "priceUsdPer100g": 17.6,
   "priceReference": {
@@ -10643,6 +12542,7 @@
   "nameOrigin": "actinium",
   "discoveryLocation": "Germany and The United Kingdom",
   "casNumber": "7440-13-3",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -10751,6 +12651,41 @@
   "nameOrigin": "Uranus",
   "discoveryLocation": "Germany",
   "casNumber": "7440-61-1",
+  "ghs": {
+   "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+   "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+   "substance": "uranium",
+   "signal": "Danger",
+   "pictograms": [
+    {
+     "code": "GHS06",
+     "label": "Acute toxic"
+    },
+    {
+     "code": "GHS08",
+     "label": "Health hazard"
+    }
+   ],
+   "hazards": [
+    {
+     "code": "H300",
+     "text": "Fatal if swallowed"
+    },
+    {
+     "code": "H330",
+     "text": "Fatal if inhaled"
+    },
+    {
+     "code": "H373",
+     "text": "May causes damage to organs through prolonged or repeated exposure"
+    },
+    {
+     "code": "H413",
+     "text": "May cause long lasting harmful effects to aquatic life"
+    }
+   ],
+   "notClassified": null
+  },
   "priceUsdPerKg": 57.76,
   "priceUsdPer100g": 5.776,
   "priceReference": {
@@ -10864,6 +12799,7 @@
   "nameOrigin": "Neptune",
   "discoveryLocation": "The United States",
   "casNumber": "7439-99-8",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -10971,6 +12907,7 @@
   "nameOrigin": "Pluto",
   "discoveryLocation": "The United States",
   "casNumber": "7440-07-5",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -11078,6 +13015,7 @@
   "nameOrigin": "Americas",
   "discoveryLocation": "The United States",
   "casNumber": "7440-35-9",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -11185,6 +13123,7 @@
   "nameOrigin": "Marie Sklodowska-Curie; Pierre Curie",
   "discoveryLocation": "The United States",
   "casNumber": "7440-51-9",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -11292,6 +13231,7 @@
   "nameOrigin": "Berkeley",
   "discoveryLocation": "The United States",
   "casNumber": "7440-40-6",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -11399,6 +13339,7 @@
   "nameOrigin": "California",
   "discoveryLocation": "The United States",
   "casNumber": "7440-71-3",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -11506,6 +13447,7 @@
   "nameOrigin": "Albert Einstein",
   "discoveryLocation": "The United States",
   "casNumber": "7429-92-7",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -11613,6 +13555,7 @@
   "nameOrigin": "Enrico Fermi",
   "discoveryLocation": "The United States",
   "casNumber": "7440-72-4",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -11720,6 +13663,7 @@
   "nameOrigin": "Dmitri Mendeleev",
   "discoveryLocation": "The United States",
   "casNumber": "7440-11-1",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -11827,6 +13771,7 @@
   "nameOrigin": "Alfred Nobel",
   "discoveryLocation": "Sweden and The United States",
   "casNumber": "10028-14-5",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -11934,6 +13879,7 @@
   "nameOrigin": "Ernest Orlando Lawrence",
   "discoveryLocation": "The United States",
   "casNumber": "22537-19-5",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -12041,6 +13987,7 @@
   "nameOrigin": "Ernest Rutherford",
   "discoveryLocation": "Russia and The United States",
   "casNumber": "53850-36-5",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -12146,6 +14093,7 @@
   "nameOrigin": "Dubna",
   "discoveryLocation": "Russia and The United States",
   "casNumber": "53850-35-4",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -12251,6 +14199,7 @@
   "nameOrigin": "Glenn Theodore Seaborg",
   "discoveryLocation": "The United States",
   "casNumber": "54038-81-2",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -12356,6 +14305,7 @@
   "nameOrigin": "Q7085",
   "discoveryLocation": "Germany",
   "casNumber": "54037-14-8",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -12461,6 +14411,7 @@
   "nameOrigin": "Hesse",
   "discoveryLocation": "Germany",
   "casNumber": "54037-57-9",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -12566,6 +14517,7 @@
   "nameOrigin": "Lise Meitner",
   "discoveryLocation": "Germany",
   "casNumber": "54038-01-6",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -12671,6 +14623,7 @@
   "nameOrigin": "Darmstadt",
   "discoveryLocation": "Germany",
   "casNumber": "54083-77-1",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -12776,6 +14729,7 @@
   "nameOrigin": "Wilhelm Conrad Röntgen",
   "discoveryLocation": "Germany",
   "casNumber": "54386-24-2",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -12881,6 +14835,7 @@
   "nameOrigin": "Nicolaus Copernicus",
   "discoveryLocation": "Germany",
   "casNumber": "54084-26-3",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -12986,6 +14941,7 @@
   "nameOrigin": "Japan",
   "discoveryLocation": "Russia and The United States",
   "casNumber": "54084-70-7",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -13091,6 +15047,7 @@
   "nameOrigin": "Flerov Laboratory of Nuclear Reactions",
   "discoveryLocation": "Russia",
   "casNumber": "54085-16-4",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -13196,6 +15153,7 @@
   "nameOrigin": "Moscow Oblast",
   "discoveryLocation": "Russia and The United States",
   "casNumber": "54085-64-2",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -13301,6 +15259,7 @@
   "nameOrigin": "Lawrence Livermore National Laboratory",
   "discoveryLocation": "Russia",
   "casNumber": "54100-71-9",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -13406,6 +15365,7 @@
   "nameOrigin": "Tennessee",
   "discoveryLocation": "Joint Institute for Nuclear Research",
   "casNumber": "87658-56-8",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,
@@ -13511,6 +15471,7 @@
   "nameOrigin": "Yuri Oganessian",
   "discoveryLocation": "Russia and The United States",
   "casNumber": "54144-19-3",
+  "ghs": null,
   "priceUsdPerKg": null,
   "priceUsdPer100g": null,
   "priceReference": null,

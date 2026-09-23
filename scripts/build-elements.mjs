@@ -54,6 +54,15 @@ try {
   // Run scripts/build-nuclides.mjs first to get consistent half-lives.
 }
 
+// GHS hazard classification from PubChem (EU harmonised / ECHA), keyed by atomic
+// number. Refresh with scripts/fetch-ghs.mjs.
+let ghsByNumber = {};
+try {
+  ghsByNumber = JSON.parse(readFileSync(join(root, 'data-sources/pubchem-ghs.json'), 'utf8'));
+} catch {
+  // Optional: elements simply have no Safety section without it.
+}
+
 // --- tiny CSV parser (handles quoted fields) ---
 function parseCsv(text) {
   const rows = [];
@@ -232,6 +241,7 @@ const elements = bowser
       // Extended properties (periodic-table-data-complete, MIT)
       discoveryLocation: firstString(pt.discovered?.location, wd.discoveryLocations, yearRaw === 'Ancient' ? 'Known since antiquity' : null),
       casNumber: stripPrefix(classifications.cas_number, 'CAS'),
+      ghs: ghsByNumber[el.number] ?? null,
       priceUsdPerKg: num(price?.usdPerKg),
       priceUsdPer100g: num(price?.usdPer100g),
       priceReference: price

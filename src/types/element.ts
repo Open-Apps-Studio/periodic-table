@@ -89,6 +89,8 @@ export interface PeriodicElement {
   /** Valence electron count (pTable dataset). */
   discoveryLocation: string | null;
   casNumber: string | null;
+  /** GHS hazard classification (PubChem: EU harmonised or ECHA majority notifications). */
+  ghs: ElementGhs | null;
   /** Indicative market price from Leonland, USD/kg and USD/100g. */
   priceUsdPerKg: number | null;
   priceUsdPer100g: number | null;
@@ -154,4 +156,18 @@ export interface PeriodicElement {
   lifetime: number | null;
   /** barns */
   neutronCrossSection: number | null;
+}
+
+export interface ElementGhs {
+  /** Classification source, e.g. "Regulation (EC) No 1272/2008 ..." or "European Chemicals Agency (ECHA)". */
+  source: string;
+  sourceUrl: string;
+  /** The exact substance/form the classification applies to (often a powder). */
+  substance: string;
+  signal: 'Danger' | 'Warning' | null;
+  pictograms: { code: string; label: string }[];
+  /** H-statements; empty when most suppliers report no hazard. */
+  hazards: { code: string; text: string }[];
+  /** Share of ECHA supplier reports that found no GHS hazard. */
+  notClassified: { reports: number; total: number } | null;
 }

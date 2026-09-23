@@ -1,0 +1,1922 @@
+{
+  "1": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "hydrogen",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H220",
+        "text": "Extremely flammable gas"
+      }
+    ],
+    "notClassified": null
+  },
+  "2": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-168-5",
+    "substance": "Helium (EC: 231-168-5)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS04",
+        "label": "Compressed gas"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H280",
+        "text": "Contains gas under pressure; may explode if heated"
+      }
+    ],
+    "notClassified": {
+      "reports": 2,
+      "total": 491
+    }
+  },
+  "3": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "lithium",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      },
+      {
+        "code": "GHS05",
+        "label": "Corrosive"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H260",
+        "text": "In contact with water releases flammable gases which may ignite spontaneously"
+      },
+      {
+        "code": "H314",
+        "text": "Causes severe skin burns and eye damage"
+      }
+    ],
+    "notClassified": null
+  },
+  "4": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "beryllium",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS06",
+        "label": "Acute toxic"
+      },
+      {
+        "code": "GHS08",
+        "label": "Health hazard"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H301",
+        "text": "Toxic if swallowed"
+      },
+      {
+        "code": "H315",
+        "text": "Causes skin irritation"
+      },
+      {
+        "code": "H317",
+        "text": "May cause an allergic skin reaction"
+      },
+      {
+        "code": "H319",
+        "text": "Causes serious eye irritation"
+      },
+      {
+        "code": "H330",
+        "text": "Fatal if inhaled"
+      },
+      {
+        "code": "H335",
+        "text": "May cause respiratory irritation"
+      },
+      {
+        "code": "H350i",
+        "text": "May cause cancer by inhalation"
+      },
+      {
+        "code": "H372",
+        "text": "Causes damage to organs through prolonged or repeated exposure"
+      }
+    ],
+    "notClassified": null
+  },
+  "5": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-151-2",
+    "substance": "Boron (EC: 231-151-2)",
+    "signal": null,
+    "pictograms": [],
+    "hazards": [],
+    "notClassified": {
+      "reports": 253,
+      "total": 485
+    }
+  },
+  "6": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-153-3",
+    "substance": "Carbon (EC: 231-153-3)",
+    "signal": "Warning",
+    "pictograms": [
+      {
+        "code": "GHS07",
+        "label": "Irritant"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H319",
+        "text": "Causes serious eye irritation"
+      },
+      {
+        "code": "H335",
+        "text": "May cause respiratory irritation"
+      }
+    ],
+    "notClassified": {
+      "reports": 1095,
+      "total": 2727
+    }
+  },
+  "7": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-783-9",
+    "substance": "Nitrogen (EC: 231-783-9)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS04",
+        "label": "Compressed gas"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H280",
+        "text": "Contains gas under pressure; may explode if heated"
+      }
+    ],
+    "notClassified": {
+      "reports": 47,
+      "total": 1001
+    }
+  },
+  "8": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "oxygen",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS03",
+        "label": "Oxidizer"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H270",
+        "text": "May cause or intensify fire; oxidizer"
+      }
+    ],
+    "notClassified": null
+  },
+  "9": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "fluorine",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS03",
+        "label": "Oxidizer"
+      },
+      {
+        "code": "GHS05",
+        "label": "Corrosive"
+      },
+      {
+        "code": "GHS06",
+        "label": "Acute toxic"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H270",
+        "text": "May cause or intensify fire; oxidizer"
+      },
+      {
+        "code": "H314",
+        "text": "Causes severe skin burns and eye damage"
+      },
+      {
+        "code": "H330",
+        "text": "Fatal if inhaled"
+      }
+    ],
+    "notClassified": null
+  },
+  "10": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-110-9",
+    "substance": "Neon (EC: 231-110-9)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS04",
+        "label": "Compressed gas"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H280",
+        "text": "Contains gas under pressure; may explode if heated"
+      }
+    ],
+    "notClassified": null
+  },
+  "11": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "sodium",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      },
+      {
+        "code": "GHS05",
+        "label": "Corrosive"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H260",
+        "text": "In contact with water releases flammable gases which may ignite spontaneously"
+      },
+      {
+        "code": "H314",
+        "text": "Causes severe skin burns and eye damage"
+      }
+    ],
+    "notClassified": null
+  },
+  "12": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "magnesium powder (pyrophoric)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H250",
+        "text": "Catches fire spontaneously if exposed to air"
+      },
+      {
+        "code": "H260",
+        "text": "In contact with water releases flammable gases which may ignite spontaneously"
+      }
+    ],
+    "notClassified": null
+  },
+  "13": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "aluminium powder (pyrophoric)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H250",
+        "text": "Catches fire spontaneously if exposed to air"
+      },
+      {
+        "code": "H261",
+        "text": "In contact with water releases flammable gas"
+      }
+    ],
+    "notClassified": null
+  },
+  "14": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-130-8",
+    "substance": "Silicon (EC: 231-130-8)",
+    "signal": null,
+    "pictograms": [],
+    "hazards": [],
+    "notClassified": {
+      "reports": 3142,
+      "total": 3263
+    }
+  },
+  "15": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "red phosphorus",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H228",
+        "text": "Flammable solid"
+      },
+      {
+        "code": "H412",
+        "text": "Harmful to aquatic life with long lasting effects"
+      }
+    ],
+    "notClassified": null
+  },
+  "16": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "sulfur",
+    "signal": "Warning",
+    "pictograms": [
+      {
+        "code": "GHS07",
+        "label": "Irritant"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H315",
+        "text": "Causes skin irritation"
+      }
+    ],
+    "notClassified": null
+  },
+  "17": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "chlorine",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS03",
+        "label": "Oxidizer"
+      },
+      {
+        "code": "GHS06",
+        "label": "Acute toxic"
+      },
+      {
+        "code": "GHS09",
+        "label": "Environmental hazard"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H270",
+        "text": "May cause or intensify fire; oxidizer"
+      },
+      {
+        "code": "H315",
+        "text": "Causes skin irritation"
+      },
+      {
+        "code": "H319",
+        "text": "Causes serious eye irritation"
+      },
+      {
+        "code": "H331",
+        "text": "Toxic if inhaled"
+      },
+      {
+        "code": "H335",
+        "text": "May cause respiratory irritation"
+      },
+      {
+        "code": "H400",
+        "text": "Very toxic to aquatic life"
+      }
+    ],
+    "notClassified": null
+  },
+  "18": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-147-0",
+    "substance": "Argon (EC: 231-147-0)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS04",
+        "label": "Compressed gas"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H280",
+        "text": "Contains gas under pressure; may explode if heated"
+      }
+    ],
+    "notClassified": {
+      "reports": 4,
+      "total": 643
+    }
+  },
+  "19": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "potassium",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      },
+      {
+        "code": "GHS05",
+        "label": "Corrosive"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H260",
+        "text": "In contact with water releases flammable gases which may ignite spontaneously"
+      },
+      {
+        "code": "H314",
+        "text": "Causes severe skin burns and eye damage"
+      }
+    ],
+    "notClassified": null
+  },
+  "20": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "calcium",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H261",
+        "text": "In contact with water releases flammable gas"
+      }
+    ],
+    "notClassified": null
+  },
+  "21": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-129-2",
+    "substance": "Scandium (EC: 231-129-2)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H228",
+        "text": "Flammable solid"
+      }
+    ],
+    "notClassified": {
+      "reports": 5,
+      "total": 105
+    }
+  },
+  "22": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-142-3",
+    "substance": "Titanium (EC: 231-142-3)",
+    "signal": null,
+    "pictograms": [],
+    "hazards": [],
+    "notClassified": {
+      "reports": 606,
+      "total": 808
+    }
+  },
+  "23": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-171-1",
+    "substance": "Vanadium (EC: 231-171-1)",
+    "signal": null,
+    "pictograms": [],
+    "hazards": [],
+    "notClassified": {
+      "reports": 431,
+      "total": 452
+    }
+  },
+  "26": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-096-4",
+    "substance": "Iron (EC: 231-096-4)",
+    "signal": null,
+    "pictograms": [],
+    "hazards": [],
+    "notClassified": {
+      "reports": 4458,
+      "total": 6013
+    }
+  },
+  "27": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "cobalt",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS07",
+        "label": "Irritant"
+      },
+      {
+        "code": "GHS08",
+        "label": "Health hazard"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H317",
+        "text": "May cause an allergic skin reaction"
+      },
+      {
+        "code": "H334",
+        "text": "May cause allergy or asthma symptoms or breathing difficulties if inhaled"
+      },
+      {
+        "code": "H341",
+        "text": "Suspected of causing genetic defects"
+      },
+      {
+        "code": "H350",
+        "text": "May cause cancer"
+      },
+      {
+        "code": "H360F",
+        "text": "May damage fertility"
+      },
+      {
+        "code": "H413",
+        "text": "May cause long lasting harmful effects to aquatic life"
+      }
+    ],
+    "notClassified": null
+  },
+  "28": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "nickel",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS07",
+        "label": "Irritant"
+      },
+      {
+        "code": "GHS08",
+        "label": "Health hazard"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H317",
+        "text": "May cause an allergic skin reaction"
+      },
+      {
+        "code": "H351",
+        "text": "Suspected of causing cancer"
+      },
+      {
+        "code": "H372",
+        "text": "Causes damage to organs through prolonged or repeated exposure"
+      }
+    ],
+    "notClassified": null
+  },
+  "29": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "copper [specific surface area > 0,67 mm2/mg]",
+    "signal": "Warning",
+    "pictograms": [
+      {
+        "code": "GHS09",
+        "label": "Environmental hazard"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H400",
+        "text": "Very toxic to aquatic life"
+      },
+      {
+        "code": "H410",
+        "text": "Very toxic to aquatic life with long lasting effects"
+      }
+    ],
+    "notClassified": null
+  },
+  "30": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "zinc powder - zinc dust (pyrophoric)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      },
+      {
+        "code": "GHS09",
+        "label": "Environmental hazard"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H250",
+        "text": "Catches fire spontaneously if exposed to air"
+      },
+      {
+        "code": "H260",
+        "text": "In contact with water releases flammable gases which may ignite spontaneously"
+      },
+      {
+        "code": "H400",
+        "text": "Very toxic to aquatic life"
+      },
+      {
+        "code": "H410",
+        "text": "Very toxic to aquatic life with long lasting effects"
+      }
+    ],
+    "notClassified": null
+  },
+  "31": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-163-8",
+    "substance": "Gallium (EC: 231-163-8)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS05",
+        "label": "Corrosive"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H314",
+        "text": "Causes severe skin burns and eye damage"
+      }
+    ],
+    "notClassified": {
+      "reports": 9,
+      "total": 388
+    }
+  },
+  "32": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-164-3",
+    "substance": "Germanium (EC: 231-164-3)",
+    "signal": null,
+    "pictograms": [],
+    "hazards": [],
+    "notClassified": {
+      "reports": 186,
+      "total": 319
+    }
+  },
+  "33": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "arsenic",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS06",
+        "label": "Acute toxic"
+      },
+      {
+        "code": "GHS09",
+        "label": "Environmental hazard"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H301",
+        "text": "Toxic if swallowed"
+      },
+      {
+        "code": "H331",
+        "text": "Toxic if inhaled"
+      },
+      {
+        "code": "H400",
+        "text": "Very toxic to aquatic life"
+      },
+      {
+        "code": "H410",
+        "text": "Very toxic to aquatic life with long lasting effects"
+      }
+    ],
+    "notClassified": null
+  },
+  "34": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "selenium",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS06",
+        "label": "Acute toxic"
+      },
+      {
+        "code": "GHS08",
+        "label": "Health hazard"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H301",
+        "text": "Toxic if swallowed"
+      },
+      {
+        "code": "H331",
+        "text": "Toxic if inhaled"
+      },
+      {
+        "code": "H373",
+        "text": "May causes damage to organs through prolonged or repeated exposure"
+      },
+      {
+        "code": "H413",
+        "text": "May cause long lasting harmful effects to aquatic life"
+      }
+    ],
+    "notClassified": null
+  },
+  "35": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "bromine",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS05",
+        "label": "Corrosive"
+      },
+      {
+        "code": "GHS06",
+        "label": "Acute toxic"
+      },
+      {
+        "code": "GHS09",
+        "label": "Environmental hazard"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H314",
+        "text": "Causes severe skin burns and eye damage"
+      },
+      {
+        "code": "H330",
+        "text": "Fatal if inhaled"
+      },
+      {
+        "code": "H400",
+        "text": "Very toxic to aquatic life"
+      }
+    ],
+    "notClassified": null
+  },
+  "36": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-098-5",
+    "substance": "Krypton (EC: 231-098-5)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS04",
+        "label": "Compressed gas"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H280",
+        "text": "Contains gas under pressure; may explode if heated"
+      }
+    ],
+    "notClassified": null
+  },
+  "37": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-126-6",
+    "substance": "Rubidium (EC: 231-126-6)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      },
+      {
+        "code": "GHS05",
+        "label": "Corrosive"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H260",
+        "text": "In contact with water releases flammable gases which may ignite spontaneously"
+      },
+      {
+        "code": "H314",
+        "text": "Causes severe skin burns and eye damage"
+      }
+    ],
+    "notClassified": {
+      "reports": 1,
+      "total": 81
+    }
+  },
+  "38": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-133-4",
+    "substance": "Strontium (EC: 231-133-4)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      },
+      {
+        "code": "GHS05",
+        "label": "Corrosive"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H260",
+        "text": "In contact with water releases flammable gases which may ignite spontaneously"
+      },
+      {
+        "code": "H314",
+        "text": "Causes severe skin burns and eye damage"
+      },
+      {
+        "code": "H318",
+        "text": "Causes serious eye damage"
+      }
+    ],
+    "notClassified": {
+      "reports": 52,
+      "total": 304
+    }
+  },
+  "39": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-174-8",
+    "substance": "Yttrium (EC: 231-174-8)",
+    "signal": null,
+    "pictograms": [],
+    "hazards": [],
+    "notClassified": {
+      "reports": 180,
+      "total": 317
+    }
+  },
+  "40": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "zirconium powder (pyrophoric)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H250",
+        "text": "Catches fire spontaneously if exposed to air"
+      },
+      {
+        "code": "H260",
+        "text": "In contact with water releases flammable gases which may ignite spontaneously"
+      }
+    ],
+    "notClassified": null
+  },
+  "41": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-113-5",
+    "substance": "Niobium (EC: 231-113-5)",
+    "signal": null,
+    "pictograms": [],
+    "hazards": [],
+    "notClassified": {
+      "reports": 307,
+      "total": 529
+    }
+  },
+  "42": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-107-2",
+    "substance": "Molybdenum (EC: 231-107-2)",
+    "signal": null,
+    "pictograms": [],
+    "hazards": [],
+    "notClassified": {
+      "reports": 874,
+      "total": 1523
+    }
+  },
+  "45": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-125-0",
+    "substance": "Rhodium (EC: 231-125-0)",
+    "signal": null,
+    "pictograms": [],
+    "hazards": [],
+    "notClassified": {
+      "reports": 239,
+      "total": 294
+    }
+  },
+  "46": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-115-6",
+    "substance": "Palladium (EC: 231-115-6)",
+    "signal": null,
+    "pictograms": [],
+    "hazards": [],
+    "notClassified": {
+      "reports": 365,
+      "total": 616
+    }
+  },
+  "47": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "silver massive: [particle diameter ≥ 1 mm]",
+    "signal": "Warning",
+    "pictograms": [
+      {
+        "code": "GHS08",
+        "label": "Health hazard"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H361f",
+        "text": "Suspected of damaging fertility"
+      },
+      {
+        "code": "H373",
+        "text": "May causes damage to organs through prolonged or repeated exposure"
+      }
+    ],
+    "notClassified": null
+  },
+  "48": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "cadmium (pyrophoric)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      },
+      {
+        "code": "GHS06",
+        "label": "Acute toxic"
+      },
+      {
+        "code": "GHS08",
+        "label": "Health hazard"
+      },
+      {
+        "code": "GHS09",
+        "label": "Environmental hazard"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H250",
+        "text": "Catches fire spontaneously if exposed to air"
+      },
+      {
+        "code": "H330",
+        "text": "Fatal if inhaled"
+      },
+      {
+        "code": "H341",
+        "text": "Suspected of causing genetic defects"
+      },
+      {
+        "code": "H350",
+        "text": "May cause cancer"
+      },
+      {
+        "code": "H361fd",
+        "text": "Suspected of damaging fertility; Suspected of damaging the unborn child"
+      },
+      {
+        "code": "H372",
+        "text": "Causes damage to organs through prolonged or repeated exposure"
+      },
+      {
+        "code": "H400",
+        "text": "Very toxic to aquatic life"
+      },
+      {
+        "code": "H410",
+        "text": "Very toxic to aquatic life with long lasting effects"
+      }
+    ],
+    "notClassified": null
+  },
+  "49": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-180-0",
+    "substance": "Indium (EC: 231-180-0)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS08",
+        "label": "Health hazard"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H372",
+        "text": "Causes damage to organs through prolonged or repeated exposure"
+      }
+    ],
+    "notClassified": {
+      "reports": 69,
+      "total": 371
+    }
+  },
+  "50": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-141-8",
+    "substance": "Tin (EC: 231-141-8)",
+    "signal": null,
+    "pictograms": [],
+    "hazards": [],
+    "notClassified": {
+      "reports": 695,
+      "total": 953
+    }
+  },
+  "52": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "tellurium",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS08",
+        "label": "Health hazard"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H360Df",
+        "text": "May damage the unborn child; Suspected of damaging fertility"
+      },
+      {
+        "code": "H362",
+        "text": "May cause harm to breast-fed children"
+      }
+    ],
+    "notClassified": null
+  },
+  "53": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "iodine",
+    "signal": "Warning",
+    "pictograms": [
+      {
+        "code": "GHS07",
+        "label": "Irritant"
+      },
+      {
+        "code": "GHS09",
+        "label": "Environmental hazard"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H312",
+        "text": "Harmful in contact with skin"
+      },
+      {
+        "code": "H332",
+        "text": "Harmful if inhaled"
+      },
+      {
+        "code": "H400",
+        "text": "Very toxic to aquatic life"
+      }
+    ],
+    "notClassified": null
+  },
+  "54": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-172-7",
+    "substance": "Xenon (EC: 231-172-7)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS04",
+        "label": "Compressed gas"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H280",
+        "text": "Contains gas under pressure; may explode if heated"
+      }
+    ],
+    "notClassified": {
+      "reports": 22,
+      "total": 373
+    }
+  },
+  "55": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-155-4",
+    "substance": "Caesium (EC: 231-155-4)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      },
+      {
+        "code": "GHS05",
+        "label": "Corrosive"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H260",
+        "text": "In contact with water releases flammable gases which may ignite spontaneously"
+      },
+      {
+        "code": "H314",
+        "text": "Causes severe skin burns and eye damage"
+      },
+      {
+        "code": "H318",
+        "text": "Causes serious eye damage"
+      }
+    ],
+    "notClassified": {
+      "reports": 1,
+      "total": 158
+    }
+  },
+  "57": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-099-0",
+    "substance": "Lanthanum (EC: 231-099-0)",
+    "signal": null,
+    "pictograms": [],
+    "hazards": [],
+    "notClassified": {
+      "reports": 146,
+      "total": 248
+    }
+  },
+  "58": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-154-9",
+    "substance": "Cerium (EC: 231-154-9)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H228",
+        "text": "Flammable solid"
+      }
+    ],
+    "notClassified": {
+      "reports": 11,
+      "total": 502
+    }
+  },
+  "59": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-120-3",
+    "substance": "Praseodymium (EC: 231-120-3)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      },
+      {
+        "code": "GHS07",
+        "label": "Irritant"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H228",
+        "text": "Flammable solid"
+      },
+      {
+        "code": "H251",
+        "text": "Self-heating; may catch fire"
+      },
+      {
+        "code": "H315",
+        "text": "Causes skin irritation"
+      },
+      {
+        "code": "H319",
+        "text": "Causes serious eye irritation"
+      }
+    ],
+    "notClassified": {
+      "reports": 45,
+      "total": 247
+    }
+  },
+  "60": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-109-3",
+    "substance": "Neodymium (EC: 231-109-3)",
+    "signal": null,
+    "pictograms": [],
+    "hazards": [],
+    "notClassified": {
+      "reports": 261,
+      "total": 463
+    }
+  },
+  "62": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-128-7",
+    "substance": "Samarium (EC: 231-128-7)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H228",
+        "text": "Flammable solid"
+      },
+      {
+        "code": "H261",
+        "text": "In contact with water releases flammable gas"
+      }
+    ],
+    "notClassified": {
+      "reports": 6,
+      "total": 255
+    }
+  },
+  "63": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-161-7",
+    "substance": "Europium (EC: 231-161-7)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H250",
+        "text": "Catches fire spontaneously if exposed to air"
+      }
+    ],
+    "notClassified": {
+      "reports": 2,
+      "total": 48
+    }
+  },
+  "64": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-162-2",
+    "substance": "Gadolinium (EC: 231-162-2)",
+    "signal": "Warning",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H261",
+        "text": "In contact with water releases flammable gas"
+      }
+    ],
+    "notClassified": {
+      "reports": 11,
+      "total": 63
+    }
+  },
+  "65": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-137-6",
+    "substance": "Terbium (EC: 231-137-6)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H228",
+        "text": "Flammable solid"
+      }
+    ],
+    "notClassified": {
+      "reports": 13,
+      "total": 62
+    }
+  },
+  "66": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-073-9",
+    "substance": "Dysprosium (EC: 231-073-9)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H228",
+        "text": "Flammable solid"
+      }
+    ],
+    "notClassified": {
+      "reports": 25,
+      "total": 105
+    }
+  },
+  "67": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-169-0",
+    "substance": "Holmium (EC: 231-169-0)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H228",
+        "text": "Flammable solid"
+      }
+    ],
+    "notClassified": {
+      "reports": 4,
+      "total": 50
+    }
+  },
+  "68": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-160-1",
+    "substance": "Erbium (EC: 231-160-1)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H228",
+        "text": "Flammable solid"
+      }
+    ],
+    "notClassified": {
+      "reports": 5,
+      "total": 104
+    }
+  },
+  "69": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-140-2",
+    "substance": "Thulium (EC: 231-140-2)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      },
+      {
+        "code": "GHS07",
+        "label": "Irritant"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H228",
+        "text": "Flammable solid"
+      },
+      {
+        "code": "H319",
+        "text": "Causes serious eye irritation"
+      },
+      {
+        "code": "H335",
+        "text": "May cause respiratory irritation"
+      }
+    ],
+    "notClassified": {
+      "reports": 3,
+      "total": 50
+    }
+  },
+  "70": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-173-2",
+    "substance": "Ytterbium (EC: 231-173-2)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      },
+      {
+        "code": "GHS07",
+        "label": "Irritant"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H228",
+        "text": "Flammable solid"
+      },
+      {
+        "code": "H302",
+        "text": "Harmful if swallowed"
+      },
+      {
+        "code": "H312",
+        "text": "Harmful in contact with skin"
+      },
+      {
+        "code": "H315",
+        "text": "Causes skin irritation"
+      },
+      {
+        "code": "H319",
+        "text": "Causes serious eye irritation"
+      },
+      {
+        "code": "H332",
+        "text": "Harmful if inhaled"
+      },
+      {
+        "code": "H335",
+        "text": "May cause respiratory irritation"
+      }
+    ],
+    "notClassified": {
+      "reports": 3,
+      "total": 50
+    }
+  },
+  "71": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-103-0",
+    "substance": "Lutetium (EC: 231-103-0)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H228",
+        "text": "Flammable solid"
+      }
+    ],
+    "notClassified": {
+      "reports": 4,
+      "total": 51
+    }
+  },
+  "72": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-166-4",
+    "substance": "Hafnium (EC: 231-166-4)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H250",
+        "text": "Catches fire spontaneously if exposed to air"
+      }
+    ],
+    "notClassified": {
+      "reports": 124,
+      "total": 360
+    }
+  },
+  "73": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-135-5",
+    "substance": "Tantalum (EC: 231-135-5)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H228",
+        "text": "Flammable solid"
+      }
+    ],
+    "notClassified": {
+      "reports": 200,
+      "total": 455
+    }
+  },
+  "74": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-143-9",
+    "substance": "Tungsten (EC: 231-143-9)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H228",
+        "text": "Flammable solid"
+      }
+    ],
+    "notClassified": {
+      "reports": 196,
+      "total": 741
+    }
+  },
+  "75": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-124-5",
+    "substance": "Rhenium (EC: 231-124-5)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H228",
+        "text": "Flammable solid"
+      }
+    ],
+    "notClassified": {
+      "reports": 137,
+      "total": 393
+    }
+  },
+  "76": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-114-0",
+    "substance": "Osmium (EC: 231-114-0)",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS02",
+        "label": "Flammable"
+      },
+      {
+        "code": "GHS05",
+        "label": "Corrosive"
+      },
+      {
+        "code": "GHS07",
+        "label": "Irritant"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H228",
+        "text": "Flammable solid"
+      },
+      {
+        "code": "H315",
+        "text": "Causes skin irritation"
+      },
+      {
+        "code": "H318",
+        "text": "Causes serious eye damage"
+      },
+      {
+        "code": "H335",
+        "text": "May cause respiratory irritation"
+      },
+      {
+        "code": "H413",
+        "text": "May cause long lasting harmful effects to aquatic life"
+      }
+    ],
+    "notClassified": null
+  },
+  "78": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-116-1",
+    "substance": "Platinum (EC: 231-116-1)",
+    "signal": null,
+    "pictograms": [],
+    "hazards": [],
+    "notClassified": {
+      "reports": 410,
+      "total": 504
+    }
+  },
+  "79": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-165-9",
+    "substance": "Gold (EC: 231-165-9)",
+    "signal": null,
+    "pictograms": [],
+    "hazards": [],
+    "notClassified": {
+      "reports": 502,
+      "total": 506
+    }
+  },
+  "80": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "mercury",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS06",
+        "label": "Acute toxic"
+      },
+      {
+        "code": "GHS08",
+        "label": "Health hazard"
+      },
+      {
+        "code": "GHS09",
+        "label": "Environmental hazard"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H330",
+        "text": "Fatal if inhaled"
+      },
+      {
+        "code": "H360D",
+        "text": "May damage the unborn child"
+      },
+      {
+        "code": "H372",
+        "text": "Causes damage to organs through prolonged or repeated exposure"
+      },
+      {
+        "code": "H400",
+        "text": "Very toxic to aquatic life"
+      },
+      {
+        "code": "H410",
+        "text": "Very toxic to aquatic life with long lasting effects"
+      }
+    ],
+    "notClassified": null
+  },
+  "81": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "thallium",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS06",
+        "label": "Acute toxic"
+      },
+      {
+        "code": "GHS08",
+        "label": "Health hazard"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H300",
+        "text": "Fatal if swallowed"
+      },
+      {
+        "code": "H330",
+        "text": "Fatal if inhaled"
+      },
+      {
+        "code": "H373",
+        "text": "May causes damage to organs through prolonged or repeated exposure"
+      },
+      {
+        "code": "H413",
+        "text": "May cause long lasting harmful effects to aquatic life"
+      }
+    ],
+    "notClassified": null
+  },
+  "82": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "lead powder; [particle diameter < 1 mm]",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS08",
+        "label": "Health hazard"
+      },
+      {
+        "code": "GHS09",
+        "label": "Environmental hazard"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H360FD",
+        "text": "May damage fertility; May damage the unborn child"
+      },
+      {
+        "code": "H362",
+        "text": "May cause harm to breast-fed children"
+      },
+      {
+        "code": "H400",
+        "text": "Very toxic to aquatic life"
+      },
+      {
+        "code": "H410",
+        "text": "Very toxic to aquatic life with long lasting effects"
+      }
+    ],
+    "notClassified": null
+  },
+  "83": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-177-4",
+    "substance": "Bismuth (EC: 231-177-4)",
+    "signal": null,
+    "pictograms": [],
+    "hazards": [],
+    "notClassified": {
+      "reports": 324,
+      "total": 382
+    }
+  },
+  "90": {
+    "source": "European Chemicals Agency (ECHA)",
+    "sourceUrl": "https://chem.echa.europa.eu/substance-search?searchText=231-139-7",
+    "substance": "Thorium (EC: 231-139-7)",
+    "signal": "Warning",
+    "pictograms": [
+      {
+        "code": "GHS07",
+        "label": "Irritant"
+      },
+      {
+        "code": "GHS08",
+        "label": "Health hazard"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H302",
+        "text": "Harmful if swallowed"
+      },
+      {
+        "code": "H315",
+        "text": "Causes skin irritation"
+      },
+      {
+        "code": "H319",
+        "text": "Causes serious eye irritation"
+      },
+      {
+        "code": "H335",
+        "text": "May cause respiratory irritation"
+      },
+      {
+        "code": "H373",
+        "text": "May causes damage to organs through prolonged or repeated exposure"
+      }
+    ],
+    "notClassified": {
+      "reports": 2,
+      "total": 18
+    }
+  },
+  "92": {
+    "source": "Regulation (EC) No 1272/2008 of the European Parliament and of the Council",
+    "sourceUrl": "https://eur-lex.europa.eu/eli/reg/2008/1272/oj",
+    "substance": "uranium",
+    "signal": "Danger",
+    "pictograms": [
+      {
+        "code": "GHS06",
+        "label": "Acute toxic"
+      },
+      {
+        "code": "GHS08",
+        "label": "Health hazard"
+      }
+    ],
+    "hazards": [
+      {
+        "code": "H300",
+        "text": "Fatal if swallowed"
+      },
+      {
+        "code": "H330",
+        "text": "Fatal if inhaled"
+      },
+      {
+        "code": "H373",
+        "text": "May causes damage to organs through prolonged or repeated exposure"
+      },
+      {
+        "code": "H413",
+        "text": "May cause long lasting harmful effects to aquatic life"
+      }
+    ],
+    "notClassified": null
+  }
+}
