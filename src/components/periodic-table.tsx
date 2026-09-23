@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { Pressable, Text, View } from 'react-native';
 import { ELEMENTS } from '@/data/elements';
-import { CategoryColors, withAlpha } from '@/constants/theme';
+import { CategoryColors, CategoryLabels, withAlpha } from '@/constants/theme';
 import { usePalette, useThemeScheme } from '@/context/theme-context';
 import { useThemedStyles } from '@/hooks/use-themed-styles';
 import { formatCellField } from '@/lib/cell-fields';
@@ -193,6 +193,8 @@ const ElementCell = memo(function ElementCell({
   return (
     <Pressable
       onPress={() => onPress(el)}
+      accessibilityRole="button"
+      accessibilityLabel={`${el.name}, ${el.symbol}, atomic number ${el.number}, ${CategoryLabels[el.category]}`}
       style={({ pressed }) => [
         styles.cell,
         {

@@ -4,9 +4,7 @@ import { fmt } from './format';
 export function fmtSci(value: number | null | undefined, sig = 2): string | null {
   if (value == null) return null;
   if (value === 0) return '0';
-  const exp = Math.floor(Math.log10(Math.abs(value)));
-  const mantissa = value / 10 ** exp;
-  return `${mantissa.toFixed(sig)}e${exp}`;
+  return value.toExponential(sig).replace('e+', 'e');
 }
 
 /** Human-readable duration from seconds (half-life, lifetime). */
@@ -94,7 +92,7 @@ export function displayAtomicRadius(el: {
 
 export function displayVanDerWaalsRadius(el: {
   vanDerWaalsRadius: number | null;
-  atomicRadius: number | null;
+  atomicRadius?: number | null;
 }): string | null {
-  return fmtPm(el.vanDerWaalsRadius ?? el.atomicRadius);
+  return fmtPm(el.vanDerWaalsRadius);
 }

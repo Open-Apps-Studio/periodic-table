@@ -27,6 +27,7 @@ export function Zoomable({
 
   const onLayout = (e: LayoutChangeEvent) => {
     const { width, height } = e.nativeEvent.layout;
+    if (width <= 0 || height <= 0) return;
     setViewport((prev) => (prev && prev.w === width && prev.h === height ? prev : { w: width, h: height }));
   };
 

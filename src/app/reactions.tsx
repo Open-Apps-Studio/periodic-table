@@ -314,6 +314,7 @@ function ReactionRow({
   styles: ReturnType<typeof useThemedStyles<Record<string, object>>>;
   onBalance: () => void;
 }) {
+  const palette = usePalette();
   const color = TYPE_COLORS[item.type];
   const balanced = (() => {
     try {
@@ -324,7 +325,11 @@ function ReactionRow({
   })();
 
   return (
-    <Pressable onPress={onBalance} style={({ pressed }) => [styles.row, pressed && { opacity: 0.65 }]}>
+    <Pressable
+      onPress={onBalance}
+      accessibilityRole="button"
+      accessibilityLabel={`Open ${item.title} in balancer`}
+      style={({ pressed }) => [styles.row, pressed && { opacity: 0.65 }]}>
       <View style={styles.rowTop}>
         <View style={[styles.typeIcon, { backgroundColor: withAlpha(color, 0.16) }]}>
           <Ionicons name={iconForType(item.type)} size={18} color={color} />
@@ -333,7 +338,7 @@ function ReactionRow({
           <Text style={styles.rowTitle}>{item.title}</Text>
           <Text style={styles.rowType}>{REACTION_TYPE_LABELS[item.type]}</Text>
         </View>
-        <Ionicons name="chevron-forward" size={17} color="#7B8794" />
+        <Ionicons name="chevron-forward" size={17} color={palette.textTertiary} />
       </View>
       <Text style={styles.equation}>{balanced}</Text>
       <Text style={styles.label}>Conditions</Text>

@@ -36,6 +36,24 @@ try {
   // Wikidata enrichment is optional; run scripts/fetch-wikidata-elements.mjs to refresh it.
 }
 
+// Longest-lived isotope half-life per element, in seconds, from the IAEA nuclide
+// table (src/data/nuclides.json, built by build-nuclides.mjs). pTable's half_life
+// mixes years and days with no unit field (U: 4.47e9 years, Rn: 3.82 days), so it
+// is only a fallback for elements the IAEA table doesn't cover.
+const longestHalfLifeByNumber = new Map();
+const hasStableIsotope = new Set();
+try {
+  const nuclides = JSON.parse(readFileSync(join(root, 'src/data/nuclides.json'), 'utf8'));
+  for (const n of nuclides) {
+    if (n.stable) hasStableIsotope.add(n.z);
+    else if (n.halfLifeSeconds != null && n.halfLifeSeconds > (longestHalfLifeByNumber.get(n.z) ?? 0)) {
+      longestHalfLifeByNumber.set(n.z, n.halfLifeSeconds);
+    }
+  }
+} catch {
+  // Run scripts/build-nuclides.mjs first to get consistent half-lives.
+}
+
 // --- tiny CSV parser (handles quoted fields) ---
 function parseCsv(text) {
   const rows = [];
@@ -148,9 +166,11 @@ const elements = bowser
     const price = priceByNumber.get(el.number);
     const wd = wikidataByNumber.get(el.number) ?? {};
 
-    const halfLife = stableOrNum(pt.half_life);
-    const lifetime = stableOrNum(pt.lifetime);
-    const isStable = pt.half_life === 'Stable' && pt.lifetime === 'Stable';
+    // Half-life/lifetime are in seconds. Elements with a stable isotope count as stable.
+    const iaeaHalfLife = hasStableIsotope.has(el.number) ? null : longestHalfLifeByNumber.get(el.number);
+    const halfLife = iaeaHalfLife ?? (hasStableIsotope.has(el.number) ? null : stableOrNum(pt.half_life));
+    const lifetime = iaeaHalfLife != null ? iaeaHalfLife / Math.LN2 : halfLife == null ? null : stableOrNum(pt.lifetime);
+    const isStable = hasStableIsotope.has(el.number) || (pt.half_life === 'Stable' && pt.lifetime === 'Stable');
     const isRadioactive = isStable ? false : halfLife != null || lifetime != null ? true : null;
 
     const heat = pt.heat ?? {};

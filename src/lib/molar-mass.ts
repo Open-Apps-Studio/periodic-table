@@ -36,13 +36,14 @@ export function parseFormula(input: string): MolarMassResult {
   if (!formula) throw new FormulaError('Enter a formula');
 
   // Hydrate / adduct segments: CuSO4·5H2O -> CuSO4 + 5×(H2O)
-  const segments = formula.split(/[·.*]/);
+  const segments = formula.split(/[·•∙⋅.*]/);
   const total: Counts = new Map();
 
   for (const rawSegment of segments) {
     if (!rawSegment) throw new FormulaError('Empty segment around the dot');
     const coefMatch = rawSegment.match(/^(\d+)/);
     const coefficient = coefMatch ? Number(coefMatch[1]) : 1;
+    if (coefficient <= 0) throw new FormulaError('Coefficient must be greater than zero');
     const segment = coefMatch ? rawSegment.slice(coefMatch[1].length) : rawSegment;
     addCounts(total, parseGroup(segment), coefficient);
   }
@@ -56,6 +57,7 @@ export function parseFormula(input: string): MolarMassResult {
     molarMass += mass;
     parts.push({ symbol: el.symbol, name: el.name, count, atomicMass: el.atomicMass, mass, percent: 0 });
   }
+  if (molarMass <= 0) throw new FormulaError('Enter a valid formula');
   for (const part of parts) part.percent = (part.mass / molarMass) * 100;
   parts.sort((a, b) => b.mass - a.mass);
 
@@ -70,7 +72,10 @@ function parseGroup(segment: string): Counts {
   const readNumber = () => {
     let digits = '';
     while (i < segment.length && /\d/.test(segment[i])) digits += segment[i++];
-    return digits ? Number(digits) : 1;
+    if (!digits) return 1;
+    const n = Number(digits);
+    if (n <= 0) throw new FormulaError('Subscript must be greater than zero');
+    return n;
   };
 
   while (i < segment.length) {

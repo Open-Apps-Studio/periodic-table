@@ -110,21 +110,27 @@ export default function IsotopesScreen() {
   const [filter, setFilter] = useState<FilterId>('all');
 
   const rows = useMemo(() => {
-    const q = query.trim().toLowerCase().replace(/^([a-z]+)-(\d+)$/i, '$2$1');
+    const rawQ = query.trim().toLowerCase();
+    const transformedQ = rawQ.replace(/^([a-z]+)-(\d+)$/i, '$2$1');
     return NUCLIDES.filter((nuclide) => {
       if (filter === 'stable' && !nuclide.stable) return false;
       if (filter === 'radioactive' && nuclide.stable) return false;
       if (filter === 'natural' && nuclide.abundancePercent == null) return false;
-      if (!q) return true;
+      if (!rawQ) return true;
       const element = getElement(nuclide.z);
       const compact = `${nuclide.massNumber}${nuclide.symbol}`.toLowerCase();
-      return [
+      const reverseCompact = `${nuclide.symbol}${nuclide.massNumber}`.toLowerCase();
+      const elementName = element?.name.toLowerCase() ?? '';
+      const text = [
         compact,
-        `${nuclide.symbol}-${nuclide.massNumber}`,
+        reverseCompact,
+        `${nuclide.symbol.toLowerCase()}-${nuclide.massNumber}`,
+        `${elementName}-${nuclide.massNumber}`,
+        `${elementName} ${nuclide.massNumber}`,
         nuclide.symbol,
         nuclide.z,
         nuclide.n,
-        element?.name,
+        elementName,
         element ? CategoryLabels[element.category] : null,
         nuclide.halfLife,
         nuclide.spinParity,
@@ -133,8 +139,9 @@ export default function IsotopesScreen() {
       ]
         .filter(Boolean)
         .join(' ')
-        .toLowerCase()
-        .includes(q);
+        .toLowerCase();
+
+      return text.includes(rawQ) || text.includes(transformedQ);
     });
   }, [filter, query]);
 

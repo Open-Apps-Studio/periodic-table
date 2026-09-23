@@ -85,7 +85,12 @@ export function CellFieldPicker({ visible, selectedId, onSelect, onClose }: Cell
           <View style={styles.handle} />
           <View style={styles.header}>
             <Text style={styles.title}>Cell detail</Text>
-            <Pressable onPress={onClose} style={styles.closeButton} hitSlop={8}>
+            <Pressable
+              onPress={onClose}
+              style={styles.closeButton}
+              hitSlop={8}
+              accessibilityRole="button"
+              accessibilityLabel="Close cell detail picker">
               <Ionicons name="close" size={18} color={palette.textSecondary} />
             </Pressable>
           </View>
@@ -102,6 +107,9 @@ export function CellFieldPicker({ visible, selectedId, onSelect, onClose }: Cell
                         onSelect(field.id);
                         onClose();
                       }}
+                      accessibilityRole="button"
+                      accessibilityState={{ selected: active }}
+                      accessibilityLabel={`${field.label} detail`}
                       style={styles.row}>
                       <View style={[styles.accentBar, { backgroundColor: field.accent }]} />
                       <Text style={[styles.rowLabel, active && styles.rowLabelActive]}>{field.label}</Text>

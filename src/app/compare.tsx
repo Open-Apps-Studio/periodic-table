@@ -1,10 +1,10 @@
 import { useMemo, useState } from 'react';
-import { FlatList, Pressable, ScrollView, Text, TextInput, View } from 'react-native';
+import { Pressable, ScrollView, Text, TextInput, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import { CategoryColors, CategoryLabels, withAlpha } from '@/constants/theme';
 import { usePalette } from '@/context/theme-context';
-import { ELEMENTS, getElement } from '@/data/elements';
+import { ELEMENTS, getElement, getElementBySymbol } from '@/data/elements';
 import { useThemedStyles } from '@/hooks/use-themed-styles';
 import { fmt, fmtKelvinShort, fmtYear } from '@/lib/format';
 import {
@@ -23,12 +23,15 @@ export default function CompareScreen() {
   const params = useLocalSearchParams<{ left?: string; right?: string }>();
   const palette = usePalette();
   const router = useRouter();
-  const initialLeft = getElement(Number(params.left)) ?? getElement(1)!;
-  const initialRight = getElement(Number(params.right)) ?? getElement(8)!;
+  const initialLeft =
+    (params.left ? getElement(Number(params.left)) ?? getElementBySymbol(params.left) : undefined) ?? getElement(1)!;
+  const initialRight =
+    (params.right ? getElement(Number(params.right)) ?? getElementBySymbol(params.right) : undefined) ?? getElement(8)!;
   const [left, setLeft] = useState(initialLeft);
   const [right, setRight] = useState(initialRight);
   const [side, setSide] = useState<Side>('left');
   const [query, setQuery] = useState('');
+
   const styles = useThemedStyles((p) => ({
     container: { flex: 1, backgroundColor: p.background },
     content: { padding: 14, gap: 12, paddingBottom: 34 },
@@ -164,18 +167,20 @@ export default function CompareScreen() {
         </View>
 
         <View style={styles.pickList}>
-          <FlatList
-            data={picks.slice(0, 24)}
-            keyExtractor={(item) => String(item.number)}
-            keyboardShouldPersistTaps="handled"
-            renderItem={({ item }) => (
-              <Pressable onPress={() => setSelected(item)} style={({ pressed }) => [styles.pickRow, pressed && { opacity: 0.65 }]}>
+          <ScrollView nestedScrollEnabled keyboardShouldPersistTaps="handled">
+            {picks.slice(0, 24).map((item) => (
+              <Pressable
+                key={item.number}
+                accessibilityRole="button"
+                accessibilityLabel={`Select ${item.name}`}
+                onPress={() => setSelected(item)}
+                style={({ pressed }) => [styles.pickRow, pressed && { opacity: 0.65 }]}>
                 <MiniTile el={item} styles={styles} />
                 <Text style={styles.pickName}>{item.name}</Text>
                 <Text style={styles.selectedMeta}>{item.number}</Text>
               </Pressable>
-            )}
-          />
+            ))}
+          </ScrollView>
         </View>
 
         <View style={styles.compareCard}>
@@ -194,11 +199,19 @@ export default function CompareScreen() {
         </View>
 
         <View style={styles.actionRow}>
-          <Pressable style={styles.actionButton} onPress={() => router.push(`/element/${left.number}`)}>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={`Open details for ${left.name}`}
+            style={styles.actionButton}
+            onPress={() => router.push(`/element/${left.number}`)}>
             <Ionicons name="open-outline" size={16} color={palette.accent} />
             <Text style={styles.actionText}>Open {left.symbol}</Text>
           </Pressable>
-          <Pressable style={styles.actionButton} onPress={() => router.push(`/element/${right.number}`)}>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={`Open details for ${right.name}`}
+            style={styles.actionButton}
+            onPress={() => router.push(`/element/${right.number}`)}>
             <Ionicons name="open-outline" size={16} color={palette.accent} />
             <Text style={styles.actionText}>Open {right.symbol}</Text>
           </Pressable>
@@ -275,7 +288,7 @@ function comparisonRows(left: PeriodicElement, right: PeriodicElement): [string,
     row('Crust abundance', (el) => fmtPercent(el.abundanceCrust) ?? '—'),
     row('Cost / 100g', (el) => fmtUsd(el.priceUsdPer100g) ?? '—'),
     row('Stable isotopes', (el) => el.isotopesStable ?? '—'),
-    row('CAS', (el) => (el.casNumber == null ? '—' : `CAS${el.casNumber}`)),
+    row('CAS', (el) => el.casNumber ?? '—'),
     row('Discovered', (el) => `${fmtYear(el.yearDiscovered)} · ${el.discoveryLocation ?? '—'}`),
     row('Name origin', (el) => el.nameOrigin ?? '—'),
     row('Bulk modulus', (el) => fmtGpa(el.bulkModulus) ?? '—'),

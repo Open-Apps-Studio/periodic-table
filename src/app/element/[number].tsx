@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useEffect, useRef } from 'react';
 import { Linking, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
@@ -8,7 +8,7 @@ import { CategoryColors, CategoryLabels, withAlpha } from '@/constants/theme';
 import { useElementNotes } from '@/context/element-notes-context';
 import { usePalette } from '@/context/theme-context';
 import { useThemedStyles } from '@/hooks/use-themed-styles';
-import { getElement } from '@/data/elements';
+import { getElement, getElementBySymbol } from '@/data/elements';
 import { getNuclidesForElement } from '@/data/nuclides';
 import { fmt, fmtKelvin, fmtYear } from '@/lib/format';
 import {
@@ -125,8 +125,16 @@ export default function ElementScreen() {
   }));
 
   const params = useLocalSearchParams<{ number: string }>();
-  const number = Number(params.number);
-  const el = getElement(number);
+  // Prev/next reuse this screen, so jump back to the top when the element changes.
+  const scrollRef = useRef<ScrollView>(null);
+  useEffect(() => {
+    scrollRef.current?.scrollTo({ y: 0, animated: false });
+  }, [params.number]);
+  const rawParam = params.number;
+  const parsedNum = Number(rawParam);
+  const el =
+    (Number.isFinite(parsedNum) ? getElement(parsedNum) : undefined) ??
+    (rawParam ? getElementBySymbol(rawParam) : undefined);
 
   if (!el) {
     return (
@@ -163,6 +171,7 @@ export default function ElementScreen() {
         }}
       />
       <ScrollView
+        ref={scrollRef}
         style={styles.container}
         contentContainerStyle={styles.content}
         contentInsetAdjustmentBehavior="automatic">
@@ -198,7 +207,7 @@ export default function ElementScreen() {
           <Text style={styles.sectionTitle}>Overview</Text>
           <Text style={styles.summary} selectable>{el.summary}</Text>
           {el.appearance && <PropertyRow styles={styles} label="Appearance" value={el.appearance} />}
-          <PropertyRow styles={styles} label="CAS Number" value={el.casNumber == null ? '—' : `CAS${el.casNumber}`} />
+          <PropertyRow styles={styles} label="CAS Number" value={el.casNumber ?? '—'} />
           <PropertyRow styles={styles} label="Cost per 100 grams" value={price} />
           {priceSource && <PropertyRow styles={styles} label="Price source" value={priceSource} />}
         </View>

@@ -114,7 +114,7 @@ function parseSide(side: string): EquationCompound[] {
 }
 
 function parseEquation(input: string): Pick<BalancedEquation, 'left' | 'right'> {
-  const normalized = input.replace(/[⇌↔]/g, '->').replace(/[=→]/g, '->');
+  const normalized = input.replace(/(-{2,}>|={1,2}>|[⇌↔=→])/g, '->');
   const pieces = normalized.split('->');
   if (pieces.length !== 2) throw new EquationError('Use one arrow, for example H2 + O2 -> H2O');
   const left = parseSide(pieces[0]);
@@ -172,7 +172,7 @@ function solveCoefficients(matrix: number[][]): number[] {
 
   let integers = solution.map((value) => Number(value.n * (commonDenominator / value.d)));
   if (integers.every((value) => value <= 0)) integers = integers.map((value) => -value);
-  if (integers.some((value) => value < 0) || integers.every((value) => value === 0)) {
+  if (integers.some((value) => value <= 0)) {
     throw new EquationError('Could not find a positive balance for this equation');
   }
 

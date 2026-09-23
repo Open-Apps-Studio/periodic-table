@@ -88,7 +88,12 @@ export function CategoryPicker({ visible, selected, onSelect, onClose }: Categor
           <View style={styles.handle} />
           <View style={styles.header}>
             <Text style={styles.title}>Categories:</Text>
-            <Pressable onPress={onClose} style={styles.closeButton} hitSlop={8}>
+            <Pressable
+              onPress={onClose}
+              style={styles.closeButton}
+              hitSlop={8}
+              accessibilityRole="button"
+              accessibilityLabel="Close category picker">
               <Ionicons name="close" size={18} color={palette.textSecondary} />
             </Pressable>
           </View>
@@ -101,6 +106,9 @@ export function CategoryPicker({ visible, selected, onSelect, onClose }: Categor
                   <Pressable
                     key={cat}
                     onPress={() => pick(active ? null : cat)}
+                    accessibilityRole="button"
+                    accessibilityState={{ selected: active }}
+                    accessibilityLabel={`${CategoryLabels[cat]}, filter`}
                     style={[
                       styles.item,
                       {

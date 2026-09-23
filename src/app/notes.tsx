@@ -157,13 +157,18 @@ export default function NotesScreen() {
               note={getEntry(item.number).note}
               favorite={getEntry(item.number).favorite}
               styles={styles}
+              palette={palette}
               onFavorite={() => toggleFavorite(item.number)}
               onPress={() => router.push(`/element/${item.number}`)}
             />
           )}
           ListEmptyComponent={
             <Text style={styles.empty}>
-              {loaded ? 'No saved notes yet. Open an element and tap the heart or write a note.' : 'Loading notes...'}
+              {loaded
+                ? filter === 'favorites'
+                  ? 'No favorite elements yet. Open an element and tap the heart icon.'
+                  : 'No saved notes yet. Open an element and tap the heart or write a note.'
+                : 'Loading notes...'}
             </Text>
           }
         />
@@ -177,6 +182,7 @@ function NoteRow({
   note,
   favorite,
   styles,
+  palette,
   onFavorite,
   onPress,
 }: {
@@ -184,12 +190,17 @@ function NoteRow({
   note: string;
   favorite: boolean;
   styles: ReturnType<typeof useThemedStyles<Record<string, object>>>;
+  palette: ReturnType<typeof usePalette>;
   onFavorite: () => void;
   onPress: () => void;
 }) {
   const color = CategoryColors[el.category];
   return (
-    <Pressable onPress={onPress} style={({ pressed }) => [styles.row, pressed && { opacity: 0.65 }]}>
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={`Open details for ${el.name}`}
+      onPress={onPress}
+      style={({ pressed }) => [styles.row, pressed && { opacity: 0.65 }]}>
       <View style={styles.rowTop}>
         <View style={[styles.tile, { backgroundColor: withAlpha(color, 0.15), borderColor: withAlpha(color, 0.55) }]}>
           <Text style={[styles.symbol, { color }]}>{el.symbol}</Text>
@@ -200,8 +211,16 @@ function NoteRow({
             {el.number} · {CategoryLabels[el.category]}
           </Text>
         </View>
-        <Pressable onPress={onFavorite} hitSlop={8} style={styles.favoriteButton}>
-          <Ionicons name={favorite ? 'heart' : 'heart-outline'} size={19} color={favorite ? '#E64980' : '#7B8794'} />
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel={favorite ? `Remove ${el.name} from favorites` : `Add ${el.name} to favorites`}
+          onPress={(e) => {
+            e.stopPropagation?.();
+            onFavorite();
+          }}
+          hitSlop={8}
+          style={styles.favoriteButton}>
+          <Ionicons name={favorite ? 'heart' : 'heart-outline'} size={19} color={favorite ? '#E64980' : palette.textTertiary} />
         </Pressable>
       </View>
       {note.trim() ? <Text style={styles.note}>{note.trim()}</Text> : <Text style={styles.noteEmpty}>No note yet.</Text>}

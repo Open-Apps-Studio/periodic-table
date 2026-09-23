@@ -117,6 +117,7 @@ export function heatRange(mode: DisplayMode, elements: PeriodicElement[]): [numb
   for (const el of elements) {
     const v = mode.heatValue(el);
     if (v == null) continue;
+    if (mode.log && v <= 0) continue;
     if (v < min) min = v;
     if (v > max) max = v;
   }
@@ -135,11 +136,11 @@ export function heatOf(
   let [min, max] = range;
   let value = v;
   if (mode.log) {
-    const floor = Math.max(min, 1e-6);
-    value = Math.log(Math.max(v, 1e-6) / floor);
-    max = Math.log(Math.max(max, 1e-6) / floor);
+    if (v <= 0) return 0;
+    value = Math.log(v / min);
+    max = Math.log(max / min);
     min = 0;
   }
   if (max === min) return 1;
-  return (value - min) / (max - min);
+  return Math.max(0, Math.min(1, (value - min) / (max - min)));
 }

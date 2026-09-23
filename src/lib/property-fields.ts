@@ -105,7 +105,7 @@ export const PROPERTY_FIELDS: PropertyField[] = [
     label: 'Van der Waals radius',
     unit: 'pm',
     accent: '#8E6C88',
-    value: (el) => el.vanDerWaalsRadius ?? el.atomicRadius,
+    value: (el) => el.vanDerWaalsRadius,
     display: displayVanDerWaalsRadius,
   },
   {
@@ -119,7 +119,7 @@ export const PROPERTY_FIELDS: PropertyField[] = [
   {
     id: 'molarVolume',
     label: 'Molar volume',
-    unit: 'm³/mol',
+    unit: 'cm³/mol',
     accent: '#2A9D8F',
     value: (el) => el.molarVolume,
     display: (el) => fmtMolarVolume(el.molarVolume),

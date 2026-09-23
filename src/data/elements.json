@@ -5248,8 +5248,8 @@
   "molarVolume": 0.000008434782608696,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 211098.4271943,
-  "lifetime": 6024860.476915,
+  "halfLife": 132854658353032.31,
+  "lifetime": 191668756764917.22,
   "neutronCrossSection": 22
  },
  {
@@ -7301,8 +7301,8 @@
   "molarVolume": 0.00001996145374449,
   "poissonsRatio": 0.28,
   "radioactive": true,
-  "halfLife": 17.72577371892,
-  "lifetime": 25.55809233891,
+  "halfLife": 558557589.7502784,
+  "lifetime": 805828264.7836187,
   "neutronCrossSection": 8400
  },
  {
@@ -9821,8 +9821,8 @@
   "molarVolume": 0.000021368,
   "poissonsRatio": 0.33,
   "radioactive": true,
-  "halfLife": 19025875190260000000,
-  "lifetime": 27587519025880000000,
+  "halfLife": 6.342942120892992e+26,
+  "lifetime": 9.150931142458042e+26,
   "neutronCrossSection": 0.034
  },
  {
@@ -9927,8 +9927,8 @@
   "molarVolume": 0.00002272727272727,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 102.1055301877,
-  "lifetime": 147.1334348047,
+  "halfLife": 3913058820.849408,
+  "lifetime": 5645350555.546256,
   "neutronCrossSection": 0.5
  },
  {
@@ -10033,8 +10033,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 8.055555555556,
-  "lifetime": 11.66666666667,
+  "halfLife": 29160,
+  "lifetime": 42068.987392322175,
   "neutronCrossSection": null
  },
  {
@@ -10139,8 +10139,8 @@
   "molarVolume": 0.02281603288798,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 3.82349537037,
-  "lifetime": 5.516087962963,
+  "halfLife": 330350.4,
+  "lifetime": 476594.88383568544,
   "neutronCrossSection": 0.7
  },
  {
@@ -10246,8 +10246,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 21.66666666667,
-  "lifetime": 31.66666666667,
+  "halfLife": 1320,
+  "lifetime": 1904.3574539734318,
   "neutronCrossSection": null
  },
  {
@@ -10354,8 +10354,8 @@
   "molarVolume": 0.0000452,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 1585.489599188,
-  "lifetime": 2314.814814815,
+  "halfLife": 50491081559.3472,
+  "lifetime": 72843232974.79039,
   "neutronCrossSection": 13
  },
  {
@@ -10462,8 +10462,8 @@
   "molarVolume": 0.00002254220456802,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 21.78652968037,
-  "lifetime": 31.43106291223,
+  "halfLife": 687057392.318817,
+  "lifetime": 991214292.7044604,
   "neutronCrossSection": 880
  },
  {
@@ -10578,8 +10578,8 @@
   "molarVolume": 0.0000197917,
   "poissonsRatio": 0.27,
   "radioactive": true,
-  "halfLife": 14060121765.6,
-  "lifetime": 20284753932.01,
+  "halfLife": 441796963644288000,
+  "lifetime": 637378288529416000,
   "neutronCrossSection": 7.4
  },
  {
@@ -10685,8 +10685,8 @@
   "molarVolume": 0.0000150316,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 32787.92491121,
-  "lifetime": 47279.29984779,
+  "halfLife": 1027809078992.4614,
+  "lifetime": 1482815061243.077,
   "neutronCrossSection": 200
  },
  {
@@ -10799,8 +10799,8 @@
   "molarVolume": 0.000012495,
   "poissonsRatio": 0.23,
   "radioactive": true,
-  "halfLife": 4471080669.711,
-  "lifetime": 6449771689.498,
+  "halfLife": 140996345254477060,
+  "lifetime": 203414728082102180,
   "neutronCrossSection": 7.57
  },
  {
@@ -10906,8 +10906,8 @@
   "molarVolume": 0.00001158924205379,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 2145484.525622,
-  "lifetime": 3095192.795535,
+  "halfLife": 67658049289525.25,
+  "lifetime": 97609932186219.14,
   "neutronCrossSection": 180
  },
  {
@@ -11013,8 +11013,8 @@
   "molarVolume": 0.00001231328219621,
   "poissonsRatio": 0.21,
   "radioactive": true,
-  "halfLife": 79274479.95941,
-  "lifetime": 114155251.1416,
+  "halfLife": 2565578081734329.5,
+  "lifetime": 3701346775531537,
   "neutronCrossSection": 1.7
  },
  {
@@ -11120,8 +11120,8 @@
   "molarVolume": 0.00001777615215801,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 7388.381532217,
-  "lifetime": 10654.49010654,
+  "halfLife": 232385202876.89548,
+  "lifetime": 335260979766.4728,
   "neutronCrossSection": 74
  },
  {
@@ -11227,8 +11227,8 @@
   "molarVolume": 0.00001828275351591,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 15601217.65601,
-  "lifetime": 22513952.30847,
+  "halfLife": 492288045203635.2,
+  "lifetime": 710221521504206.4,
   "neutronCrossSection": 60
  },
  {
@@ -11334,8 +11334,8 @@
   "molarVolume": 0.00001671177266576,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 1379.375951294,
-  "lifetime": 1991.37493658,
+  "halfLife": 43548557844.93696,
+  "lifetime": 62827288440.756714,
   "neutronCrossSection": 710
  },
  {
@@ -11441,8 +11441,8 @@
   "molarVolume": 0.00001662251655629,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 900.5580923389,
-  "lifetime": 1300.101471334,
+  "halfLife": 28338119525.183617,
+  "lifetime": 40883264507.10111,
   "neutronCrossSection": 2900
  },
  {
@@ -11548,8 +11548,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 1.292174023338,
-  "lifetime": 1.864535768645,
+  "halfLife": 40754880,
+  "lifetime": 58796863.2680248,
   "neutronCrossSection": 160
  },
  {
@@ -11655,8 +11655,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 100.4976851852,
-  "lifetime": 145.0231481481,
+  "halfLife": 8683200,
+  "lifetime": 12527209.579047047,
   "neutronCrossSection": 5800
  },
  {
@@ -11762,8 +11762,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 51.50462962963,
-  "lifetime": 74.30555555556,
+  "halfLife": 4449600,
+  "lifetime": 6419415.853939531,
   "neutronCrossSection": null
  },
  {
@@ -11869,8 +11869,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 2.777777777778,
-  "lifetime": 5.555555555556,
+  "halfLife": 3480,
+  "lifetime": 5020.578742293593,
   "neutronCrossSection": null
  },
  {
@@ -11976,8 +11976,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 10,
-  "lifetime": 14.44444444444,
+  "halfLife": 39600,
+  "lifetime": 57130.72361920295,
   "neutronCrossSection": null
  },
  {
@@ -12083,8 +12083,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 13.05555555556,
-  "lifetime": 18.88888888889,
+  "halfLife": 4680,
+  "lifetime": 6751.812791360349,
   "neutronCrossSection": null
  },
  {
@@ -12188,8 +12188,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 5.555555555556,
-  "lifetime": 8.333333333333,
+  "halfLife": 100800,
+  "lifetime": 145423.6601216075,
   "neutronCrossSection": null
  },
  {
@@ -12293,8 +12293,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 1.944444444444,
-  "lifetime": 2.777777777778,
+  "halfLife": 130,
+  "lifetime": 187.55035531556524,
   "neutronCrossSection": null
  },
  {
@@ -12398,8 +12398,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 1.5,
-  "lifetime": 2.166666666667,
+  "halfLife": 1140,
+  "lifetime": 1644.6723466134183,
   "neutronCrossSection": null
  },
  {
@@ -12503,8 +12503,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 1.111111111111,
-  "lifetime": 1.388888888889,
+  "halfLife": 1140,
+  "lifetime": 1644.6723466134183,
   "neutronCrossSection": null
  },
  {
@@ -12608,8 +12608,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 30,
-  "lifetime": 43.33333333333,
+  "halfLife": 66,
+  "lifetime": 95.21787269867158,
   "neutronCrossSection": null
  },
  {
@@ -12713,8 +12713,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 4,
-  "lifetime": 5.833333333333,
+  "halfLife": 66,
+  "lifetime": 95.21787269867158,
   "neutronCrossSection": null
  },
  {
@@ -12818,8 +12818,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 10,
-  "lifetime": 14.5,
+  "halfLife": 660,
+  "lifetime": 952.1787269867159,
   "neutronCrossSection": null
  },
  {
@@ -12923,8 +12923,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 40,
-  "lifetime": 58.33333333333,
+  "halfLife": 660,
+  "lifetime": 952.1787269867159,
   "neutronCrossSection": null
  },
  {
@@ -13028,8 +13028,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 20,
-  "lifetime": 28.33333333333,
+  "halfLife": 9.5,
+  "lifetime": 13.705602888445153,
   "neutronCrossSection": null
  },
  {
@@ -13133,8 +13133,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 1.316666666667,
-  "lifetime": 2,
+  "halfLife": 19,
+  "lifetime": 27.411205776890306,
   "neutronCrossSection": null
  },
  {
@@ -13238,8 +13238,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 1,
-  "lifetime": 1.5,
+  "halfLife": 0.65,
+  "lifetime": 0.9377517765778263,
   "neutronCrossSection": null
  },
  {
@@ -13343,8 +13343,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 120,
-  "lifetime": 173,
+  "halfLife": 0.095,
+  "lifetime": 0.13705602888445154,
   "neutronCrossSection": null
  },
  {
@@ -13448,8 +13448,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 50,
-  "lifetime": 72,
+  "halfLife": 0.051,
+  "lifetime": 0.07357744708533713,
   "neutronCrossSection": null
  },
  {
@@ -13553,8 +13553,8 @@
   "molarVolume": null,
   "poissonsRatio": null,
   "radioactive": true,
-  "halfLife": 5,
-  "lifetime": 7,
+  "halfLife": 0.00058,
+  "lifetime": 0.0008367631237155988,
   "neutronCrossSection": null
  }
 ]

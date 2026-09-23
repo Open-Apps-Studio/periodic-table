@@ -193,8 +193,8 @@ export default function TrendsScreen() {
   const rows = useMemo(() => {
     const filtered = ELEMENTS.filter((el) => {
       if (period === 'all') return true;
-      if (period === 'f') return el.block === 'f';
-      return el.period === Number(period) && el.block !== 'f';
+      if (period === 'f') return el.ypos >= 9;
+      return el.period === Number(period) && el.ypos < 9;
     });
     return filtered.map((el) => ({ el, value: field.value(el) }));
   }, [field, period]);

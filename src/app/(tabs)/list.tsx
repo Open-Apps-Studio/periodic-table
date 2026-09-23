@@ -123,7 +123,8 @@ export default function PropertyListScreen() {
 
   const max = useMemo(() => {
     const values = rows.map((row) => row.value).filter((value): value is number => value != null);
-    return values.length ? Math.max(...values.map((value) => Math.abs(value))) : 1;
+    const m = values.length ? Math.max(...values.map((value) => Math.abs(value))) : 1;
+    return m > 0 ? m : 1;
   }, [rows]);
 
   return (
@@ -190,12 +191,24 @@ function PropertyRow({
   styles: ReturnType<typeof useThemedStyles<Record<string, object>>>;
   onPress: () => void;
 }) {
+  const palette = usePalette();
   const color = CategoryColors[el.category];
   const width = value == null ? '0%' : `${Math.max(3, Math.min(100, (Math.abs(value) / max) * 100))}%`;
   const display = field.display(el);
+  const showUnit =
+    field.unit &&
+    display &&
+    !display.includes(field.unit) &&
+    !display.includes('%') &&
+    !display.startsWith('$') &&
+    !display.includes('/mol');
 
   return (
-    <Pressable onPress={onPress} style={({ pressed }) => [styles.row, pressed && { opacity: 0.6 }]}>
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel={`${el.name}, ${el.symbol}, atomic number ${el.number}, ${field.label}: ${display ?? 'unknown'} ${field.unit ?? ''}`.trim()}
+      style={({ pressed }) => [styles.row, pressed && { opacity: 0.6 }]}>
       <View style={[styles.miniCell, { borderRightColor: color }]}>
         <Text style={styles.number}>{el.number}</Text>
         <Text style={styles.symbol}>{el.symbol}</Text>
@@ -208,7 +221,7 @@ function PropertyRow({
           <View style={styles.valueBarTrack}>
             <View style={[styles.valueBar, { width, backgroundColor: withAlpha(field.accent, 0.74) }]} />
             <Text style={styles.valueText} numberOfLines={1}>
-              {display} {field.unit ? <Text style={styles.unitText}>{field.unit}</Text> : null}
+              {display} {showUnit ? <Text style={styles.unitText}>{field.unit}</Text> : null}
             </Text>
           </View>
         ) : (
@@ -216,7 +229,7 @@ function PropertyRow({
         )}
       </View>
       <View style={styles.chevron}>
-        <Ionicons name="chevron-forward" size={17} color={withAlpha('#687385', 0.7)} />
+        <Ionicons name="chevron-forward" size={17} color={palette.textTertiary} />
       </View>
     </Pressable>
   );
@@ -249,7 +262,12 @@ function PropertyPicker({
             renderItem={({ item }) => {
               const active = item.id === selectedId;
               return (
-                <Pressable onPress={() => onSelect(item.id)} style={styles.propertyRow}>
+                <Pressable
+                  onPress={() => onSelect(item.id)}
+                  accessibilityRole="button"
+                  accessibilityState={{ selected: active }}
+                  accessibilityLabel={item.label}
+                  style={styles.propertyRow}>
                   <View style={[styles.fieldDot, { backgroundColor: item.accent }]} />
                   <Text style={[styles.propertyLabel, active && styles.propertyLabelActive]}>
                     {item.label}

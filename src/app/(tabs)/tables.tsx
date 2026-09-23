@@ -3,9 +3,7 @@ import { Pressable, ScrollView, Text, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { withAlpha } from '@/constants/theme';
 import {
-  COMMON_IONS,
   ORGANIC_SERIES,
-  PHYSICAL_CONSTANTS,
   SOLUBILITY_RULES,
   type SolubilityTone,
 } from '@/data/reference-tables';
@@ -147,6 +145,27 @@ const ACTIVITY_SERIES = [
   'Au',
 ];
 
+const NOBLE_GAS_CORES = [
+  ['[He] Helium core', '1s²', 'Core for Period 2 elements (Li to Ne)'],
+  ['[Ne] Neon core', '[He] 2s² 2p⁶', 'Core for Period 3 elements (Na to Ar)'],
+  ['[Ar] Argon core', '[Ne] 3s² 3p⁶', 'Core for Period 4 elements (K to Kr)'],
+  ['[Kr] Krypton core', '[Ar] 3d¹⁰ 4s² 4p⁶', 'Core for Period 5 elements (Rb to Xe)'],
+  ['[Xe] Xenon core', '[Kr] 4d¹⁰ 5s² 5p⁶', 'Core for Period 6 elements (Cs to Rn)'],
+  ['[Rn] Radon core', '[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶', 'Core for Period 7 elements (Fr to Og)'],
+];
+
+const NEUTRON_CROSS_SECTIONS = [
+  ['Xenon-135 (¹³⁵Xe)', '2,600,000 b', 'Extreme thermal neutron absorber; nuclear reactor poison'],
+  ['Gadolinium-157 (¹⁵⁷Gd)', '254,000 b', 'Highest thermal capture cross-section of any stable nuclide'],
+  ['Cadmium-113 (¹¹³Cd)', '20,600 b', 'High thermal capture cross-section; control rod material'],
+  ['Boron-10 (¹⁰B)', '3,840 b', 'Thermal neutron absorber used in control rods & shielding'],
+  ['Uranium-235 (²³⁵U)', '585 b', 'Thermal neutron fission target nuclide'],
+  ['Hydrogen-1 (¹H)', '0.33 b', 'Light-water moderator capture; moderate neutron absorption'],
+  ['Carbon-12 (¹²C)', '0.0035 b', 'Graphite moderator; low thermal neutron absorption'],
+  ['Deuterium (²H)', '0.0005 b', 'Heavy-water (CANDU) moderator; exceptional neutron economy'],
+  ['Unit reference', '1 barn = 10⁻²⁸ m²', 'Standard unit of effective nuclear target cross-section'],
+];
+
 export default function TablesScreen() {
   const palette = usePalette();
   const styles = useThemedStyles((p) => ({
@@ -194,37 +213,41 @@ export default function TablesScreen() {
     factNote: { color: p.textSecondary, fontSize: 12.5, lineHeight: 18 },
   }));
 
-  const [openId, setOpenId] = useState<TableId>('solubility');
-  const open = TABLES.find((item) => item.id === openId)!;
+  const [openId, setOpenId] = useState<TableId | null>('solubility');
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
       {TABLES.map((item) => {
         const active = item.id === openId;
         return (
-          <Pressable
-            key={item.id}
-            onPress={() => setOpenId(active ? 'solubility' : item.id)}
-            style={[
-              styles.tableCard,
-              active && { borderColor: withAlpha(item.accent, 0.7), backgroundColor: withAlpha(item.accent, 0.08) },
-            ]}>
-            <View style={[styles.cardStripe, { backgroundColor: item.accent }]} />
-            <View style={[styles.iconDisc, { backgroundColor: withAlpha(item.accent, 0.16) }]}>
-              <Ionicons name={item.icon} size={18} color={item.accent} />
-            </View>
-            <View style={styles.cardBody}>
-              <Text style={styles.cardTitle}>{item.title}</Text>
-              <Text style={styles.cardDescription}>{item.description}</Text>
-            </View>
-            <Ionicons name={active ? 'chevron-up' : 'chevron-down'} size={18} color={palette.textTertiary} />
-          </Pressable>
+          <View key={item.id} style={{ gap: 8 }}>
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel={`${item.title}, ${active ? 'expanded' : 'collapsed'}`}
+              accessibilityState={{ expanded: active }}
+              onPress={() => setOpenId(active ? null : item.id)}
+              style={[
+                styles.tableCard,
+                active && { borderColor: withAlpha(item.accent, 0.7), backgroundColor: withAlpha(item.accent, 0.08) },
+              ]}>
+              <View style={[styles.cardStripe, { backgroundColor: item.accent }]} />
+              <View style={[styles.iconDisc, { backgroundColor: withAlpha(item.accent, 0.16) }]}>
+                <Ionicons name={item.icon} size={18} color={item.accent} />
+              </View>
+              <View style={styles.cardBody}>
+                <Text style={styles.cardTitle}>{item.title}</Text>
+                <Text style={styles.cardDescription}>{item.description}</Text>
+              </View>
+              <Ionicons name={active ? 'chevron-up' : 'chevron-down'} size={18} color={palette.textTertiary} />
+            </Pressable>
+            {active && (
+              <View style={[styles.detail, { borderColor: withAlpha(item.accent, 0.4) }]}>
+                <TableDetail id={item.id} styles={styles} accent={item.accent} />
+              </View>
+            )}
+          </View>
         );
       })}
-      <View style={[styles.detail, { borderColor: withAlpha(open.accent, 0.4) }]}>
-        <Text style={styles.detailTitle}>{open.title}</Text>
-        <TableDetail id={openId} styles={styles} accent={open.accent} />
-      </View>
     </ScrollView>
   );
 }
@@ -267,9 +290,9 @@ function TableDetail({
   if (id === 'configuration') {
     return (
       <>
-        <Text style={styles.detailText}>Fill orbitals in increasing energy order, then use noble-gas shorthand for compact notation.</Text>
-        <ChipList values={['1s', '2s', '2p', '3s', '3p', '4s', '3d', '4p', '5s', '4d', '5p', '6s', '4f', '5d', '6p', '7s']} styles={styles} accent={accent} />
-        <ReferenceRows rows={COMMON_IONS.slice(0, 10).map((ion) => [ion.name, ion.formula, ion.charge])} styles={styles} />
+        <Text style={styles.detailText}>Fill orbitals in increasing energy order (Aufbau principle), then use noble-gas shorthand for compact notation.</Text>
+        <ChipList values={['1s', '2s', '2p', '3s', '3p', '4s', '3d', '4p', '5s', '4d', '5p', '6s', '4f', '5d', '6p', '7s', '5f', '6d', '7p']} styles={styles} accent={accent} />
+        <ReferenceRows rows={NOBLE_GAS_CORES} styles={styles} />
       </>
     );
   }
@@ -287,7 +310,12 @@ function TableDetail({
     );
   }
   if (id === 'neutron') {
-    return <ReferenceRows rows={PHYSICAL_CONSTANTS.concat([{ label: 'Neutron cross-section', value: '1 barn = 10^-28 m²', note: 'Used for nuclear interaction probabilities.' }]).map((item) => [item.label, item.value, item.note])} styles={styles} />;
+    return (
+      <>
+        <Text style={styles.detailText}>Thermal neutron capture cross-sections determine how effectively nuclei absorb slow neutrons in reactors and shielding.</Text>
+        <ReferenceRows rows={NEUTRON_CROSS_SECTIONS} styles={styles} />
+      </>
+    );
   }
 
   return (

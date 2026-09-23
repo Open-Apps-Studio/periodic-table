@@ -6,8 +6,11 @@ export function fmt(value: number | null | undefined, digits = 3): string {
 }
 
 const oneDecimal = (n: number): string => {
-  const rounded = Math.round(n * 100) / 100;
-  return rounded % 1 === 0 ? rounded.toFixed(0) : rounded.toFixed(rounded % 0.1 === 0 ? 1 : 2);
+  const cents = Math.round(n * 100);
+  if (cents === 0) return '0';
+  if (cents % 100 === 0) return (cents / 100).toFixed(0);
+  if (cents % 10 === 0) return (cents / 100).toFixed(1);
+  return (cents / 100).toFixed(2);
 };
 
 /** Temperatures are stored in Kelvin; show all three common scales like the reference apps. */

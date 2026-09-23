@@ -166,9 +166,15 @@ function LessonRow({
   styles: ReturnType<typeof useThemedStyles<Record<string, object>>>;
   onPress: () => void;
 }) {
+  const palette = usePalette();
   const color = colorForLesson(lesson.category);
   return (
-    <Pressable onPress={onPress} style={({ pressed }) => [styles.lesson, open && styles.lessonActive, pressed && { opacity: 0.66 }]}>
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityState={{ expanded: open }}
+      accessibilityLabel={`${lesson.title}, ${CATEGORY_LABELS[lesson.category]}`}
+      style={({ pressed }) => [styles.lesson, open && styles.lessonActive, pressed && { opacity: 0.66 }]}>
       <View style={styles.lessonTop}>
         <View style={[styles.iconDisc, { backgroundColor: withAlpha(color, 0.16) }]}>
           <Ionicons name={iconForLesson(lesson.category)} size={18} color={color} />
@@ -177,7 +183,7 @@ function LessonRow({
           <Text style={styles.title}>{lesson.title}</Text>
           <Text style={styles.category}>{CATEGORY_LABELS[lesson.category]}</Text>
         </View>
-        <Ionicons name={open ? 'chevron-up' : 'chevron-down'} size={17} color="#7B8794" />
+        <Ionicons name={open ? 'chevron-up' : 'chevron-down'} size={17} color={palette.textTertiary} />
       </View>
       <Text style={styles.summary}>{lesson.summary}</Text>
       {open && (

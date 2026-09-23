@@ -9,7 +9,6 @@ import {
   fmtPercent,
   fmtPm,
   fmtResistivity,
-  fmtSci,
   fmtSusceptibility,
   fmtUsd,
 } from './format-properties';
@@ -50,7 +49,7 @@ export const CELL_FIELD_SECTIONS: CellFieldSection[] = [
       field('priceUsdPer100g', 'Cost per 100 grams', '#2F9E44', (el) =>
         el.priceUsdPer100g == null ? null : `${fmtUsd(el.priceUsdPer100g)} / 100g`,
       ),
-      field('casNumber', 'CAS Number', '#FF6B6B', (el) => (el.casNumber == null ? null : `CAS${el.casNumber}`)),
+      field('casNumber', 'CAS Number', '#FF6B6B', (el) => el.casNumber),
     ],
   },
   {
