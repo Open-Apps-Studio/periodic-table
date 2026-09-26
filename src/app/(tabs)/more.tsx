@@ -52,7 +52,7 @@ const FEATURE_CARDS: FeatureCard[] = [
     title: 'Isotopes',
     subtitle: 'Stable and radioactive isotope notes for common classroom work.',
     icon: 'radio-outline',
-    accent: '#495057',
+    accent: '#FFA94D',
     route: '/isotopes',
     details: [
       '3,383 ground-state nuclides from the IAEA LiveChart API.',
@@ -90,7 +90,7 @@ const FEATURE_CARDS: FeatureCard[] = [
     title: 'Dictionary',
     subtitle: 'A compact chemistry glossary without accounts or paid gates.',
     icon: 'book-outline',
-    accent: '#6C757D',
+    accent: '#118AB2',
     route: '/dictionary',
     details: [
       'Search compact chemistry definitions by term, category, example, or tag.',
@@ -293,10 +293,12 @@ export default function MoreScreen() {
   };
 
   const shareApp = async () => {
-    await Share.share({
-      title: 'Periodic Table',
-      message: `Free, open-source, ad-free periodic table app. ${APP_STORE_URL}`,
-    });
+    try {
+      await Share.share({
+        title: 'Periodic Table',
+        message: `Free, open-source, ad-free periodic table app. ${APP_STORE_URL}`,
+      });
+    } catch {}
   };
 
   return (
@@ -305,6 +307,8 @@ export default function MoreScreen() {
         {FEATURE_CARDS.map((item, index) => (
           <Pressable
             key={item.id}
+            accessibilityRole="button"
+            accessibilityLabel={`${item.title}. ${item.subtitle}`}
             onPress={() => openFeature(item)}
             style={({ pressed }) => [
               styles.feature,
@@ -338,6 +342,9 @@ export default function MoreScreen() {
                 return (
                   <Pressable
                     key={option.id}
+                    accessibilityRole="button"
+                    accessibilityLabel={`${option.label} theme`}
+                    accessibilityState={{ selected: active }}
                     onPress={() => setPreference(option.id)}
                     style={[styles.themeSegment, active && styles.themeSegmentActive]}>
                     <Text style={[styles.themeSegmentText, active && styles.themeSegmentTextActive]}>
@@ -362,13 +369,19 @@ export default function MoreScreen() {
           datasets with attribution.
         </Text>
         <Pressable
+          accessibilityRole="link"
+          accessibilityLabel="Rate on the App Store"
           style={({ pressed }) => [styles.linkRow, pressed && { opacity: 0.6 }]}
-          onPress={() => Linking.openURL(`${APP_STORE_URL}?action=write-review`)}>
+          onPress={() => Linking.openURL(`${APP_STORE_URL}?action=write-review`).catch(() => {})}>
           <Ionicons name="star-outline" size={18} color={palette.textTertiary} />
           <Text style={styles.linkText}>Rate on the App Store</Text>
           <Ionicons name="chevron-forward" size={16} color={palette.textTertiary} />
         </Pressable>
-        <Pressable style={({ pressed }) => [styles.linkRow, pressed && { opacity: 0.6 }]} onPress={shareApp}>
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel="Share the app"
+          style={({ pressed }) => [styles.linkRow, pressed && { opacity: 0.6 }]}
+          onPress={shareApp}>
           <Ionicons name="share-social-outline" size={18} color={palette.textTertiary} />
           <Text style={styles.linkText}>Share the app</Text>
           <Ionicons name="chevron-forward" size={16} color={palette.textTertiary} />

@@ -213,7 +213,11 @@ export default function TrendsScreen() {
       <Stack.Screen options={{ title: 'Trends' }} />
       <ScrollView style={styles.container} contentContainerStyle={styles.content}>
         <View style={styles.headerCard}>
-          <Pressable style={styles.propertyButton} onPress={() => setPickerOpen(true)}>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={`Select property to graph. Current: ${field.label}`}
+            style={styles.propertyButton}
+            onPress={() => setPickerOpen(true)}>
             <View style={[styles.dot, { backgroundColor: field.accent }]} />
             <Text style={styles.propertyTitle} numberOfLines={1}>{field.label}</Text>
             <Ionicons name="chevron-down" size={17} color={palette.textSecondary} />
@@ -225,12 +229,23 @@ export default function TrendsScreen() {
             {PERIOD_FILTERS.map((item) => {
               const active = item.id === period;
               return (
-                <Pressable key={item.id} onPress={() => setPeriod(item.id)} style={[styles.chip, active && styles.chipActive]}>
+                <Pressable
+                  key={item.id}
+                  accessibilityRole="button"
+                  accessibilityLabel={`Filter by ${item.label}`}
+                  accessibilityState={{ selected: active }}
+                  onPress={() => setPeriod(item.id)}
+                  style={[styles.chip, active && styles.chipActive]}>
                   <Text style={[styles.chipText, active && styles.chipTextActive]}>{item.label}</Text>
                 </Pressable>
               );
             })}
-            <Pressable onPress={() => setLogScale((value) => !value)} style={[styles.chip, logScale && styles.chipActive]}>
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel="Logarithmic scale"
+              accessibilityState={{ selected: logScale }}
+              onPress={() => setLogScale((value) => !value)}
+              style={[styles.chip, logScale && styles.chipActive]}>
               <Text style={[styles.chipText, logScale && styles.chipTextActive]}>Log scale</Text>
             </Pressable>
           </View>
@@ -277,7 +292,11 @@ export default function TrendsScreen() {
             <Text style={styles.detailValue}>{selectedDisplay}</Text>
             <Text style={styles.detailLabel}>{field.label}</Text>
           </View>
-          <Pressable style={styles.openButton} onPress={() => router.push(`/element/${selected.number}`)}>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={`Open details for ${selected.name}`}
+            style={styles.openButton}
+            onPress={() => router.push(`/element/${selected.number}`)}>
             <Ionicons name="open-outline" size={16} color={palette.accent} />
             <Text style={styles.openText}>Open {selected.symbol}</Text>
           </Pressable>
@@ -369,7 +388,12 @@ function TrendBar({
   const categoryColor = CategoryColors[el.category];
   const display = displayFieldValue(field, el);
   return (
-    <Pressable onPress={onPress} style={({ pressed }) => [styles.barCol, pressed && { opacity: 0.65 }]} accessibilityLabel={`${el.name} ${field.label} ${display}`}>
+    <Pressable
+      accessibilityRole="button"
+      accessibilityState={{ selected }}
+      accessibilityLabel={`${el.name} ${field.label} ${display}`}
+      onPress={onPress}
+      style={({ pressed }) => [styles.barCol, pressed && { opacity: 0.65 }]}>
       {value == null ? (
         <Text style={styles.missingDash}>—</Text>
       ) : (
@@ -424,7 +448,13 @@ function PropertyPicker({
             {PROPERTY_FIELDS.map((item) => {
               const active = item.id === selectedId;
               return (
-                <Pressable key={item.id} onPress={() => onSelect(item.id)} style={styles.propertyRow}>
+                <Pressable
+                  key={item.id}
+                  accessibilityRole="button"
+                  accessibilityLabel={item.label}
+                  accessibilityState={{ selected: active }}
+                  onPress={() => onSelect(item.id)}
+                  style={styles.propertyRow}>
                   <View style={[styles.dot, { backgroundColor: item.accent }]} />
                   <Text style={[styles.propertyLabel, active && styles.propertyLabelActive]}>{item.label}</Text>
                   {active && <Ionicons name="checkmark" size={18} color={palette.accent} />}

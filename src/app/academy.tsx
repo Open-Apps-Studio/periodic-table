@@ -220,7 +220,7 @@ function colorForLesson(category: AcademyLesson['category']) {
   if (category === 'bonding') return '#7950F2';
   if (category === 'reactions') return '#E8590C';
   if (category === 'solutions') return '#0B7285';
-  if (category === 'nuclear') return '#495057';
+  if (category === 'nuclear') return '#FFA94D';
   return '#228BE6';
 }
 

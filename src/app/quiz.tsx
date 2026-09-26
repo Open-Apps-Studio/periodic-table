@@ -1,7 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Ionicons } from '@expo/vector-icons';
 import { Stack, useRouter } from 'expo-router';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Pressable, ScrollView, Text, View } from 'react-native';
 import { CategoryColors, withAlpha } from '@/constants/theme';
 import { usePalette } from '@/context/theme-context';
@@ -134,7 +134,10 @@ export default function QuizScreen() {
     secondaryText: { color: p.accent, fontSize: 15, fontWeight: '800' },
   }));
 
+  const answeredRef = useRef(false);
+
   const start = () => {
+    answeredRef.current = false;
     setQuestions(buildRound(mode, pool));
     setIndex(0);
     setPicked(null);
@@ -146,12 +149,16 @@ export default function QuizScreen() {
   const score = questions.length - missed.length;
 
   const choose = (option: string) => {
-    if (picked || !current) return;
+    if (picked || answeredRef.current || !current) return;
+    answeredRef.current = true;
     setPicked(option);
-    if (option !== current.answer) setMissed((m) => [...m, current]);
+    if (option !== current.answer) {
+      setMissed((m) => (m.some((q) => q.element.number === current.element.number) ? m : [...m, current]));
+    }
   };
 
   const next = () => {
+    answeredRef.current = false;
     if (index + 1 < questions.length) {
       setIndex(index + 1);
       setPicked(null);
@@ -192,6 +199,7 @@ export default function QuizScreen() {
                 key={option}
                 accessibilityRole="button"
                 accessibilityState={{ disabled: reveal, selected: picked === option }}
+                disabled={reveal}
                 onPress={() => choose(option)}
                 style={({ pressed }) => [
                   styles.option,

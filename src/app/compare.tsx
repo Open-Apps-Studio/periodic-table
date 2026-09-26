@@ -26,11 +26,13 @@ export default function CompareScreen() {
   const initialLeft =
     (params.left ? getElement(Number(params.left)) ?? getElementBySymbol(params.left) : undefined) ?? getElement(1)!;
   const initialRight =
-    (params.right ? getElement(Number(params.right)) ?? getElementBySymbol(params.right) : undefined) ?? getElement(8)!;
+    (params.right ? getElement(Number(params.right)) ?? getElementBySymbol(params.right) : undefined) ??
+    (initialLeft.number === 8 ? getElement(1)! : getElement(8)!);
   const [left, setLeft] = useState(initialLeft);
   const [right, setRight] = useState(initialRight);
   const [side, setSide] = useState<Side>('left');
   const [query, setQuery] = useState('');
+
 
   const styles = useThemedStyles((p) => ({
     container: { flex: 1, backgroundColor: p.background },
@@ -168,7 +170,7 @@ export default function CompareScreen() {
 
         <View style={styles.pickList}>
           <ScrollView nestedScrollEnabled keyboardShouldPersistTaps="handled">
-            {picks.slice(0, 24).map((item) => (
+            {picks.map((item) => (
               <Pressable
                 key={item.number}
                 accessibilityRole="button"
@@ -236,7 +238,12 @@ function SelectedElement({
 }) {
   const color = CategoryColors[el.category];
   return (
-    <Pressable onPress={onPress} style={[styles.selectedCard, active && styles.selectedActive]}>
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={`Select ${side === 'left' ? 'left' : 'right'} element. Currently ${el.name}`}
+      accessibilityState={{ selected: active }}
+      onPress={onPress}
+      style={[styles.selectedCard, active && styles.selectedActive]}>
       <View style={styles.selectedTop}>
         <View style={[styles.tile, { backgroundColor: withAlpha(color, 0.16), borderColor: withAlpha(color, 0.55) }]}>
           <Text style={[styles.symbol, { color }]}>{el.symbol}</Text>

@@ -15,7 +15,7 @@ const CATEGORY_COLORS: Record<GlossaryCategory, string> = {
   bonding: '#7950F2',
   reactions: '#E8590C',
   solutions: '#0B7285',
-  nuclear: '#495057',
+  nuclear: '#FFA94D',
   measurement: '#C2255C',
 };
 

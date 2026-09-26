@@ -120,9 +120,10 @@ export default function ElementsScreen() {
           clearButtonMode="while-editing"
         />
         <Pressable
+          accessibilityRole="button"
+          accessibilityLabel="Choose search property"
           onPress={() => setFilterOpen(true)}
-          style={styles.filterButton}
-          accessibilityLabel="Choose search property">
+          style={styles.filterButton}>
           <Ionicons name="filter" size={17} color={palette.accent} />
         </Pressable>
       </View>
@@ -172,7 +173,11 @@ function ElementRow({
   const palette = usePalette();
   const color = CategoryColors[el.category];
   return (
-    <Pressable onPress={onPress} style={({ pressed }) => [styles.row, pressed && { opacity: 0.6 }]}>
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={`${el.number}. ${el.name}, ${el.symbol}, ${CategoryLabels[el.category]}`}
+      onPress={onPress}
+      style={({ pressed }) => [styles.row, pressed && { opacity: 0.6 }]}>
       <View style={[styles.tile, { backgroundColor: withAlpha(color, 0.16), borderColor: withAlpha(color, 0.55) }]}>
         <Text style={[styles.tileSymbol, { color }]}>{el.symbol}</Text>
       </View>
@@ -212,7 +217,13 @@ function SearchScopePicker({
           {SEARCH_SCOPES.map((scope) => {
             const active = scope.id === selectedId;
             return (
-              <Pressable key={scope.id} onPress={() => onSelect(scope.id)} style={styles.scopeRow}>
+              <Pressable
+                key={scope.id}
+                accessibilityRole="button"
+                accessibilityLabel={scope.label}
+                accessibilityState={{ selected: active }}
+                onPress={() => onSelect(scope.id)}
+                style={styles.scopeRow}>
                 <Text style={[styles.scopeText, active && styles.scopeTextActive]}>{scope.label}</Text>
                 {active && <Ionicons name="checkmark" size={18} color={palette.accent} />}
               </Pressable>

@@ -107,7 +107,10 @@ export function GhsCard({ ghs, elementName }: { ghs: ElementGhs | null; elementN
         </>
       )}
 
-      <Pressable accessibilityRole="link" onPress={() => Linking.openURL(ghs.sourceUrl)}>
+      <Pressable
+        accessibilityRole="link"
+        accessibilityLabel="Open chemical safety source in browser"
+        onPress={() => Linking.openURL(ghs.sourceUrl).catch(() => {})}>
         <Text style={styles.source}>
           Applies to: {ghs.substance}.{'\n'}
           {isEcha

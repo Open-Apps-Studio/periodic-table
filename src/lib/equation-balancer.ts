@@ -89,6 +89,11 @@ function parseCompound(raw: string): EquationCompound {
   const trimmed = raw.trim();
   if (!trimmed) throw new EquationError('Empty compound in equation');
 
+  const coefMatch = trimmed.match(/^(\d+)/);
+  if (coefMatch && Number(coefMatch[1]) <= 0) {
+    throw new EquationError('Coefficient must be greater than zero');
+  }
+
   const withoutCoefficient = trimmed.replace(/^\d+\s*/, '');
   const stateMatch = withoutCoefficient.match(/^(.*?)(\((?:aq|s|l|g)\))$/i);
   const formula = (stateMatch ? stateMatch[1] : withoutCoefficient).trim();
@@ -114,7 +119,7 @@ function parseSide(side: string): EquationCompound[] {
 }
 
 function parseEquation(input: string): Pick<BalancedEquation, 'left' | 'right'> {
-  const normalized = input.replace(/(-{2,}>|={1,2}>|[⇌↔=→])/g, '->');
+  const normalized = input.replace(/(<[-=]>|-+>|=+>|={1,2}|[⇌↔→])/g, '->');
   const pieces = normalized.split('->');
   if (pieces.length !== 2) throw new EquationError('Use one arrow, for example H2 + O2 -> H2O');
   const left = parseSide(pieces[0]);

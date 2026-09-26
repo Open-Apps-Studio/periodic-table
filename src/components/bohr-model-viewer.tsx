@@ -126,7 +126,7 @@ export function BohrModelViewer(props: BohrModelViewerProps) {
           request.url.startsWith('https://storage.googleapis.com/');
 
         if (!isViewerResource) {
-          Linking.openURL(request.url);
+          Linking.openURL(request.url).catch(() => {});
         }
         return isViewerResource;
       }}

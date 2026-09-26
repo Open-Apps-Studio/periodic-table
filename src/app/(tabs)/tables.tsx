@@ -298,7 +298,18 @@ function TableDetail({
   }
 
   if (id === 'indicators') return <ReferenceRows rows={INDICATORS} styles={styles} />;
-  if (id === 'alkanes') return <ReferenceRows rows={ORGANIC_SERIES.map((item) => [item.family, item.generalFormula, item.note])} styles={styles} />;
+  if (id === 'alkanes') {
+    return (
+      <ReferenceRows
+        rows={ORGANIC_SERIES.map((item) => [
+          item.family,
+          item.generalFormula,
+          `${item.note} Examples: ${item.firstMembers.join(', ')}`,
+        ])}
+        styles={styles}
+      />
+    );
+  }
   if (id === 'polyaromatic') return <ReferenceRows rows={POLYAROMATICS} styles={styles} />;
   if (id === 'qualitative') return <ReferenceRows rows={QUALITATIVE_REACTIONS} styles={styles} />;
   if (id === 'electrochemical') {

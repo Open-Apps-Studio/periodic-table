@@ -210,7 +210,12 @@ export default function ReactionsScreen() {
               />
               <View style={styles.examples}>
                 {EXAMPLE_EQUATIONS.map((example) => (
-                  <Pressable key={example} onPress={() => setEquation(example)} style={styles.chip}>
+                  <Pressable
+                    key={example}
+                    accessibilityRole="button"
+                    accessibilityLabel={`Load example ${example}`}
+                    onPress={() => setEquation(example)}
+                    style={styles.chip}>
                     <Text style={styles.chipText}>{example}</Text>
                   </Pressable>
                 ))}
@@ -273,7 +278,12 @@ function ModeButton({
   onPress: () => void;
 }) {
   return (
-    <Pressable onPress={onPress} style={[styles.segment, active && styles.segmentActive]}>
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={label}
+      accessibilityState={{ selected: active }}
+      onPress={onPress}
+      style={[styles.segment, active && styles.segmentActive]}>
       <Ionicons name={icon} size={16} color={active ? palette.accent : palette.textTertiary} />
       <Text style={[styles.segmentText, active && styles.segmentTextActive]}>{label}</Text>
     </Pressable>

@@ -405,12 +405,20 @@ export default function ElementScreen() {
           />
         </View>
 
-        <Pressable accessibilityRole="link" style={styles.wikiButton} onPress={() => Linking.openURL(el.wikipediaUrl)}>
+        <Pressable
+          accessibilityRole="link"
+          accessibilityLabel={`Read more about ${el.name} on Wikipedia`}
+          style={styles.wikiButton}
+          onPress={() => Linking.openURL(el.wikipediaUrl).catch(() => {})}>
           <Ionicons name="globe-outline" size={16} color={palette.accent} />
           <Text style={styles.wikiText}>Read more on Wikipedia</Text>
         </Pressable>
         {el.spectralImage && (
-          <Pressable accessibilityRole="link" style={styles.wikiButton} onPress={() => Linking.openURL(el.spectralImage!)}>
+          <Pressable
+            accessibilityRole="link"
+            accessibilityLabel={`Open spectral image for ${el.name}`}
+            style={styles.wikiButton}
+            onPress={() => Linking.openURL(el.spectralImage!).catch(() => {})}>
             <Ionicons name="analytics-outline" size={16} color={palette.accent} />
             <Text style={styles.wikiText}>Open spectral image</Text>
           </Pressable>

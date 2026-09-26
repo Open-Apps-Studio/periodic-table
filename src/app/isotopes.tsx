@@ -179,6 +179,9 @@ export default function IsotopesScreen() {
                   return (
                     <Pressable
                       key={item.id}
+                      accessibilityRole="button"
+                      accessibilityLabel={`Filter ${item.label}`}
+                      accessibilityState={{ selected: active }}
                       onPress={() => setFilter(item.id)}
                       style={[styles.filter, active && styles.filterActive]}>
                       <Text style={[styles.filterText, active && styles.filterTextActive]}>{item.label}</Text>
@@ -233,7 +236,11 @@ function NuclideRow({
   const badgeColor = nuclide.stable ? '#2F9E44' : '#FF6B6B';
 
   return (
-    <Pressable onPress={onPress} style={({ pressed }) => [styles.row, pressed && { opacity: 0.65 }]}>
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={`${element.name}-${nuclide.massNumber}, ${nuclide.stable ? 'Stable' : 'Radioactive'}. Tap to view element details`}
+      onPress={onPress}
+      style={({ pressed }) => [styles.row, pressed && { opacity: 0.65 }]}>
       <View style={styles.rowTop}>
         <View style={[styles.tile, { backgroundColor: withAlpha(color, 0.15), borderColor: withAlpha(color, 0.55) }]}>
           <Text style={[styles.massNumber, { color }]}>{nuclide.massNumber}</Text>

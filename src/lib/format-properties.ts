@@ -19,7 +19,7 @@ export function fmtDuration(seconds: number): string {
   for (const [size, label] of units) {
     if (seconds >= size) {
       const v = seconds / size;
-      return v >= 100 ? `${v.toExponential(2)} ${label}` : `${fmt(v, 3)} ${label}`;
+      return v >= 1000 ? `${v.toExponential(2).replace('e+', 'e')} ${label}` : `${fmt(v, 3)} ${label}`;
     }
   }
   return `${fmt(seconds, 3)} s`;

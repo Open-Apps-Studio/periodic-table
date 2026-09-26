@@ -42,7 +42,7 @@ export default function TabsLayout() {
         name="tables"
         options={{
           title: 'Tables',
-          tabBarIcon: ({ color, size }) => <Ionicons name="grid-outline" size={size} color={color} />,
+          tabBarIcon: ({ color, size }) => <Ionicons name="library-outline" size={size} color={color} />,
         }}
       />
       <Tabs.Screen
